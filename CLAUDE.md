@@ -50,9 +50,9 @@ The task plan lives in `KICKOFF.md`. This file holds the rules that apply in eve
 - An aria description per scene state. Full keyboard support (← →, Tab) with visible focus rings. Colour is never the only carrier of meaning.
 
 ## Deployment
-- The site is published to GitHub Pages at https://edang100x.github.io/scaling-monosemanticity/, which is a subfolder, not the domain root.
+- The site is published to GitHub Pages at https://edangx100.github.io/scaling-monosemanticity/, which is a subfolder, not the domain root.
 - All asset and link paths are **relative** (`./src/…`, `assets/…`, never `/src/…`), so the site works from a subfolder and from `npm run dev`.
-- OG and Twitter image tags (and `og:url` / canonical) use the full URL: `https://edang100x.github.io/scaling-monosemanticity/…`.
+- OG and Twitter image tags (and `og:url` / canonical) use the full URL: `https://edangx100.github.io/scaling-monosemanticity/…`.
 - Deployment is a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds and publishes to Pages on every push to `main`.
 
 ## Commands (create these in Phase 1, keep them working)

@@ -35,5 +35,5 @@ test('the page renders with no unresolved marks', async () => {
   const html = await renderPage();
   assert.ok(!/\[\[|\]\]|\{\{|\}\}|\{toy:/.test(html), 'unresolved inline mark in output');
   assert.ok(!/(href|src)="\//.test(html), 'absolute path found; all paths must be relative for GitHub Pages');
-  assert.match(html, /og:image" content="https:\/\/edang100x\.github\.io\/scaling-monosemanticity\//);
+  assert.match(html, /og:image" content="https:\/\/edangx100\.github\.io\/scaling-monosemanticity\//);
 });
