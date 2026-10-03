@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Storyboard contact sheet</title>
+<meta name="description" content="Low-fi key frames for every step of the Scaling Monosemanticity explorable (Phase 0 review).">
+<style>
+  /* Tokens follow research/visual-language.md */
+  :root {
+    --bg: #f7f5f0; --panel: #ffffff; --ink: #1b1d22; --ink-2: #45484f; --ink-3: #6b6f78;
+    --paper: #ece6d8; --raw: #5677a8; --lamp: #d9a400; --bridge: #c0362c; --machine: #1f8a85;
+    --gap: #c2456b; --dead: #a7a9ad; --frame: #d6d1c4; --toy: #6b4bd6; --cite: #1f7a4d; --schem: #6b6f78;
+    --line: #e2ddd0;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b0d12; --panel: #13171f; --ink: #ece7dc; --ink-2: #b9b4a9; --ink-3: #8a8f9c;
+      --paper: #2a2e38; --raw: #7aa2dd; --lamp: #ffcc4d; --bridge: #ff6a4d; --machine: #3cc7bf;
+      --gap: #f07a9a; --dead: #4a4f5a; --frame: #272c37; --toy: #b495ff; --cite: #3fd08a; --schem: #8a8f9c;
+      --line: #232a38;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b0d12; --panel: #13171f; --ink: #ece7dc; --ink-2: #b9b4a9; --ink-3: #8a8f9c;
+    --paper: #2a2e38; --raw: #7aa2dd; --lamp: #ffcc4d; --bridge: #ff6a4d; --machine: #3cc7bf;
+    --gap: #f07a9a; --dead: #4a4f5a; --frame: #272c37; --toy: #b495ff; --cite: #3fd08a; --schem: #8a8f9c;
+    --line: #232a38;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { max-width: 1200px; margin: 0 auto; padding: 28px max(16px, env(safe-area-inset-left)) 8px; }
+  h1 { font-size: 1.6rem; letter-spacing: -0.02em; margin: 0 0 .3rem; }
+  header p { color: var(--ink-2); margin: .2rem 0; max-width: 70ch; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 12px 0 0; font-size: .82rem; color: var(--ink-2); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+  h2 { max-width: 1200px; margin: 28px auto 8px; padding: 0 16px; font-size: 1.05rem; color: var(--ink-2); font-weight: 600; }
+  .grid { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px 12px; }
+  figure svg { width: 100%; height: auto; display: block; background: var(--bg); border-radius: 8px; }
+  figcaption { margin-top: 8px; }
+  .id { font-size: .75rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+  .t { font-weight: 650; font-size: .98rem; line-height: 1.25; margin: 2px 0 4px; }
+  .k { font-size: .84rem; color: var(--ink-2); line-height: 1.4; }
+  .b { display: inline-block; margin-top: 6px; font-size: .7rem; padding: 1px 7px; border-radius: 99px; border: 1px solid currentColor; }
+  .b.toy { color: var(--toy); border-radius: 3px; }
+  .b.cite { color: var(--cite); }
+  .b.schem { color: var(--schem); border-style: dashed; }
+  footer { max-width: 1200px; margin: 30px auto 40px; padding: 0 16px; color: var(--ink-3); font-size: .82rem; }
+  /* SVG text */
+  svg text { font-family: system-ui, sans-serif; fill: var(--ink); }
+  svg .s { font-size: 11px; }
+  svg .xs { font-size: 9.5px; fill: var(--ink-2); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Storyboard contact sheet</h1>
+  <p>One low-fi key frame per step, drawn from scratch to check the visual flow. Shapes and colours follow <code>research/visual-language.md</code>; copy and sources are in <code>storyboard.md</code>. These are sketches: every number shown is either a <code>facts.md</code> value or labelled toy or schematic.</p>
+  <div class="legend">
+    <span><i class="sw" style="background:var(--paper)"></i>token tile</span>
+    <span><i class="sw" style="background:var(--raw)"></i>model's numbers</span>
+    <span><i class="sw" style="background:var(--lamp)"></i>feature lamp</span>
+    <span><i class="sw" style="background:var(--bridge)"></i>Golden Gate feature</span>
+    <span><i class="sw" style="background:var(--machine)"></i>SAE machinery</span>
+    <span><i class="sw" style="background:var(--gap)"></i>error (hatched)</span>
+    <span><i class="sw" style="background:var(--dead)"></i>dead</span>
+  </div>
+</header>
+<main id="sheet"></main>
+<footer>Phase 0 review artefact. Not site code; the real scenes are built in Phase 1 with the isometric engine.</footer>
+
+<script>
+// ---------- tiny drawing kit (sketch quality on purpose) ----------
+const U = 14, C = Math.cos(Math.PI / 6), S = 0.5;
+const P = (x, y, z = 0) => [120 + (x - y) * C * U, 70 + (x + y) * S * U - z * U];
+const pt = a => a.map(v => v.toFixed(1)).join(',');
+const v = n => `var(--${n})`;
+
+function box(x, y, z, w, d, h, fill, extra = '') {
+  const A = P(x, y, z + h), B = P(x + w, y, z + h), Cc = P(x + w, y + d, z + h), D = P(x, y + d, z + h);
+  const E = P(x + w, y, z), F = P(x + w, y + d, z), G = P(x, y + d, z);
+  return `<g ${extra}><polygon points="${[A, B, Cc, D].map(pt).join(' ')}" fill="${fill}"/>` +
+    `<polygon points="${[D, Cc, F, G].map(pt).join(' ')}" fill="${fill}" opacity=".78"/>` +
+    `<polygon points="${[Cc, B, E, F].map(pt).join(' ')}" fill="${fill}" opacity=".58"/></g>`;
+}
+const slab = (x, y, z, w, d, fill, extra) => box(x, y, z, w, d, 0.25, fill, extra);
+function text(x, y, s, cls = 's', anchor = 'middle', fill) {
+  return `<text x="${x}" y="${y}" class="${cls}" text-anchor="${anchor}"${fill ? ` style="fill:${fill}"` : ''}>${s}</text>`;
+}
+function tileRow(words, x0 = -4, y0 = 2, z = 0, opts = {}) {
+  return words.map((w, i) => {
+    const heat = opts.heat ? opts.heat[i] : null;
+    const fill = heat == null ? v('paper') : `color-mix(in oklab, var(--bridge) ${Math.round(heat * 100)}%, #ffffff)`;
+    const [px, py] = P(x0 + i * 1.05, y0, z + 0.25);
+    return slab(x0 + i * 1.05, y0, z, 0.95, 0.95, fill) + (opts.labels !== false ? text(px + 1, py + 8, w, 'xs') : '');
+  }).join('');
+}
+function column(cx, cy, vals, color = v('raw'), w = 5, gap = 1.5, unit = 22) {
+  let s = `<line x1="${cx - 2}" y1="${cy}" x2="${cx + vals.length * (w + gap)}" y2="${cy}" stroke="${v('ink-3')}" stroke-width="1"/>`;
+  vals.forEach((val, i) => {
+    const h = Math.abs(val) * unit, x = cx + i * (w + gap);
+    s += `<rect x="${x}" y="${val >= 0 ? cy - h : cy}" width="${w}" height="${h}" rx="1" fill="${color}"/>`;
+  });
+  return s;
+}
+function lamp(cx, cy, on = 1, color = v('lamp'), r = 6, label) {
+  let s = '';
+  if (on > 0) s += `<circle cx="${cx}" cy="${cy}" r="${r + 4}" fill="${color}" opacity="${0.18 * on}"/>`;
+  s += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${on > 0 ? color : v('panel')}" stroke="${color}" stroke-width="1.5" opacity="${on > 0 ? 0.35 + 0.65 * on : 1}"/>`;
+  s += `<rect x="${cx - 2}" y="${cy + r}" width="4" height="4" fill="${v('ink-3')}"/>`;
+  if (label) s += text(cx, cy + r + 14, label, 'xs');
+  return s;
+}
+function arrow(x1, y1, x2, y2, color = v('lamp'), w = 2, dash) {
+  const a = Math.atan2(y2 - y1, x2 - x1), hx = x2 - 7 * Math.cos(a - 0.4), hy = y2 - 7 * Math.sin(a - 0.4),
+    jx = x2 - 7 * Math.cos(a + 0.4), jy = y2 - 7 * Math.sin(a + 0.4);
+  return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${w}"${dash ? ' stroke-dasharray="4 3"' : ''}/>` +
+    `<polygon points="${x2},${y2} ${hx},${hy} ${jx},${jy}" fill="${color}"/>`;
+}
+function featArrow(x1, y1, x2, y2, color = v('lamp'), on = 1) { return arrow(x1, y1, x2, y2, color, 2) + lamp(x2 + (x2 > x1 ? 6 : -6), y2 - 6, on, color, 4); }
+function badge(kind, x = 236, y = 12) {
+  const map = { toy: ['TOY', 'toy'], cite: ['FROM THE PAPER', 'cite'], schem: ['SCHEMATIC', 'schem'] };
+  const [t, c] = map[kind]; const w = t.length * 5.6 + 10;
+  return `<rect x="${x - w}" y="${y - 9}" width="${w}" height="13" rx="${kind === 'toy' ? 2 : 6.5}" fill="none" stroke="${v(c)}"${kind === 'schem' ? ' stroke-dasharray="3 2"' : ''}/>` +
+    `<text x="${x - w / 2}" y="${y + 1}" text-anchor="middle" style="font-size:8px;fill:${v(c)};font-weight:600">${t}</text>`;
+}
+function tower(x, y, floors = 6, hi = -1, z0 = 0) {
+  let s = '';
+  for (let i = 0; i < floors; i++) s += slab(x, y, z0 + i * 1.1, 3, 3, i === hi ? v('machine') : v('frame'));
+  return s;
+}
+function hatch(id) { return `<defs><pattern id="${id}" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="${v('gap')}" stroke-width="2"/></pattern></defs>`; }
+function bubble(x, y, w, h, lines, tag) {
+  let s = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="6" fill="${v('panel')}" stroke="${v('ink-3')}"/>`;
+  lines.forEach((l, i) => s += text(x + 6, y + 13 + i * 11, l, 'xs', 'start'));
+  if (tag) s += text(x + w - 4, y + h - 4, tag, 'xs', 'end', v('cite'));
+  return s;
+}
+function funnel(x, y, n = 12, lit = [], w = 150) {
+  let s = `<polygon points="${x},${y - 8} ${x + 26},${y - 22} ${x + 26},${y + 22} ${x},${y + 8}" fill="${v('machine')}" opacity=".85"/>`;
+  s += `<polygon points="${x + 34 + w},${y - 22} ${x + 60 + w},${y - 8} ${x + 60 + w},${y + 8} ${x + 34 + w},${y + 22}" fill="${v('machine')}" opacity=".85"/>`;
+  for (let i = 0; i < n; i++) s += lamp(x + 36 + i * (w / (n - 1)) - 2, y, lit.includes(i) ? 1 : 0, i === lit[0] ? v('bridge') : v('lamp'), 4);
+  return s;
+}
+const SENT = ['We', 'drove', 'across', 'the', 'Golden', 'Gate', 'Bridge', 'at', 'sunset', '.'];
+const svg = (inner, label) => `<svg viewBox="0 0 240 150" role="img" aria-label="${label}">${inner}</svg>`;
+
+// ---------- frames ----------
+const frames = [
+  { sec: 'Hook' },
+  { id: 'H', t: 'A bridge inside Claude', k: 'You can find a single idea inside a model and turn it up.', b: 'cite',
+    d: () => tileRow(['', '', '', ''], -6, 3, 0, { labels: false }) + box(-1, 0, 0, 1.2, 1.2, 2.2, v('frame')) + box(1.2, 0.5, 0, 1, 1, 1.4, v('frame')) +
+      `<path d="M 40 112 Q 95 70 150 112" fill="none" stroke="${v('bridge')}" stroke-width="3"/><line x1="62" y1="84" x2="62" y2="118" stroke="${v('bridge')}" stroke-width="3"/><line x1="128" y1="84" x2="128" y2="118" stroke="${v('bridge')}" stroke-width="3"/>` +
+      lamp(196, 92, 1, v('bridge'), 8) + `<circle cx="196" cy="122" r="11" fill="none" stroke="${v('machine')}" stroke-width="2"/><line x1="196" y1="122" x2="204" y2="114" stroke="${v('ink')}" stroke-width="2"/>` + text(196, 144, '10×', 'xs') +
+      bubble(118, 22, 112, 40, ['Asked about its body,', 'it said it was the bridge.'], 'paraphrase') + badge('cite', 112, 14),
+    a: 'A city by a bay with a glowing bridge; a lamp with its dial at 10×; a speech bubble labelled paraphrase.' },
+  { sec: 'Primer · How a language model reads' },
+  { id: 'P1', t: 'Words become tiles', k: 'Text goes in as a row of tokens.', b: 'toy',
+    d: () => SENT.map((w, i) => { const x = 8 + i * 23; return `<rect x="${x}" y="64" width="21" height="22" rx="3" fill="${v('paper')}" stroke="${v('ink-3')}" stroke-width=".5"/>` + text(x + 10.5, 79, w.slice(0, 4), 'xs') + text(x + 10.5, 98, String(100 + i * 37), 'xs'); }).join('') +
+      text(120, 32, 'We drove across the Golden Gate', 'xs') + text(120, 44, 'Bridge at sunset.', 'xs') + badge('toy'),
+    a: 'The sentence splits into ten word tiles, each with a number tag.' },
+  { id: 'P2', t: 'Tiles become lists of numbers', k: 'Inside the model, a word is a list of numbers (toy: 3).', b: 'toy',
+    d: () => SENT.slice(3, 8).map((w, i) => { const x = 18 + i * 36; const vals = [0, 1, 2].map(j => Math.sin(i * 1.7 + j * 2.1) * .9);
+      return column(x, 86, vals, i === 3 ? v('raw') : v('ink-3'), 6, 2, 22) + `<rect x="${x - 4}" y="114" width="30" height="16" rx="3" fill="${v('paper')}"/>` + text(x + 11, 126, w.slice(0, 5), 'xs'); }).join('') +
+      `<rect x="122" y="40" width="30" height="66" rx="4" fill="none" stroke="${v('ink')}" stroke-dasharray="3 2"/>` + column(206, 86, Array.from({ length: 16 }, (_, j) => Math.sin(j * 1.3) * .8), v('ink-3'), 1.4, .6, 26).replace(/<rect/g, '<rect opacity=".35"') +
+      text(234, 136, 'real model: far more', 'xs', 'end') + text(234, 147, '(count not reported)', 'xs', 'end') + badge('toy'),
+    a: 'Each tile has a column of three bars above it, with gaps; the Bridge column is outlined; a faint tall column stands for a real model.' },
+  { id: 'P3', t: 'The list rises through the floors', k: 'The paper looks at the middle floor.', b: 'cite',
+    d: () => tower(-3, -3, 5, 2, -3.2) + column(100, 58, [.3, -.2, .5, .1, -.4, .5, .2, -.1], v('raw'), 4, 1.2, 18) + text(166, 76, 'middle layer', 'xs', 'start') + `<line x1="146" y1="73" x2="163" y2="73" stroke="${v('ink-3')}"/>` +
+      `<path d="M 30 130 C 60 128 90 110 100 90" fill="none" stroke="${v('raw')}" stroke-dasharray="3 3"/>` + badge('cite'),
+    a: 'A tower of seven floors; a column of bars has climbed to the middle floor, which is labelled middle layer.' },
+  { id: 'P4', t: 'The top floor makes a guess', k: 'Everything inside serves one output: the next-word guess.', b: 'toy',
+    d: () => tower(-3, -3, 4, -1, -2.4) + [['sunset', .62], ['night', .25], ['dawn', .13]].map(([w, p], i) => `<rect x="150" y="${40 + i * 16}" width="${p * 110}" height="11" rx="2" fill="${v('raw')}"${i === 0 ? ` stroke="${v('ink')}"` : ''}/>` + text(146, 49 + i * 16, w, 'xs', 'end')).join('') +
+      text(150, 32, 'next-word odds', 'xs', 'start') + `<path d="M 160 98 Q 170 120 150 132" fill="none" stroke="${v('ink-3')}" stroke-dasharray="3 2"/>` + `<rect x="118" y="126" width="34" height="16" rx="3" fill="${v('paper')}" stroke="${v('ink')}"/>` + text(135, 138, 'sunset', 'xs') + badge('toy'),
+    a: 'Odds bars on the tower roof for sunset, night and dawn; the winner drops onto the end of the token strip.' },
+  { sec: 'Act I · Why neurons don\'t tell you much' },
+  { id: 'I-1', t: 'Look at one number', k: 'First guess: each slot, or neuron, means one thing.', b: 'toy',
+    d: () => column(96, 92, [.4, 1.3, -.4], v('raw'), 14, 6, 26) + `<rect x="114" y="54" width="18" height="44" rx="3" fill="none" stroke="${v('ink')}" stroke-width="1.5"/>` + text(123, 134, '#2', 's') + text(60, 40, 'tokens pass →', 'xs') + badge('toy'),
+    a: 'A three-bar column zoomed in; bar 2 is bracketed while tokens pass.' },
+  { id: 'I-2', t: 'One slot, many jobs', k: 'Single units mix unrelated ideas.', b: 'toy',
+    d: () => column(20, 100, [.3, 1.4, -.3], v('raw'), 10, 4, 26) + `<rect x="33" y="60" width="14" height="44" rx="2" fill="none" stroke="${v('ink')}"/>` +
+      [['bridge', 0], ['code bug', 1], ['sad', 2]].map(([w, i]) => `<rect x="${92 + i * 50}" y="48" width="44" height="58" rx="6" fill="${v('panel')}" stroke="${v('ink-3')}"/>` + text(114 + i * 50, 118, w, 'xs')).join('') +
+      `<path d="M 100 92 Q 114 70 128 92" fill="none" stroke="${v('bridge')}" stroke-width="2.5"/>` + text(164, 82, '{ ! }', 's') + `<path d="M 214 66 q -6 10 0 16 q 6 -6 0 -16" fill="${v('raw')}"/>` + badge('toy'),
+    a: 'Bar 2 of three is tall beside three cards: a bridge, a code error, a teardrop.' },
+  { id: 'I-3', t: 'Ideas as directions', k: 'An idea is a direction; the shadow on it is its strength.', b: 'toy',
+    d: () => `<path d="M 60 112 L 60 40 M 60 112 L 132 132 M 60 112 L 18 132" stroke="${v('ink-3')}" fill="none"/>` + featArrow(60, 112, 150, 62, v('bridge')) + text(166, 56, 'bridge', 'xs', 'start') +
+      arrow(60, 112, 100, 50, v('raw'), 2) + `<line x1="100" y1="50" x2="114" y2="82" stroke="${v('ink-3')}" stroke-dasharray="2 2"/><line x1="60" y1="112" x2="114" y2="82" stroke="${v('bridge')}" stroke-width="5" opacity=".35"/>` + text(92, 44, 'token', 'xs') + text(98, 108, 'shadow', 'xs') +
+      `<rect x="200" y="62" width="14" height="66" rx="3" fill="none" stroke="${v('ink-3')}"/><rect x="200" y="96" width="14" height="32" rx="3" fill="${v('bridge')}" opacity=".7"/>` + text(207, 142, 'bridge-ness', 'xs') + badge('toy'),
+    a: 'A token arrow casts a shadow on an orange bridge arrow inside a room corner; a meter matches the shadow length.' },
+  { id: 'I-4', t: 'More ideas than room', k: 'More ideas than numbers, so each slot holds pieces of several.', b: 'toy',
+    d: () => { let s = `<circle cx="80" cy="80" r="56" fill="none" stroke="${v('ink-3')}" stroke-dasharray="2 3"/>`;
+      const dirs = [[0, -1, .3], [.95, -.3, .1], [.6, .8, .2], [-.6, .8, .2], [-.95, -.3, .1], [.35, -.2, -1], [-.35, .35, -1], [0, .9, -.6]];
+      dirs.forEach(([x, y, z], i) => { const ex = 80 + 50 * (x * .9 - z * .25), ey = 80 + 50 * (y * .6 + z * .45); s += arrow(80, 80, ex, ey, i === 0 ? v('bridge') : v('lamp'), z < 0 ? 1.2 : 1.8); });
+      s += text(122, 40, '‹toy›°', 'xs', 'start') + text(186, 40, '8 ideas', 's') + text(186, 54, '3 numbers', 'xs');
+      s += `<rect x="176" y="70" width="20" height="60" fill="${v('panel')}" stroke="${v('ink-3')}"/><rect x="176" y="70" width="20" height="20" fill="${v('bridge')}"/><rect x="176" y="90" width="20" height="20" fill="${v('lamp')}"/><rect x="176" y="110" width="20" height="20" fill="${v('raw')}"/>` + text(214, 104, 'slot #2', 'xs');
+      return s + badge('toy'); },
+    a: 'Eight arrows spread evenly in 3-D, more than three right angles allow; slot 2 shown as a bar made of three coloured pieces.' },
+  { id: 'R-I', t: 'Recap I', k: 'Tiles → numbers → floors → guess; a crowded middle.', b: '',
+    d: () => tileRow(['', '', '', ''], -7, 3, 0, { labels: false }) + tower(-1.5, -2, 5, 2, -2.6) + column(150, 64, [.3, 1, -.4], v('raw'), 6, 2, 16) + `<circle cx="205" cy="105" r="22" fill="none" stroke="${v('ink-3')}"/>` +
+      [0, 1, 2, 3, 4, 5, 6, 7].map(i => arrow(205, 105, 205 + 18 * Math.cos(i * .79), 105 - 18 * Math.sin(i * .79), v('lamp'), 1.2)).join(''),
+    a: 'Zoomed out: street tiles, the tower with its middle floor lit, a three-bar column, and eight crowded arrows.' },
+  { sec: 'Act II · The tool: a sparse autoencoder' },
+  { id: 'II-1', t: 'A few ingredients at a time', k: 'Each list is a recipe of a few features: the dictionary.', b: 'toy',
+    d: () => { let s = ''; const lit = { 0: v('bridge'), 1: v('lamp'), 2: v('raw') }; const order = [5, 0, 3, 1, 6, 2, 4, 7];
+      order.forEach((f, i) => { const on = f < 3; s += arrow(18 + i * 18, 110, 22 + i * 18, 70, on ? lit[f] : v('ink-3'), 1.2) + lamp(22 + i * 18, 62, on ? 1 : 0, on ? lit[f] : v('lamp'), 4); });
+      s += `<rect x="176" y="98" width="22" height="18" fill="${v('bridge')}"/><rect x="176" y="80" width="22" height="18" fill="${v('lamp')}"/><rect x="176" y="66" width="22" height="14" fill="${v('raw')}"/>`;
+      s += `<rect x="210" y="66" width="22" height="50" fill="none" stroke="${v('ink')}" stroke-dasharray="3 2"/>` + text(204, 95, '=', 's') + text(84, 134, '8 features; 3 lit', 'xs') + text(204, 134, 'recipe', 'xs'); return s + badge('toy'); },
+    a: 'Eight lamp-tipped arrows with three lit; the column split into three parts tinted to match, which equal the original.' },
+  { id: 'II-2', t: 'Widen', k: 'The encoder spreads 3 numbers into 8 feature scores.', b: 'toy',
+    d: () => column(12, 80, [.4, 1, -.4], v('raw'), 5, 2, 18) + funnel(44, 80, 8, [], 120) + [.6, -.3, .2, -.5, .9, .1, -.2, .4].map((q, i) => text(80 + i * 17.1 - 2, 62 - (i % 2) * 8, q.toFixed(1), 'xs')).join('') + text(110, 124, 'encoder', 's') + badge('toy'),
+    a: 'A three-bar column enters a teal funnel that widens into eight lamps, each with a score, some below zero.' },
+  { id: 'II-3', t: 'Switch off the negatives', k: 'ReLU leaves only a few lamps on.', b: 'toy',
+    d: () => { let s = funnel(20, 66, 8, [4, 0, 7], 150); for (let i = 0; i < 8; i++) { const x = 54 + i * (150 / 7) - 2; s += `<rect x="${x - 4}" y="88" width="8" height="2.5" fill="${v('machine')}"/>`; } s += text(120, 112, 'below zero → 0', 'xs') + text(120, 128, 'ReLU gates', 's'); return s + badge('toy'); },
+    a: 'Gates under eight lamps; below-zero scores flatten to zero; three lamps stay lit.' },
+  { id: 'II-4', t: 'Rebuild the original', k: 'The decoder adds lit features back up; the gap is the error.', b: 'toy',
+    d: () => hatch('h1') + arrow(40, 120, 90, 96, v('bridge'), 2.5) + arrow(90, 96, 130, 60, v('lamp'), 2.5) + arrow(130, 60, 150, 44, v('raw'), 2.5) +
+      arrow(40, 120, 166, 32, v('ink-3'), 1.5, true) + `<polygon points="150,44 166,32 160,50" fill="url(#h1)" stroke="${v('gap')}"/>` + text(188, 34, 'original', 'xs', 'start') + text(174, 58, 'error', 'xs', 'start', v('gap')) + text(80, 136, 'decoder: arrows head to tail', 'xs') + badge('toy'),
+    a: 'Three lit arrows join head to tail toward a dashed ghost arrow; a small hatched gap remains.' },
+  { id: 'II-5', t: 'Learning by rebuilding', k: 'Features are found: arrows swing onto the hidden ideas.', b: 'toy',
+    d: () => { let s = ''; for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4; s += arrow(70, 80, 70 + 48 * Math.cos(a), 80 + 48 * Math.sin(a), v('ink-3'), 1, true); s += arrow(70, 80, 70 + 42 * Math.cos(a + .55 - i * .02), 80 + 42 * Math.sin(a + .55), v('lamp'), 1.8); }
+      s += `<path d="M 126 52 A 30 30 0 0 1 132 76" fill="none" stroke="${v('ink')}" marker-end=""/>` + arrow(130, 70, 132, 78, v('ink'), 1.2);
+      s += text(190, 60, 'round ‹toy›', 's') + text(190, 80, 'dashed: hidden ideas', 'xs') + text(190, 94, 'solid: learned', 'xs'); return s + badge('toy'); },
+    a: 'Eight dashed hidden-idea arrows; eight solid learned arrows partway through rotating onto them; a round counter.' },
+  { id: 'II-6', t: 'Two forces in a tug-of-war', k: 'The loss balances accuracy against few lamps; λ is the knob.', b: 'toy',
+    d: () => hatch('h2') + `<rect x="18" y="40" width="40" height="70" rx="4" fill="none" stroke="${v('lamp')}"/><rect x="18" y="80" width="40" height="30" rx="4" fill="${v('lamp')}"/>` + text(38, 126, 'lamps lit', 'xs') +
+      `<rect x="182" y="40" width="40" height="70" rx="4" fill="none" stroke="${v('gap')}"/><rect x="182" y="64" width="40" height="46" rx="4" fill="url(#h2)"/>` + text(202, 126, 'rebuild gap', 'xs') +
+      `<path d="M 58 75 Q 120 86 182 75" fill="none" stroke="${v('ink')}" stroke-width="2"/><circle cx="132" cy="82" r="5" fill="${v('ink')}"/>` +
+      `<line x1="70" y1="140" x2="170" y2="140" stroke="${v('ink-3')}" stroke-width="3" stroke-linecap="round"/><circle cx="132" cy="140" r="7" fill="${v('panel')}" stroke="${v('ink')}" stroke-width="2"/>` + text(120, 30, 'λ (lambda)', 's') + badge('toy'),
+    a: 'A rope between a lamps-lit meter and a hatched rebuild-gap meter; a λ slider moves the knot.' },
+  { id: 'II-7', t: 'Three dictionaries', k: '1M, 4M, 34M lamps; roughly 2%, 35%, 65% dead.', b: 'cite',
+    d: () => { let s = ''; [[1, '1,048,576', .02], [4, '4,194,304', .35], [32, '33,554,432', .65]].forEach(([n, l, dead], r) => { const cnt = Math.min(34, 3 + n); for (let i = 0; i < cnt; i++) { const isDead = i >= cnt * (1 - dead); s += lamp(18 + i * 6.2, 44 + r * 36, isDead ? 0 : .6, isDead ? v('dead') : v('lamp'), 2.2); if (isDead) s += text(18 + i * 6.2, 47 + r * 36, '×', 'xs'); } s += text(14, 32 + r * 36, l + ` · ${Math.round(dead * 100)}% dead`, 'xs', 'start'); });
+      return s + text(120, 146, 'each drawn lamp = many features', 'xs') + badge('cite'); },
+    a: 'Three shelves of lamps of growing length with exact counts; roughly 2%, 35% and 65% of each greyed out with ×.' },
+  { id: 'II-8', t: 'Read the receipts', k: '<300 lit per token; rebuild explains ≥65%.', b: 'cite',
+    d: () => { let s = hatch('h3'); for (let r = 0; r < 6; r++) for (let c = 0; c < 14; c++) s += lamp(14 + c * 8, 30 + r * 11, (r * 7 + c * 3) % 23 === 0 ? 1 : 0, v('lamp'), 2.4);
+      s += text(64, 108, 'fewer than 300 lit', 'xs') + `<rect x="138" y="60" width="62" height="20" fill="${v('raw')}"/><rect x="200" y="60" width="32" height="20" fill="url(#h3)" stroke="${v('gap')}"/>` + text(169, 96, '≥65% explained', 'xs') + text(216, 110, 'missed', 'xs');
+      return s + badge('cite'); },
+    a: 'A lamp grid with a few lit; a bar split into at least 65% explained and a hatched missed part.' },
+  { id: 'R-II', t: 'Recap II · The machine', k: 'Funnel in, few lamps, rebuild out.', b: '',
+    d: () => tower(-6, 0, 4, 2, -1) + funnel(84, 80, 8, [3, 6], 90) + column(208, 92, [.3, -.2, .5, .1, -.4], v('raw'), 3, 1, 16),
+    a: 'The whole pipeline: tower, funnel, lamp row with two lit, rebuilt column.' },
+  { sec: 'Act III · Are the features real?' },
+  { id: 'III-1', t: 'What lights it up', k: 'Meaning comes from what makes a feature fire.', b: 'toy',
+    d: () => SENT.map((w, i) => { const h = [0, 0, .05, 0, .8, .9, 1, .1, .15, 0][i]; const x = 8 + i * 23;
+      return `<rect x="${x}" y="58" width="21" height="22" rx="3" fill="color-mix(in oklab, var(--bridge) ${h * 85}%, #ffffff)" stroke="${v('ink-3')}" stroke-width=".5"/>` + text(x + 10.5, 94, w.slice(0, 4), 'xs'); }).join('') +
+      `<defs><linearGradient id="g1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="${'#c0362c'}"/></linearGradient></defs><rect x="70" y="116" width="100" height="8" fill="url(#g1)" stroke="${v('ink-3')}" stroke-width=".5"/>` + text(64, 124, '0', 'xs', 'end') + text(176, 124, 'max', 'xs', 'start') + badge('toy'),
+    a: 'The sentence tinted white to orange; Golden, Gate and Bridge are deepest.' },
+  { id: 'III-2', t: 'Grading the labels', k: 'When a feature is bright, it matches its name.', b: 'schem',
+    d: () => { let s = [['bridge', v('bridge')], ['brain', v('lamp')], ['tourist', v('lamp')], ['transit', v('lamp')]].map(([l, c], i) => lamp(40 + i * 54, 30, 1, c, 5) + text(54 + i * 54, 34, l, 'xs', 'start')).join('');
+      [0, 1, 2, 3].forEach(b => { s += `<rect x="${24 + b * 50}" y="70" width="40" height="56" rx="3" fill="none" stroke="${v('ink-3')}"/>` + text(44 + b * 50, 140, String(b), 's'); });
+      [[3, 6], [2, 3], [1, 2], [0, 2]].forEach(([b, n]) => { for (let i = 0; i < n; i++) s += `<circle cx="${32 + b * 50 + (i % 4) * 8}" cy="${118 - Math.floor(i / 4) * 9}" r="3" fill="${b === 3 ? v('cite') : v('ink-3')}"/>`; });
+      return s + text(120, 58, 'graded 0–3 by Claude 3 Opus', 'xs') + badge('schem', 236, 146); },
+    a: 'Four named lamps above four bins labelled 0 to 3; most dots in bin 3.' },
+  { id: 'III-3', t: 'Any language, even pictures', k: 'Features track ideas, not spellings.', b: 'schem',
+    d: () => ['Γέφυρα', 'Мост', 'Cầu', 'Pont'].map((w, i) => `<rect x="${14 + i * 44}" y="90" width="40" height="24" rx="3" fill="${v('paper')}"/>` + text(34 + i * 44, 106, w, 'xs') + `<line x1="${34 + i * 44}" y1="88" x2="120" y2="58" stroke="${v('ink-3')}" stroke-dasharray="2 2"/>`).join('') +
+      `<rect x="194" y="86" width="34" height="30" rx="3" fill="${v('panel')}" stroke="${v('ink-3')}"/><path d="M 198 110 L 208 98 L 214 104 L 220 94 L 226 110 Z" fill="${v('ink-3')}"/><line x1="210" y1="84" x2="126" y2="56" stroke="${v('ink-3')}" stroke-dasharray="2 2"/>` +
+      lamp(122, 48, 1, v('bridge'), 8) + text(120, 136, 'scripts illustrative', 'xs') + badge('schem'),
+    a: 'Tiles in four scripts and a photo card, each connected to the lit bridge lamp.' },
+  { id: 'III-4', t: 'Turn the dial', k: 'Clamp, put the list back, and the guess changes.', b: 'toy',
+    d: () => tower(-5.2, -1.5, 4, 1, -2.4) + lamp(150, 36, 1, v('bridge'), 7) + `<circle cx="176" cy="36" r="10" fill="none" stroke="${v('machine')}" stroke-width="2.5"/><line x1="176" y1="36" x2="184" y2="29" stroke="${v('ink')}" stroke-width="2"/>` + text(198, 40, '10×', 'xs', 'start') +
+      arrow(150, 56, 92, 74, v('bridge'), 2, true) + text(140, 76, 'edited list back in', 'xs', 'start') +
+      [['bridge', .7], ['Golden', .45], ['road', .2]].map(([w, p], i) => `<rect x="50" y="${16 + i * 11}" width="${p * 70}" height="8" rx="2" fill="${v('raw')}"/>` + text(46, 23 + i * 11, w, 'xs', 'end')).join('') +
+      `<rect x="108" y="94" width="128" height="46" rx="5" fill="none" stroke="${v('cite')}"/>` + text(114, 108, 'From the paper:', 'xs', 'start', v('cite')) + text(114, 120, 'bridge 10× · transit 5×', 'xs', 'start') + text(114, 132, 'brain 10× · tourist 8×', 'xs', 'start') + badge('toy'),
+    a: 'A dial at 10× on the bridge lamp; a dashed arrow carries the edited list back into the tower; roof bars favour bridge; a paper card lists four results.' },
+  { id: 'III-5', t: 'A feature for code mistakes', k: '+3× invents an error; −5× ignores a real bug.', b: 'cite',
+    d: () => `<rect x="14" y="34" width="96" height="44" rx="4" fill="${v('panel')}" stroke="${v('lamp')}" stroke-width="2"/>` + text(20, 50, 'return left', 'xs', 'start') + text(20, 64, '  + rihgt', 'xs', 'start') + text(62, 90, '3 programming languages', 'xs') +
+      `<rect x="14" y="100" width="96" height="30" rx="4" fill="${v('panel')}" stroke="${v('ink-3')}"/>` + text(62, 119, 'teh cat (dark)', 'xs') +
+      `<circle cx="150" cy="80" r="18" fill="none" stroke="${v('machine')}" stroke-width="2.5"/><line x1="150" y1="80" x2="136" y2="92" stroke="${v('ink')}" stroke-width="2"/>` + text(150, 114, '+3× · −5×', 'xs') +
+      bubble(176, 44, 56, 46, ['+3×: error', '−5×: "3"'], '') + badge('cite'),
+    a: 'Buggy code glows; an English typo stays dark; a dial between +3× and −5×; a card flips from error to 3.' },
+  { id: 'III-6', t: 'Features beat neurons', k: '82% of features: no neuron matches above 0.3.', b: 'schem',
+    d: () => { let s = `<line x1="20" y1="110" x2="226" y2="110" stroke="${v('ink-3')}"/>` + text(20, 124, '0', 'xs') + text(226, 124, '1', 'xs') + text(120, 140, 'best match with any neuron (correlation)', 'xs');
+      const x3 = 20 + 206 * .3; s += `<rect x="20" y="40" width="${x3 - 20}" height="70" fill="${v('cite')}" opacity=".12"/><line x1="${x3}" y1="36" x2="${x3}" y2="112" stroke="${v('ink')}" stroke-dasharray="4 3"/>` + text(x3, 32, '0.3', 'xs');
+      for (let i = 0; i < 34; i++) { const x = i % 6 === 0 ? x3 + 8 + (i * 13) % 90 : 24 + (i * 17) % (x3 - 30), y = 48 + (i * 23) % 56; s += `<circle cx="${x}" cy="${y}" r="2.6" fill="${v('lamp')}"/>`; }
+      return s + text(44, 100, '82%', 's') + badge('schem'); },
+    a: 'A strip chart from 0 to 1 of each feature\'s best neuron match; a line at 0.3; 82% of dots shaded left of it.' },
+  { id: 'R-III', t: 'Recap III', k: 'Specific, multilingual, steerable, and not neurons.', b: '',
+    d: () => [['bridge', v('bridge')], ['brain', v('lamp')], ['tourist', v('lamp')], ['transit', v('lamp')], ['code', v('lamp')]].map(([l, c], i) => lamp(30 + i * 45, 66, 1, c, 8, l) + `<circle cx="${30 + i * 45}" cy="112" r="9" fill="none" stroke="${v('machine')}" stroke-width="2"/>`).join(''),
+    a: 'Five lit lamps (bridge, brain sciences, tourist attractions, transit, code mistakes), each with a dial.' },
+  { sec: 'Act IV · A map of a mind' },
+  { id: 'IV-1', t: 'Neighbourhoods', k: 'Nearby features mean related things.', b: 'schem',
+    d: () => `<ellipse cx="120" cy="80" rx="104" ry="58" fill="${v('frame')}" opacity=".5"/><ellipse cx="120" cy="80" rx="64" ry="36" fill="${v('frame')}" opacity=".7"/><ellipse cx="120" cy="80" rx="30" ry="18" fill="${v('frame')}"/>` +
+      lamp(120, 76, 1, v('bridge'), 6) + lamp(96, 82, .7, v('lamp'), 4, 'Alcatraz') + lamp(146, 84, .7, v('lamp'), 4, 'Presidio') + lamp(66, 62, .5, v('lamp'), 4, 'Tahoe') + lamp(176, 60, .5, v('lamp'), 4, 'Yosemite') + lamp(36, 102, .3, v('lamp'), 4, 'Skye') + badge('schem'),
+    a: 'Islands on a map: the bridge in the centre, Alcatraz and the Presidio nearby, Tahoe and Yosemite further, Skye at the edge.' },
+  { id: 'IV-2', t: 'Features split', k: '1 → 2 → 11 as the dictionary grows.', b: 'cite',
+    d: () => lamp(34, 70, 1, v('lamp'), 9) + text(34, 112, '1M: 1', 'xs') + lamp(90, 62, 1, v('lamp'), 6) + lamp(108, 80, 1, v('lamp'), 6) + text(98, 112, '4M: 2', 'xs') +
+      Array.from({ length: 11 }, (_, i) => lamp(172 + 24 * Math.cos(i * .57), 72 + 22 * Math.sin(i * .57), 1, v('lamp'), 3.5)).join('') + text(172, 112, '34M: 11', 'xs') +
+      text(120, 30, '"San Francisco"', 's') + text(120, 140, '+ earthquake features appear in 4M, 34M', 'xs') + badge('cite'),
+    a: 'One San Francisco lamp becomes two, then eleven; an earthquake cluster appears.' },
+  { id: 'IV-3', t: 'What\'s missing', k: 'Common ideas get features first; ~60% of London boroughs.', b: 'schem',
+    d: () => { let s = ''; for (let i = 0; i < 18; i++) { const h = 100 * Math.pow(.84, i); s += `<rect x="${16 + i * 11.5}" y="${130 - h}" width="9" height="${h}" fill="${v('raw')}" opacity=".7"/>`; if (130 - h < 98) s += lamp(20.5 + i * 11.5, 130 - h - 9, 1, v('lamp'), 2.6); }
+      s += `<rect x="12" y="98" width="216" height="32" fill="${v('machine')}" opacity=".18"/><line x1="12" y1="98" x2="228" y2="98" stroke="${v('machine')}" stroke-width="2"/>` + text(226, 94, 'waterline (34M)', 'xs', 'end');
+      return s + text(120, 145, 'more common ←   → rarer', 'xs') + badge('schem'); },
+    a: 'Concept bars sorted by frequency; a water line across them; bars above the line carry a lamp.' },
+  { id: 'IV-4', t: 'Switch one off', k: 'Ablation: switch a feature off and see what changes.', b: 'schem',
+    d: () => text(120, 30, 'John: "I want to be alone." John feels…', 'xs') +
+      [['alone', 1], ['sad', 1], ['be', 0], ['the', 0]].map(([l, on], i) => lamp(30 + i * 34, 64, 1, v('lamp'), 6, l) + (on ? `<line x1="${22 + i * 34}" y1="54" x2="${38 + i * 34}" y2="72" stroke="${v('ink')}" stroke-width="2"/>` : '')).join('') +
+      `<rect x="186" y="50" width="48" height="10" rx="2" fill="${v('raw')}" opacity=".35"/><rect x="186" y="50" width="16" height="10" rx="2" fill="${v('raw')}"/>` + text(182, 58, 'sad', 'xs', 'end') +
+      `<rect x="186" y="66" width="24" height="10" rx="2" fill="${v('raw')}"/>` + text(182, 74, 'happy', 'xs', 'end') + text(200, 98, 'sad bar shrinks', 'xs') + text(120, 120, 'top two: wanting to be alone, sadness', 'xs') + badge('schem', 236, 146),
+    a: 'Lamps under the John sentence; the alone and sadness lamps are slashed and the sad bar shrinks.' },
+  { id: 'IV-5', t: 'A chain of ideas', k: 'Brightest isn\'t most important; attribution finds the ones that are.', b: 'cite',
+    d: () => { const L = ['Kobe', 'Lakers', 'LA', 'Calif.', 'capital']; let s = ''; L.forEach((w, i) => { if (i) s += `<line x1="${21 + (i - 1) * 38 + 6}" y1="56" x2="${21 + i * 38 - 6}" y2="56" stroke="${v('ink-3')}" stroke-width="2"/>`; s += lamp(21 + i * 38, 56, 1, v('lamp'), 6) + text(21 + i * 38, 86, w, 'xs'); });
+      s += `<line x1="185" y1="56" x2="200" y2="56" stroke="${v('ink-3')}" stroke-width="2"/><rect x="202" y="47" width="34" height="18" rx="3" fill="${v('paper')}"/>` + text(219, 60, 'Sacr.', 'xs');
+      s += `<rect x="30" y="104" width="180" height="20" rx="10" fill="none" stroke="${v('ink-3')}"/><rect x="120" y="106" width="88" height="16" rx="8" fill="${v('ink')}"/>` + text(75, 117, 'brightness', 'xs') + text(164, 117, 'attribution', 'xs', 'middle', v('bg'));
+      s += text(120, 140, 'Lakers: 70th by brightness', 'xs'); return s + badge('cite'); },
+    a: 'Linked lamps Kobe, Lakers, LA, California, capital lead to Sacramento; a sort toggle; a note that Lakers ranks 70th by brightness.' },
+  { id: 'R-IV', t: 'Recap IV', k: 'Map, splits, waterline, chains.', b: '',
+    d: () => `<ellipse cx="50" cy="60" rx="40" ry="24" fill="${v('frame')}"/>` + lamp(50, 58, 1, v('bridge'), 4) + `<rect x="110" y="40" width="40" height="8" fill="${v('frame')}"/><rect x="110" y="54" width="60" height="8" fill="${v('frame')}"/><rect x="110" y="68" width="100" height="8" fill="${v('frame')}"/>` +
+      `<line x1="20" y1="112" x2="110" y2="112" stroke="${v('machine')}" stroke-width="2"/>` + [0, 1, 2, 3].map(i => lamp(136 + i * 22, 112, 1, v('lamp'), 4)).join(''),
+    a: 'The island map, three shelves, a water line and a domino chain side by side.' },
+  { sec: 'Act V · Safety, carefully' },
+  { id: 'V-1', t: 'Features with sharp edges', k: 'A feature existing isn\'t the model acting on it.', b: 'cite',
+    d: () => { const L = ['Unsafe code', 'Bias', 'Deception', 'Sycophancy', 'Dangerous content']; let s = `<rect x="56" y="22" width="128" height="116" rx="4" fill="${v('frame')}" stroke="${v('ink-3')}"/>`;
+      L.forEach((w, i) => { s += `<rect x="64" y="${28 + i * 22}" width="112" height="18" rx="2" fill="${v('panel')}" stroke="${v('ink-3')}"/>` + text(120, 41 + i * 22, w, 'xs'); });
+      s += `<rect x="188" y="70" width="18" height="14" rx="2" fill="${v('ink-3')}"/><path d="M 191 70 v -5 a 6 6 0 0 1 12 0 v 5" fill="none" stroke="${v('ink-3')}" stroke-width="2"/>`; return s + badge('cite'); },
+    a: 'A locked cabinet with five drawer labels and no contents.' },
+  { id: 'V-2', t: 'A feature that flags a false claim', k: 'Clamping internal conflict 2× got a truthful answer.', b: 'cite',
+    d: () => `<line x1="120" y1="20" x2="120" y2="140" stroke="${v('line')}"/>` + bubble(10, 40, 100, 34, ['"Done, I\'ve forgotten', 'it."'], '') + text(60, 100, 'unclamped', 'xs') +
+      lamp(150, 36, 1, v('lamp'), 5) + `<circle cx="176" cy="36" r="8" fill="none" stroke="${v('machine')}" stroke-width="2"/>` + text(200, 40, '2×', 'xs', 'start') +
+      bubble(130, 60, 104, 34, ['"I can\'t forget; the', 'word was ▢."'], '') + text(182, 110, 'internal conflict 2×', 'xs') + text(120, 140, 'both paraphrased from the paper', 'xs', 'middle', v('cite')) + badge('cite'),
+    a: 'Two lanes: unclamped claims to forget; with internal conflict at 2× it says it cannot and names the word, shown blank.' },
+  { id: 'V-3', t: 'Who the assistant thinks it is', k: 'The persona may partly be a feature (speculative).', b: 'cite',
+    d: () => [['robots', 30, 40], ['AI', 210, 40], ['conscious.', 34, 110], ['ghosts', 206, 110]].map(([l, x, y]) => lamp(x, y, .6, v('lamp'), 4) + text(x, y + 18, l, 'xs')).join('') + lamp(120, 84, .6, v('lamp'), 10) +
+      `<path d="M 88 52 Q 120 30 152 52 Q 150 74 120 78 Q 90 74 88 52 Z" fill="${v('panel')}" stroke="${v('ink')}" stroke-width="1.5" transform="translate(0 -12) rotate(-12 120 52)"/>` +
+      `<circle cx="120" cy="128" r="10" fill="none" stroke="${v('machine')}" stroke-width="2"/><line x1="120" y1="128" x2="111" y2="121" stroke="${v('ink')}" stroke-width="2"/>` + text(140, 132, '−2×', 'xs', 'start') + text(120, 112, 'dialogue / assistant', 'xs') + text(120, 146, 'speculative, per the paper', 'xs', 'middle', v('cite')) + badge('cite'),
+    a: 'Small lamps for robots, AI, consciousness and ghosts around a masked dialogue-assistant lamp; its dial at minus 2× lifts the mask; a speculative tag.' },
+  { id: 'V-4', t: 'Where it breaks', k: 'A strong start, not a full map (four big limits).', b: 'cite',
+    d: () => { const L = ['no answer key', 'most ideas missing', 'costly', 'one floor only']; let s = `<rect x="10" y="26" width="220" height="114" rx="6" fill="${v('frame')}" opacity=".6"/>`;
+      L.forEach((w, i) => { const x = 40 + (i % 2) * 110, y = 40 + Math.floor(i / 2) * 50; s += `<path d="M ${x} ${y} l 8 6 l -4 6 l 9 7 l -3 6" fill="none" stroke="${v('ink')}" stroke-width="1.5"/>` + text(x + 6, y + 40, w, 'xs'); }); return s + badge('cite'); },
+    a: 'Four labelled cracks across the floor: no answer key, most ideas missing, costly, one floor only.' },
+  { id: 'Close', t: 'A vocabulary, not yet a grammar', k: 'We can read some words; next is the grammar.', b: '',
+    d: () => `<path d="M 70 100 Q 120 64 170 100" fill="none" stroke="${v('bridge')}" stroke-width="3"/><line x1="90" y1="82" x2="90" y2="108" stroke="${v('bridge')}" stroke-width="3"/><line x1="150" y1="82" x2="150" y2="108" stroke="${v('bridge')}" stroke-width="3"/>` +
+      ['bridge', 'city', 'bug', 'sad', 'plus', 'rail', 'pin', 'brain', 'map'].map((w, i) => { const a = i * .7, x = 120 + 96 * Math.cos(a), y = 80 + 52 * Math.sin(a); return `<rect x="${x - 16}" y="${y - 8}" width="32" height="15" rx="3" fill="${v('paper')}"/>` + text(x, y + 3, w, 'xs'); }).join('') +
+      `<path d="M 216 80 L 180 116 L 120 132" fill="none" stroke="${v('ink-3')}" stroke-dasharray="2 3"/>`,
+    a: 'The bridge surrounded by scattered word tiles with no lines between them, apart from one faint chain.' },
+  { sec: 'Labs' },
+  { id: 'Lab 1', t: 'Train a sparse autoencoder', k: '3 numbers, 8 hidden ideas; arrows swing into line.', b: 'toy',
+    d: () => { let s = `<circle cx="80" cy="80" r="52" fill="none" stroke="${v('ink-3')}"/>`; for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4; s += arrow(80, 80, 80 + 46 * Math.cos(a), 80 + 46 * Math.sin(a), v('ink-3'), 1, true); s += arrow(80, 80, 80 + 40 * Math.cos(a + .18), 80 + 40 * Math.sin(a + .18), v('lamp'), 1.8); }
+      s += `<rect x="150" y="40" width="80" height="14" rx="7" fill="${v('frame')}"/><circle cx="178" cy="47" r="6" fill="${v('ink')}"/>` + text(190, 66, 'λ · lamps: 8', 'xs') + `<rect x="150" y="80" width="56" height="20" rx="5" fill="${v('machine')}"/>` + text(178, 94, 'Train', 'xs', 'middle', v('bg')) + text(190, 120, 'dead: ‹toy›', 'xs'); return s + badge('toy'); },
+    a: 'A sphere with dashed hidden-idea arrows and solid learned arrows nearly aligned; a λ slider, lamp count and Train button.' },
+  { id: 'Lab 2', t: 'Steer a toy model', k: 'Clamp −5× to +10× and watch the toy shift.', b: 'toy',
+    d: () => { let s = ['GG Bridge', 'SF', 'bridge', 'landmark', 'code error', 'sad', 'add', 'transit'].map((w, i) => `<rect x="${10 + (i % 4) * 56}" y="${30 + Math.floor(i / 4) * 22}" width="52" height="18" rx="9" fill="${i === 0 ? v('bridge') : v('panel')}" stroke="${v('ink-3')}"/>` + text(36 + (i % 4) * 56, 42 + Math.floor(i / 4) * 22, w, 'xs', 'middle', i === 0 ? v('bg') : null)).join('');
+      s += `<line x1="20" y1="92" x2="220" y2="92" stroke="${v('ink-3')}" stroke-width="3"/><circle cx="190" cy="92" r="7" fill="${v('panel')}" stroke="${v('ink')}" stroke-width="2"/>` + text(20, 108, '−5×', 'xs', 'start') + text(220, 108, '+10×', 'xs', 'end');
+      s += [['bridge', .8], ['lunch', .3]].map(([w, p], i) => `<rect x="70" y="${116 + i * 13}" width="${p * 140}" height="9" rx="2" fill="${v('raw')}"/>` + text(66, 124 + i * 13, w, 'xs', 'end')).join(''); return s + badge('toy'); },
+    a: 'Eight toy feature chips, one selected; a clamp slider from minus 5× to plus 10×; toy next-word bars.' },
+];
+
+// ---------- render ----------
+const main = document.getElementById('sheet');
+let grid = null;
+for (const f of frames) {
+  if (f.sec) { const h = document.createElement('h2'); h.textContent = f.sec; main.append(h); grid = document.createElement('div'); grid.className = 'grid'; main.append(grid); continue; }
+  const fig = document.createElement('figure');
+  const badgeHtml = f.b ? `<span class="b ${f.b}">${{ toy: 'TOY', cite: 'FROM THE PAPER', schem: 'SCHEMATIC' }[f.b]}</span>` : '';
+  fig.innerHTML = svg(f.d(), f.a) + `<figcaption><div class="id">${f.id}</div><div class="t">${f.t}</div><div class="k">${f.k}</div>${badgeHtml}</figcaption>`;
+  grid.append(fig);
+}
+</script>
+</body>
+</html>

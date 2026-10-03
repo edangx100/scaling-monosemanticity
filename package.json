@@ -1,0 +1,14 @@
+{
+  "name": "scaling-monosemanticity-explorable",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A mobile-first, scroll-driven explainer of Anthropic's Scaling Monosemanticity paper.",
+  "type": "module",
+  "scripts": {
+    "ref-shots": "node scripts/ref-shots.mjs --browser chromium"
+  },
+  "author": "edang100x",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
