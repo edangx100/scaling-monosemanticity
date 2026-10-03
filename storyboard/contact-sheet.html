@@ -50,7 +50,7 @@
   .b.schem { color: var(--schem); border-style: dashed; }
   footer { max-width: 1200px; margin: 30px auto 40px; padding: 0 16px; color: var(--ink-3); font-size: .82rem; }
   /* SVG text */
-  svg text { font-family: system-ui, sans-serif; fill: var(--ink); }
+  svg text { font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans", "PingFang SC", "Hiragino Sans", "Microsoft YaHei", sans-serif; fill: var(--ink); }
   svg .s { font-size: 11px; }
   svg .xs { font-size: 9.5px; fill: var(--ink-2); }
 </style>
@@ -230,15 +230,11 @@ const frames = [
       `<path d="M 58 75 Q 120 86 182 75" fill="none" stroke="${v('ink')}" stroke-width="2"/><circle cx="132" cy="82" r="5" fill="${v('ink')}"/>` +
       `<line x1="70" y1="140" x2="170" y2="140" stroke="${v('ink-3')}" stroke-width="3" stroke-linecap="round"/><circle cx="132" cy="140" r="7" fill="${v('panel')}" stroke="${v('ink')}" stroke-width="2"/>` + text(120, 30, 'λ (lambda)', 's') + badge('toy'),
     a: 'A rope between a lamps-lit meter and a hatched rebuild-gap meter; a λ slider moves the knot.' },
-  { id: 'II-7', t: 'Three dictionaries', k: '1M, 4M, 34M lamps; roughly 2%, 35%, 65% dead.', b: 'cite',
-    d: () => { let s = ''; [[1, '1,048,576', .02], [4, '4,194,304', .35], [32, '33,554,432', .65]].forEach(([n, l, dead], r) => { const cnt = Math.min(34, 3 + n); for (let i = 0; i < cnt; i++) { const isDead = i >= cnt * (1 - dead); s += lamp(18 + i * 6.2, 44 + r * 36, isDead ? 0 : .6, isDead ? v('dead') : v('lamp'), 2.2); if (isDead) s += text(18 + i * 6.2, 47 + r * 36, '×', 'xs'); } s += text(14, 32 + r * 36, l + ` · ${Math.round(dead * 100)}% dead`, 'xs', 'start'); });
-      return s + text(120, 146, 'each drawn lamp = many features', 'xs') + badge('cite'); },
-    a: 'Three shelves of lamps of growing length with exact counts; roughly 2%, 35% and 65% of each greyed out with ×.' },
-  { id: 'II-8', t: 'Read the receipts', k: '<300 lit per token; rebuild explains ≥65%.', b: 'cite',
-    d: () => { let s = hatch('h3'); for (let r = 0; r < 6; r++) for (let c = 0; c < 14; c++) s += lamp(14 + c * 8, 30 + r * 11, (r * 7 + c * 3) % 23 === 0 ? 1 : 0, v('lamp'), 2.4);
-      s += text(64, 108, 'fewer than 300 lit', 'xs') + `<rect x="138" y="60" width="62" height="20" fill="${v('raw')}"/><rect x="200" y="60" width="32" height="20" fill="url(#h3)" stroke="${v('gap')}"/>` + text(169, 96, '≥65% explained', 'xs') + text(216, 110, 'missed', 'xs');
-      return s + badge('cite'); },
-    a: 'A lamp grid with a few lit; a bar split into at least 65% explained and a hatched missed part.' },
+  { id: 'II-7', t: 'Read the receipts', k: '3 dictionaries; <300 lit per token; many dead; ≥65% explained.', b: 'cite',
+    d: () => { let s = hatch('h3'); [[1, '1,048,576', .02], [4, '4,194,304', .35], [32, '33,554,432', .65]].forEach(([n, l, dead], r) => { const cnt = Math.min(24, 3 + n); for (let i = 0; i < cnt; i++) { const isDead = i >= cnt * (1 - dead); const lit = !isDead && (i * 7 + r * 3) % 9 === 0; s += lamp(16 + i * 6.2, 44 + r * 34, lit ? 1 : 0, isDead ? v('dead') : v('lamp'), 2.2); if (isDead) s += text(16 + i * 6.2, 47 + r * 34, '×', 'xs'); } s += text(12, 32 + r * 34, l, 'xs', 'start'); });
+      s += `<rect x="176" y="56" width="38" height="18" fill="${v('raw')}"/><rect x="214" y="56" width="20" height="18" fill="url(#h3)" stroke="${v('gap')}"/>` + text(234, 88, '≥65% explained', 'xs', 'end') + text(234, 100, 'rest missed', 'xs', 'end');
+      return s + text(120, 146, 'few lit per token · grey × = dead', 'xs') + badge('cite'); },
+    a: 'Three shelves of lamps with exact counts, a few lit, a growing share greyed out as dead; a bar of at least 65% explained and a hatched missed part.' },
   { id: 'R-II', t: 'Recap II · The machine', k: 'Funnel in, few lamps, rebuild out.', b: '',
     d: () => tower(-6, 0, 4, 2, -1) + funnel(84, 80, 8, [3, 6], 90) + column(208, 92, [.3, -.2, .5, .1, -.4], v('raw'), 3, 1, 16),
     a: 'The whole pipeline: tower, funnel, lamp row with two lit, rebuilt column.' },
@@ -255,7 +251,7 @@ const frames = [
       return s + text(120, 58, 'graded 0–3 by Claude 3 Opus', 'xs') + badge('schem', 236, 146); },
     a: 'Four named lamps above four bins labelled 0 to 3; most dots in bin 3.' },
   { id: 'III-3', t: 'Any language, even pictures', k: 'Features track ideas, not spellings.', b: 'schem',
-    d: () => ['Γέφυρα', 'Мост', 'Cầu', 'Pont'].map((w, i) => `<rect x="${14 + i * 44}" y="90" width="40" height="24" rx="3" fill="${v('paper')}"/>` + text(34 + i * 44, 106, w, 'xs') + `<line x1="${34 + i * 44}" y1="88" x2="120" y2="58" stroke="${v('ink-3')}" stroke-dasharray="2 2"/>`).join('') +
+    d: () => ['Γκόλντεν', 'Золотые', 'Cầu Cổng', '金门大桥'].map((w, i) => `<rect x="${10 + i * 45}" y="90" width="43" height="24" rx="3" fill="${v('paper')}"/>` + text(31.5 + i * 45, 106, w, 'xs') + `<line x1="${31.5 + i * 45}" y1="88" x2="120" y2="58" stroke="${v('ink-3')}" stroke-dasharray="2 2"/>`).join('') +
       `<rect x="194" y="86" width="34" height="30" rx="3" fill="${v('panel')}" stroke="${v('ink-3')}"/><path d="M 198 110 L 208 98 L 214 104 L 220 94 L 226 110 Z" fill="${v('ink-3')}"/><line x1="210" y1="84" x2="126" y2="56" stroke="${v('ink-3')}" stroke-dasharray="2 2"/>` +
       lamp(122, 48, 1, v('bridge'), 8) + text(120, 136, 'scripts illustrative', 'xs') + badge('schem'),
     a: 'Tiles in four scripts and a photo card, each connected to the lit bridge lamp.' },

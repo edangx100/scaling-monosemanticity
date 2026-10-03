@@ -1,9 +1,9 @@
 # Storyboard
 
-Draft for Checkpoint 1, revised after the beginner read-through (`research/beginner-review.md`). Every real claim cites a fact ID from `research/facts.md` in square brackets, e.g. [D5]. `[M…]` IDs are general background with no numbers. Toy numbers are marked `‹toy›`: they come from `src/toy/` at build time and are never typed in by hand.
+Approved at Checkpoint 1 (with the changes noted at the end), revised after the beginner read-through (`research/beginner-review.md`). Every real claim cites a fact ID from `research/facts.md` in square brackets, e.g. [D5]. `[M…]` IDs are general background with no numbers. Toy numbers are marked `‹toy›`: they come from `src/toy/` at build time and are never typed in by hand.
 
-**Shape.** Hook → Primer (4) → Act I (4 + recap) → Act II (8 + recap) → Act III (6 + recap) → Act IV (5 + recap) → Act V (4) → Close → Lab 1, Lab 2 → Sources.
-That's **32 story steps** (excluding the hook and recaps), above KICKOFF's ~24–28. The beginner review found several steps carrying two new ideas, and `CLAUDE.md` says to split those. The three-dictionaries and dead-features step (II-7) and the language step (III-3) are the easiest to fold if you'd rather be nearer 28.
+**Shape.** Hook → Primer (4) → Act I (4 + recap) → Act II (7 + recap) → Act III (6 + recap) → Act IV (5 + recap) → Act V (4) → Close → Lab 1, Lab 2 → Sources.
+That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24–28. That's because of the one-new-idea-per-step rule, as agreed at Checkpoint 1, where the three-dictionaries step was folded into the receipts step (II-7).
 
 **The toy, stated once.** The toy model's list has **3 numbers**, so it can be drawn as an arrow in a room. It holds **8 named ideas**: Golden Gate Bridge, San Francisco, bridge (any), tourist landmark, code error, sadness, addition, transit. The toy SAE has 8 lamps by default (Lab 1 lets you change that). Every toy picture uses these counts.
 
@@ -36,7 +36,7 @@ That's **32 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **Beats:** (1) city settles in, 0.8s; (2) dial turns 0 → 10×, 0.6s; (3) lamp lights and the bridge brightens, 0.4s; (4) bubble and badge fade in, 0.4s.
 - **Interaction:** "Begin" button; Replay.
 - **Caption:** "Reported by Templeton et al. (2024), §assessing-tour-influence. The bubble paraphrases the paper's example; it isn't a quote or a live output."
-- **Byline / hint:** "[Author] · [Month 2026]" · "32 steps · scroll, or use ← →".
+- **Byline / hint:** "[Author] · [Month 2026]" · "31 steps · scroll, or use ← →".
 
 ---
 
@@ -115,7 +115,7 @@ That's **32 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 **Body**
 > Watch slot #2 again. It jumps for the bridge. It also jumps for a bug in some code, and again for a sad sentence.
 >
-> A unit with several unrelated jobs is called polysemantic. It's why reading single neurons rarely tells you what a model is working with. Two steps from now, we'll see why it happens.
+> A unit with several unrelated jobs is called polysemantic. [M8] It's why reading single neurons rarely tells you what a model is working with. Two steps from now, we'll see why it happens.
 
 - **Takeaway:** Single units mix unrelated ideas.
 - **New term:** *polysemantic*. Picture: three cards flip over one bar. Glossary: "Polysemantic means one unit responds to several unrelated things."
@@ -142,7 +142,7 @@ That's **32 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 **Body**
 > A room has space for only three directions that are all at right angles to each other. Our toy has **8** ideas to store.
 >
-> So it spreads them as far apart as it can, but they can't all be at right angles: neighbours end up only ‹toy›° apart. That's superposition. [A14] In real models, with vastly more numbers, ideas can sit almost exactly at right angles. [M6]
+> So it spreads them as far apart as it can, but they can't all be at right angles: neighbours end up only ‹toy›° apart. That's superposition. [A14, M9] In real models, with vastly more numbers, ideas can sit almost exactly at right angles. [M6]
 >
 > And here's the answer to slot #2: no idea gets a slot to itself, so every slot carries pieces of several ideas. It works because ideas rarely appear together. If bridges and sadness almost never share a sentence, their overlap seldom causes a mix-up.
 
@@ -248,32 +248,21 @@ That's **32 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **Show the maths:** L = E[‖x − x̂‖² + λ Σ_i f_i(x)‖W^dec_i‖] [A8]. Multiplying by the decoder norm stops the SAE cheating by shrinking scores and stretching arrows [A10].
 - **Caption:** "Loss, §scaling-sparse-autoencoders [A8]. The paper used λ = 5, a value that only means something given how it scaled its numbers [A9]. Slider runs the toy `TOY`."
 
-### II-7 · Three dictionaries
+### II-7 · Read the receipts
 **Body**
-> The team trained three SAEs, three dictionaries, on snapshots from Sonnet's middle floor, with about 1 million, 4 million and 34 million lamps. [B1, A12]
+> The team trained three SAEs (three dictionaries) on snapshots from Sonnet's middle floor, with about 1 million, 4 million and 34 million lamps. [B1, A12] On a typical token, fewer than **300** of those lamps light up. [B3]
 >
-> Not every lamp gets used. A lamp that stays dark across 10 million tokens is called dead: roughly 2% of the smallest dictionary, 35% of the middle one and 65% of the largest. [B5, B6] That still leaves the biggest with about **12 million** working features. [B7]
-
-- **Takeaway:** Bigger dictionaries hold more features, though many lamps in the biggest never light.
-- **New term:** *dead feature*. Picture: a grey lamp with a ×. Glossary: "A dead feature never switches on, so it's wasted space. The authors expect better training to reduce this." [B5]
-- **Scene words:** "1 million, 4 million and 34 million" → the three shelves; "dead" → the grey lamps.
-- **Scene / aria:** "Three shelves of small lamps: short, medium and very long, labelled 1,048,576, 4,194,304 and 33,554,432. A share of each shelf turns grey with small ×s: a sliver, about a third, about two-thirds. A note: each drawn lamp stands for many features."
-- **Beats:** (1) 1M shelf, 0.5s; (2) 4M shelf, 0.6s; (3) 34M shelf runs off-screen as the camera pulls back, 1.0s; (4) dead shares grey out, 3 × 0.4s.
-- **Caption:** "Sizes and dead shares, §scaling-sae-experiments [B1, B5, B6]; alive count, §feature-survey-completeness [B7]. The 34M SAE's training length was chosen with scaling laws [B2]. Shelf lengths `SCHEMATIC`; dead shares drawn to scale."
-- **Show the maths:** loss fell roughly as a power law in compute; the best feature count appeared to grow somewhat faster than the best step count, with the paper's caveat [B8, B9].
-
-### II-8 · Read the receipts
-**Body**
-> How well do they work? On a typical token, fewer than **300** of the millions of lamps light up. [B3]
+> Not every lamp gets used. One that stays dark across 10 million tokens is called dead: roughly 2% of the smallest dictionary, about a third of the middle one and nearly two-thirds of the largest. That still leaves the biggest with about 12 million working features. [B5, B6, B7]
 >
 > And the rebuilds aren't perfect. They account for at least 65% of the ways the original lists differ from one another, so up to a third goes unexplained. [B4] Keep that in mind; it comes back at the end.
 
-- **Takeaway:** Very sparse, fairly good rebuilds, with real gaps.
-- **New term:** none ("variance" lives in the glossary note for "account for": "how much of the spread in the original lists the rebuild reproduces").
-- **Scene words:** "fewer than 300" → the few lit lamps; "unexplained" → the hatched remainder.
-- **Scene / aria:** "A huge grid of lamps where only a few light per token as tokens pass. Beside it, a bar split into a solid part labelled 'explained: at least 65%' and a hatched part labelled 'missed'."
-- **Beats:** (1) tokens pass and a few lamps blink each time, 1.0s; (2) the bar fills, 0.6s.
-- **Caption:** "§scaling-sae-experiments [B3, B4]. Lamp grid `SCHEMATIC`."
+- **Takeaway:** Three dictionaries, very few lamps per token, many unused lamps, and rebuilds that are good but incomplete.
+- **New term:** *dead feature*. Picture: a grey lamp with a ×. Glossary: "A dead feature never switches on, so it's wasted space. The authors expect better training to reduce this." [B5] (The glossary note for "account for" says: "how much of the spread in the original lists the rebuild reproduces".)
+- **Scene words:** "1 million, 4 million and 34 million" → the three shelves; "fewer than 300" → the few lit lamps; "dead" → the grey lamps; "unexplained" → the hatched part of the bar.
+- **Scene / aria:** "Three shelves of small lamps: short, medium and very long, labelled 1,048,576, 4,194,304 and 33,554,432. As tokens pass, only a few lamps blink on each shelf. A share of each shelf turns grey with small ×s: a sliver, about a third, nearly two-thirds. Beside them, a bar split into 'explained: at least 65%' and a hatched 'missed' part."
+- **Beats:** (1) the three shelves extend in turn as the camera pulls back, 1.2s; (2) tokens pass and a few lamps blink, 0.8s; (3) dead shares grey out, 3 × 0.3s; (4) the explained/missed bar fills, 0.6s.
+- **Caption:** "Sizes, lamps per token, dead shares (roughly 2%, 35%, 65%) and variance explained, §scaling-sae-experiments [B1, B3–B6]; alive count, §feature-survey-completeness [B7]. The 34M SAE's training length was chosen with scaling laws [B2]. Shelf lengths `SCHEMATIC`; dead shares drawn to scale."
+- **Show the maths:** loss fell roughly as a power law in compute; the best feature count appeared to grow somewhat faster than the best step count, with the paper's caveat [B8, B9].
 
 ### Recap II · The machine
 > A middle-floor snapshot goes into the funnel, spreads into one score per feature, loses its negatives, and lights a few lamps. The lamps rebuild the snapshot. Training swings the arrows until rebuilding works with few lamps, and those arrows are the features.
@@ -319,7 +308,8 @@ That's **32 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **Takeaway:** Features track ideas, not spellings.
 - **New term:** none.
 - **Scene words:** "other languages" → the script tiles; "photos" → the photo icon.
-- **Scene / aria:** "Tiles in several scripts and a small photo card line up; the bridge lamp lights for each."
+- **Scene / aria:** "Tiles reading the bridge's name in Greek, Russian, Vietnamese and Chinese, then a small photo card, line up; the bridge lamp lights for each."
+- **Tiles (illustrative):** Γκόλντεν Γκέιτ · Золотые Ворота · Cầu Cổng Vàng · 金门大桥. The CJK tile uses the system font stack (no self-hosted CJK font); if a device lacks the glyphs, the tile falls back to a labelled 'Chinese' tag instead of empty boxes.
 - **Beats:** (1) script tiles arrive one by one, the lamp lighting for each, 4 × 0.3s; (2) the photo card arrives, the lamp lights, 0.5s.
 - **Caption:** "§assessing-tour-specificity [C12–C14]. The paper doesn't name the languages; the scripts drawn are illustrative `SCHEMATIC`. Image examples were hand-picked [C7]."
 
@@ -504,7 +494,7 @@ That's **32 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **Scene words:** each limitation → its crack.
 - **Scene / aria:** "Four labelled cracks spread across the world's floor: no answer key, most ideas missing, costly, one floor only."
 - **Beats:** cracks appear one by one, 4 × 0.3s.
-- **Caption:** "§discussion-limitations [K1–K9]; the rebuild gap from II-8 [B4] is another way to see it."
+- **Caption:** "§discussion-limitations [K1–K9]; the rebuild gap from II-7 [B4] is another way to see it."
 
 ### Close · A vocabulary, not yet a grammar
 **Body**
@@ -555,4 +545,5 @@ Every bracketed ID above exists in `research/facts.md` (checked by script). Chan
 10. **Act V lying caveat:** the paper's own sentence [J2].
 11. **Act I order:** directions before superposition.
 12. **λ = 5** is moved from the body to the caption, since it's meaningless without the paper's scaling [A9].
-13. **Additions** from the beginner review: P4 next-word guess [M1]; II-5 training [M7]; III-4 "put the edited list back" [D1]; IV-4 ablation via the John example [I4, I5]; V-3 self-questions [J16]. Each is a background statement or a `facts.md` value.
+13. **Checkpoint 1 changes:** the three-dictionaries step was folded into the receipts step (II-7); III-3 gains a Chinese tile in the system font stack; the background definitions (M) are cited to *Toy Models* or *Towards Monosemanticity* where they come from there.
+14. **Additions** from the beginner review: P4 next-word guess [M1]; II-5 training [M7]; III-4 "put the edited list back" [D1]; IV-4 ablation via the John example [I4, I5]; V-3 self-questions [J16]. Each is a background statement or a `facts.md` value.

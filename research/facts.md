@@ -217,19 +217,21 @@ Every other seed item was confirmed as written; the confirmed lines are below.
 | L4 | Olah, *Distributed Representations: Composition & Superposition*, 2023 | https://transformer-circuits.pub/2023/superposition-composition/index.html | added (linked from paper) |
 | L5 | Interpretability team size at publication: 18 people | §appendix-hiring | added (probably not needed) |
 
-## M. General background (standard definitions, not claims from the paper; no numbers)
+## M. Background (standard definitions, not claims from the paper; no numbers)
 
-Plain-English definitions the page needs that the paper takes for granted. They carry no figures and are labelled as background, not cited to a section.
+Plain-English definitions the page needs that the paper takes for granted. Status is always **background**. Where a definition comes from one of the two earlier Transformer Circuits papers, that paper is cited, and the main session checked the wording against a local copy on 2026-10-03. Otherwise it's a standard textbook definition with no specific source.
 
-| ID | Statement | Status |
-|---|---|---|
-| M1 | A language model reads text as tokens and, at its top layer, turns its internal numbers into a guess at the next token | background |
-| M2 | Each token's starting list of numbers comes from a table the model learned during training | background |
-| M3 | A model's layers pass a running list of numbers up from layer to layer; the paper calls this the residual stream [A3] | background |
-| M4 | Inside each layer, "attention" lets the model move information between tokens, and MLP layers contain the units usually called neurons | background |
-| M5 | Correlation runs from −1 to 1: near 1 means two quantities rise and fall together, near 0 means unrelated | background |
-| M6 | In a space with many dimensions, far more directions than dimensions can be nearly perpendicular; in 3-D they can't. This is why superposition needs high dimensions [A14]. | background |
-| M7 | Training means repeatedly nudging a model's numbers to lower its loss (gradient descent) | background |
+| ID | Statement | Status | Source |
+|---|---|---|---|
+| M1 | A language model reads text as tokens and, at its top layer, turns its internal numbers into a guess at the next token | background | standard definition |
+| M2 | Each token's starting list of numbers comes from a table the model learned during training | background | standard definition |
+| M3 | A model's layers pass a running list of numbers up from layer to layer; the paper calls this the residual stream [A3] | background | standard definition; term as used in the paper (§scaling-sae-experiments) |
+| M4 | Inside each layer, "attention" moves information between tokens, and MLP layers contain the units usually called neurons | background | standard definition; *Towards Monosemanticity* studies the neurons of a one-layer model's MLP layer [L2] |
+| M5 | Correlation runs from −1 to 1: near 1 means two quantities rise and fall together, near 0 means unrelated | background | standard definition |
+| M6 | An n-dimensional space has only n exactly perpendicular directions, but high-dimensional spaces can hold very many *almost* perpendicular ones; in 3-D they can't | background | *Toy Models of Superposition* [L3], `#motivation-superposition` ("Almost Orthogonal Vectors") |
+| M7 | Training means repeatedly nudging a model's numbers to lower its loss (gradient descent) | background | standard definition |
+| M8 | Many neurons are polysemantic: they respond to mixtures of seemingly unrelated inputs | background | *Towards Monosemanticity* [L2], introduction |
+| M9 | Superposition: linear representations can hold more features than dimensions | background | *Toy Models of Superposition* [L3], `#motivation`; restated by the paper [A14] |
 
 ## Not reported by the paper (say so if the page touches these)
 - Claude 3 Sonnet's size, layer count and residual-stream dimension D.

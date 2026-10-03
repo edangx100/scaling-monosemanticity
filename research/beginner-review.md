@@ -44,7 +44,7 @@ All 11 blockers are fixed in the current `storyboard.md`, along with most of the
 | II-3 | "Negative or tiny" wrongly implies ReLU clears tiny positives. | Now "below zero" only; faint lamps stay faintly lit. |
 | II-5 (old) | Training, loss and λ are crammed into one step, and learning is never shown. | New **II-5 · Learning by rebuilding**: random arrows rotate onto the hidden ideas (the toy's real training run) [M7]. Loss and λ get their own step (II-6). |
 | II-6 | The bold "λ = 5" is meaningless without context. | Moved to the caption with its caveat [A9]; the body has no bold. |
-| II-7/8 | Two different 65% figures side by side; "variation" undefined; drawers. | Dead shares now sit with the three dictionaries (II-7, as greyed lamps). Receipts (II-8) phrase the ≥65% as "of the ways the lists differ from one another… up to a third unexplained" [B4]. |
+| II-7 | Two different 65% figures side by side; "variation" undefined; drawers. | The body gives the dead shares in words ("a third", "nearly two-thirds") and keeps 65% only for the rebuild, phrased as "of the ways the lists differ from one another… up to a third unexplained" [B4]. Exact dead percentages are in the caption. Lamps, not drawers. (After Checkpoint 1, dictionaries, dead features and receipts are one step.) |
 | III-1 | Who named the feature? | "Features come out unnamed… researchers read the text that lights it most, then give it a name." |
 | III-2 | Is Claude grading itself? | "A larger Claude model, Claude 3 Opus, acted as the grader." |
 | III-3 | How does a text model see photos? | "Show the model photos of the bridge…"; "multimodal" dropped. |
@@ -78,6 +78,6 @@ All 11 blockers are fixed in the current `storyboard.md`, along with most of the
   - The crack labels' meaning depends on the text; each crack gets a glossary note.
 
 ## Open items from this review
-1. **Step count is 32**, above KICKOFF's ~24–28, because of the one-new-idea-per-step rule. II-7 and III-3 are the candidates to fold if you want fewer steps.
-2. **CJK fonts.** Real CJK scripts on the page would need self-hosted CJK font subsets, which are heavy. Phase 1 will decide between small subsets and staying with Latin, Greek and Cyrillic examples, labelled illustrative.
+1. **Step count:** resolved at Checkpoint 1. The three-dictionaries step was folded into the receipts step, giving **31** steps; III-3 was kept.
+2. **CJK fonts:** resolved at Checkpoint 1. A short Chinese tile uses the system font stack (no self-hosted CJK font), labelled illustrative, alongside the Greek, Cyrillic and Vietnamese tiles.
 3. **Repeat the read-through** on the built page in Phase 3, as KICKOFF requires.
