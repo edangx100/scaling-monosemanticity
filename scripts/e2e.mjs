@@ -114,6 +114,35 @@ try {
       await ctx.close();
     }
 
+    // ---- regression: no oversized-text flash, no step flip-flop mid-scroll ----
+    // Real smooth scrolling (no __instant), dark mode, stepping through every step.
+    {
+      const ctx = await browser.newContext(contextOptions(name, { width: 1440, height: 900 }, { colorScheme: 'dark' }));
+      const page = await ctx.newPage();
+      await page.goto(server.url, { waitUntil: 'networkidle' });
+      await page.evaluate(() => {
+        window.__big = []; window.__changes = [];
+        document.addEventListener('stepchange', e => window.__changes.push(e.detail.id));
+        const tick = () => {
+          document.querySelectorAll('.stage-svg .world text').forEach(t => {
+            const g = t.closest('.obj'); if (!g || getComputedStyle(g).display === 'none' || +(g.getAttribute('opacity') ?? 1) < 0.05) return;
+            const lines = t.querySelectorAll('tspan').length || 1;
+            const h = t.getBoundingClientRect().height / lines;   // per line; labels are 11–13px
+            if (h > 30) window.__big.push({ id: g.dataset.id, h: Math.round(h) });
+          });
+          requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+      const n = await page.evaluate(() => window.__story.steps.length);
+      for (let i = 1; i < n; i++) { await page.keyboard.press('ArrowRight'); await page.waitForTimeout(2600); }
+      const { big, changes } = await page.evaluate(() => ({ big: window.__big, changes: window.__changes }));
+      check(name, 'no scene text ever paints oversized while stepping (the “big white letters” flash)', big.length === 0, big.length ? JSON.stringify(big.slice(0, 3)) : `${n - 1} transitions watched every frame`);
+      const expected = (await page.evaluate(() => window.__story.steps)).slice(1);
+      check(name, 'each → press changes the step exactly once (no flip-flop during smooth scroll)', JSON.stringify(changes) === JSON.stringify(expected), changes.join(','));
+      await ctx.close();
+    }
+
     // ---- reduced motion: cross-fade straight to the end state ----
     {
       const ctx = await browser.newContext(contextOptions(name, { width: 390, height: 844 }, { reducedMotion: 'reduce' }));

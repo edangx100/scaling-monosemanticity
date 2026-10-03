@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T07:15:45.199Z",
+ "generated": "2026-10-03T11:36:29.212Z",
  "results": [
   {
    "browser": "chromium",
@@ -120,6 +120,18 @@
    "name": "no console errors (desktop)",
    "ok": true,
    "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
+   "ok": true,
+   "detail": "9 transitions watched every frame"
+  },
+  {
+   "browser": "chromium",
+   "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
+   "ok": true,
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1"
   },
   {
    "browser": "chromium",
@@ -246,6 +258,18 @@
    "name": "no console errors (desktop)",
    "ok": true,
    "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
+   "ok": true,
+   "detail": "9 transitions watched every frame"
+  },
+  {
+   "browser": "webkit",
+   "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
+   "ok": true,
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1"
   },
   {
    "browser": "webkit",

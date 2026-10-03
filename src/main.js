@@ -46,6 +46,13 @@ function activate(i, { force = false } = {}) {
 
 // ---------- scroll → active step ----------
 const triggerY = () => innerHeight * (mobile.matches ? 0.74 : 0.5);
+// While a button/key/link scrolls the page to a step, ignore the steps it
+// passes on the way; otherwise the scene restarts several times mid-scroll.
+let heading = null, headingTimer = 0;
+const release = () => { heading = null; clearTimeout(headingTimer); };
+['wheel', 'touchstart', 'pointerdown'].forEach(ev => addEventListener(ev, release, { passive: true }));
+addEventListener('keydown', e => { if (!['ArrowLeft', 'ArrowRight'].includes(e.key)) release(); });
+
 function pick() {
   const y = triggerY();
   let best = 0;
@@ -53,6 +60,7 @@ function pick() {
     const r = steps[i].getBoundingClientRect();
     if (r.top <= y) best = i; else break;
   }
+  if (heading != null) { if (best === heading) release(); else return; }
   activate(best);
 }
 let queued = false;
@@ -69,8 +77,10 @@ function go(i, { instant = false } = {}) {
   const r = card.getBoundingClientRect();
   const stageBottom = mobile.matches ? $('.stage-wrap').getBoundingClientRect().height : 0;
   const target = mobile.matches ? scrollY + r.top - stageBottom - 12 : scrollY + r.top - (innerHeight - Math.min(r.height, innerHeight * 0.8)) / 2;
-  scrollTo({ top: Math.max(0, i === 0 ? 0 : target), behavior: instant || reducedMotion() || window.__instant ? 'auto' : 'smooth' });
+  const smooth = !(instant || reducedMotion() || window.__instant);
+  if (smooth) { heading = i; clearTimeout(headingTimer); headingTimer = setTimeout(release, 1500); }
   activate(i);
+  scrollTo({ top: Math.max(0, i === 0 ? 0 : target), behavior: smooth ? 'smooth' : 'auto' });
 }
 $('[data-prev]', stepper).addEventListener('click', () => go(active - 1));
 $('[data-next]', stepper).addEventListener('click', () => go(active + 1));

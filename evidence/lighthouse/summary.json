@@ -1,11 +1,11 @@
 {
- "url": "http://localhost:35749/scaling-monosemanticity/",
- "fetched": "2026-10-03T07:16:34.430Z",
+ "url": "http://localhost:34063/scaling-monosemanticity/",
+ "fetched": "2026-10-03T11:36:41.296Z",
  "formFactor": "mobile",
- "performance": 99,
+ "performance": 98,
  "accessibility": 100,
- "LCP": "1.7 s",
- "TBT": "100 ms",
+ "LCP": "1.8 s",
+ "TBT": "130 ms",
  "CLS": "0",
  "FCP": "1.4 s",
  "failedA11y": []

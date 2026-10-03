@@ -111,6 +111,10 @@ export class Stage {
     const g = el('g', { class: `obj obj-${o.type}`, 'data-id': o.id });
     const inner = el('g', { class: 'in' }, g);
     const handle = type.build(inner, o, this) || {};
+    // Hidden until draw() has positioned it and scaled its labels; otherwise
+    // the browser can paint it once at the origin with labels at world scale
+    // (13px text × zoom = hundreds of pixels).
+    g.style.display = 'none';
     n = { g, inner, handle, type, key, fixed: [...g.querySelectorAll('.fixed')], keys: [].concat(o.k || []) };
     this.nodes.set(o.id, n);
     this.layers[o.layer ?? 1].appendChild(g);
