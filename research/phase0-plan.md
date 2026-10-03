@@ -3,11 +3,13 @@
 This is the approved plan for Phase 0 of `KICKOFF.md`, written down so a new session can pick it up. Phase 0 has not started yet. When it's done, stop at Checkpoint 1.
 
 ## Decisions already made
-- **Files moved to the root.** `CLAUDE.md` and `KICKOFF.md` now sit at the project root (commit `d079c00`).
+- **Files moved to the root.** `CLAUDE.md` and `KICKOFF.md` sit at the project root (commit `d079c00`).
 - **Reference screenshots are gitignored.** `research/reference-shots/` is in `.gitignore`; the user views them from the folder.
-- **The project is moving out of OneDrive.** This avoids slow syncing and file locks in `node_modules`.
-- **The user installs Node.js.** Before starting, check that `node -v` and `npm -v` work.
-- **Git identity.** None was configured on the machine. The first commit used `edang <edang100x@gmail.com>` for that commit only. If it's still not configured, ask the user to set it.
+- **The project lives in WSL Ubuntu** at `/home/ed/explainers/Anthropic`, out of OneDrive (done).
+- **Node.js is installed** through nvm 0.40.3: Node v22.20.0, npm 11.6.3. Stay on v22 (user's choice, 2026-10-03).
+- **Git identity is set globally** to `edang100x <edang100x@gmail.com>`. The first two commits were authored as `edang`; leave them as they are.
+- **No sudo from the session.** If Playwright needs system libraries, the user runs this in their own terminal from the project folder:
+  `sudo env "PATH=$PATH" npx playwright install-deps chromium webkit`
 
 ## Files to create
 - `package.json`: only Playwright as a dev dependency for now. Run `npm i -D playwright && npx playwright install chromium webkit`.
@@ -34,7 +36,7 @@ This is the approved plan for Phase 0 of `KICKOFF.md`, written down so a new ses
 4. **The beginner read-through (0.5) is a separate subagent.** It reads the storyboard as a curious reader with no ML background.
 
 ## Blockers to watch for
-- **Node.js and Playwright.** If Node still isn't available or WebKit won't install, take the Chromium screenshots in the app's built-in browser and list WebKit as an open item.
-- **Reference site.** It responded with HTTP 200 on 2026-10-03. If its JavaScript-driven scenes don't render headless, stop and tell the user rather than guessing.
-- **Paper fetch.** The paper is very large. Download the raw HTML with `curl` instead of a summarising fetch tool, so no section is cut off.
+- **Playwright.** If browsers need system libraries, stop and give the user the sudo command above. If WebKit still won't run after that, take the Chromium screenshots and list WebKit as an open item.
+- **Reference site.** It responded with HTTP 200 on 2026-10-03, but its HTML is only about 27 KB, so the scenes are built by JavaScript. If its JavaScript-driven scenes don't render headless, stop and tell the user rather than guessing.
+- **Paper fetch.** The paper is very large (about 16 MB of HTML). Download the raw HTML with `curl` instead of a summarising fetch tool, so no section is cut off.
 - **Copyright.** The paper copy stays in the scratchpad and the reference screenshots stay gitignored. Borrow the reference site's patterns, not its code or text.
