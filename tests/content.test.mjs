@@ -1,0 +1,39 @@
+// Content integrity: every coloured word points at scene objects that exist,
+// every glossary term exists, toy placeholders resolve, and the page renders.
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { STEPS } from '../content/steps.js';
+import { GLOSSARY } from '../content/glossary.js';
+import { SCENES } from '../src/scenes/slice.js';
+import { renderPage } from '../scripts/render.mjs';
+
+for (const step of STEPS) {
+  test(`${step.id}: scene words and glossary terms resolve`, () => {
+    const scene = SCENES[step.id] && SCENES[step.id]();
+    assert.ok(scene, `no scene for ${step.id}`);
+    const final = scene.frames[scene.frames.length - 1].objs;
+    const text = step.body.join(' ');
+    for (const [, key] of text.matchAll(/\[\[([\w-]+)\|/g)) {
+      assert.ok(scene.words[key], `no colour for scene word "${key}"`);
+      const hits = final.filter(o => [].concat(o.k || []).includes(key) && (o.o ?? 1) > 0);
+      assert.ok(hits.length, `scene word "${key}" highlights nothing in the final frame`);
+    }
+    for (const [, term] of text.matchAll(/\{\{([\w-]+)\|/g)) assert.ok(GLOSSARY[term], `unknown glossary term "${term}"`);
+    for (const f of scene.frames) assert.ok(f.aria && f.aria.length > 40, 'every keyframe needs an aria description');
+    const ids = final.map(o => o.id);
+    assert.equal(new Set(ids).size, ids.length, 'object ids must be unique');
+  });
+}
+
+test('every technical term is introduced with a glossary note on first use', () => {
+  const seen = new Set();
+  for (const step of STEPS) for (const [, term] of step.body.join(' ').matchAll(/\{\{([\w-]+)\|/g)) seen.add(term);
+  for (const term of ['token', 'vector', 'layer', 'next', 'neuron', 'polysemantic', 'direction', 'superposition']) assert.ok(seen.has(term), term);
+});
+
+test('the page renders with no unresolved marks', async () => {
+  const html = await renderPage();
+  assert.ok(!/\[\[|\]\]|\{\{|\}\}|\{toy:/.test(html), 'unresolved inline mark in output');
+  assert.ok(!/(href|src)="\//.test(html), 'absolute path found; all paths must be relative for GitHub Pages');
+  assert.match(html, /og:image" content="https:\/\/edang100x\.github\.io\/scaling-monosemanticity\//);
+});

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finding a bridge inside Claude</title>
+<meta name="description" content="A step-by-step, beginner-friendly explainer of Anthropic’s Scaling Monosemanticity paper: what a feature is, how a sparse autoencoder finds one, and why it matters.">
+<meta name="author" content="edang100x">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://edang100x.github.io/scaling-monosemanticity/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Finding a bridge inside Claude">
+<meta property="og:description" content="How researchers pulled millions of readable ideas out of a language model, explained from scratch.">
+<meta property="og:url" content="https://edang100x.github.io/scaling-monosemanticity/">
+<meta property="og:image" content="https://edang100x.github.io/scaling-monosemanticity/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="An isometric city by a bay with a glowing bridge and a lamp whose dial is turned up.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Finding a bridge inside Claude">
+<meta name="twitter:description" content="How researchers pulled millions of readable ideas out of a language model, explained from scratch.">
+<meta name="twitter:image" content="https://edang100x.github.io/scaling-monosemanticity/og.png">
+<link rel="preload" href="./assets/fonts/inter-tight-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+<a class="skip" href="#steps">Skip to the story</a>
+
+<main class="story" id="story">
+  <div class="stage-wrap" aria-label="Scene">
+    <div class="stage" id="stage"></div>
+    <div class="hud" id="hud" aria-hidden="true"></div>
+  </div>
+  <div class="steps" id="steps">
+<!--STEPS-->
+  </div>
+</main>
+
+<nav class="stepper" id="stepper" aria-label="Story steps" hidden>
+  <button class="btn icon" type="button" data-prev aria-label="Previous step">←</button>
+  <div class="rail" aria-hidden="true"></div>
+  <span class="where" id="where"></span>
+  <button class="btn icon" type="button" data-next aria-label="Next step">→</button>
+</nav>
+<div class="sr-only" aria-live="polite" id="live"></div>
+
+<footer class="colophon" id="sources">
+<!--SOURCES-->
+</footer>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

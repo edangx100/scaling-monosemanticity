@@ -1,0 +1,257 @@
+{
+ "generated": "2026-10-03T07:15:45.199Z",
+ "results": [
+  {
+   "browser": "chromium",
+   "name": "tap a coloured word highlights its scene object",
+   "ok": true,
+   "detail": "card-code"
+  },
+  {
+   "browser": "chromium",
+   "name": "tapped word reports aria-pressed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "tapping again clears the highlight",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "tapping a word in another step switches to that step and highlights",
+   "ok": true,
+   "detail": "floors: floor-3,mid-label"
+  },
+  {
+   "browser": "chromium",
+   "name": "tapping a glossary term opens its note",
+   "ok": true,
+   "detail": "Token. A small chunk of text, like a word or part of a word,"
+  },
+  {
+   "browser": "chromium",
+   "name": "tapping it again closes the note",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "I-3 slider changes the token arrow and shadow readout",
+   "ok": true,
+   "detail": "token: “Bridge” · shadow 0.66 → token: “We” · shadow 0.02"
+  },
+  {
+   "browser": "chromium",
+   "name": "nav, Begin and Replay buttons are ≥ 44×44",
+   "ok": true,
+   "detail": "[[75,44],[91,44],[91,44]]"
+  },
+  {
+   "browser": "chromium",
+   "name": "no console errors (phone)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "→ moves forward one step at a time",
+   "ok": true,
+   "detail": "tiles,numbers,floors"
+  },
+  {
+   "browser": "chromium",
+   "name": "← moves back",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "URL hash follows the active step",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "Tab reaches a coloured word with a visible focus ring",
+   "ok": true,
+   "detail": "{\"cls\":\"sw\",\"k\":\"column\",\"outline\":\"solid\",\"width\":\"3px\"}"
+  },
+  {
+   "browser": "chromium",
+   "name": "keyboard focus on a coloured word highlights the scene",
+   "ok": true,
+   "detail": "10 objects"
+  },
+  {
+   "browser": "chromium",
+   "name": "Enter on a coloured word toggles it (aria-pressed)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "hovering a coloured word highlights (desktop)",
+   "ok": true,
+   "detail": "shadow,drop,tok-label,meter"
+  },
+  {
+   "browser": "chromium",
+   "name": "Replay plays the step again and finishes",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "editing the hash to #guess moves to that step",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "deep link #crowded opens that step on load",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "no console errors (desktop)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "reduced motion: cross-fades (snapshot overlay) to the final frame",
+   "ok": true,
+   "detail": "{\"mid\":true,\"snap\":false,\"tiles\":10,\"plank\":false}"
+  },
+  {
+   "browser": "webkit",
+   "name": "tap a coloured word highlights its scene object",
+   "ok": true,
+   "detail": "card-code"
+  },
+  {
+   "browser": "webkit",
+   "name": "tapped word reports aria-pressed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "tapping again clears the highlight",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "tapping a word in another step switches to that step and highlights",
+   "ok": true,
+   "detail": "floors: floor-3,mid-label"
+  },
+  {
+   "browser": "webkit",
+   "name": "tapping a glossary term opens its note",
+   "ok": true,
+   "detail": "Token. A small chunk of text, like a word or part of a word,"
+  },
+  {
+   "browser": "webkit",
+   "name": "tapping it again closes the note",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "I-3 slider changes the token arrow and shadow readout",
+   "ok": true,
+   "detail": "token: “Bridge” · shadow 0.66 → token: “We” · shadow 0.02"
+  },
+  {
+   "browser": "webkit",
+   "name": "nav, Begin and Replay buttons are ≥ 44×44",
+   "ok": true,
+   "detail": "[[75,44],[91,44],[91,44]]"
+  },
+  {
+   "browser": "webkit",
+   "name": "no console errors (phone)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "→ moves forward one step at a time",
+   "ok": true,
+   "detail": "tiles,numbers,floors"
+  },
+  {
+   "browser": "webkit",
+   "name": "← moves back",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "URL hash follows the active step",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "Tab reaches a coloured word with a visible focus ring",
+   "ok": true,
+   "detail": "{\"cls\":\"sw\",\"k\":\"column\",\"outline\":\"solid\",\"width\":\"3px\"}"
+  },
+  {
+   "browser": "webkit",
+   "name": "keyboard focus on a coloured word highlights the scene",
+   "ok": true,
+   "detail": "10 objects"
+  },
+  {
+   "browser": "webkit",
+   "name": "Enter on a coloured word toggles it (aria-pressed)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "hovering a coloured word highlights (desktop)",
+   "ok": true,
+   "detail": "shadow,drop,tok-label,meter"
+  },
+  {
+   "browser": "webkit",
+   "name": "Replay plays the step again and finishes",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "editing the hash to #guess moves to that step",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "deep link #crowded opens that step on load",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "no console errors (desktop)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "reduced motion: cross-fades (snapshot overlay) to the final frame",
+   "ok": true,
+   "detail": "{\"mid\":true,\"snap\":false,\"tiles\":10,\"plank\":false}"
+  }
+ ]
+}

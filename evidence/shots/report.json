@@ -1,0 +1,1546 @@
+{
+ "generated": "2026-10-03T07:13:33.086Z",
+ "runs": [
+  {
+   "browser": "chromium",
+   "size": "320x568",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/320x568/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/320x568/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/320x568/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/320x568/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/320x568/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/320x568/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/320x568/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/320x568/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/320x568/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/320x568/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "360x800",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/360x800/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/360x800/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/360x800/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/360x800/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/360x800/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/360x800/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/360x800/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/360x800/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/360x800/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/360x800/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "390x844",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/390x844/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/390x844/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/390x844/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/390x844/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/390x844/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/390x844/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/390x844/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/390x844/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/390x844/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/390x844/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "430x932",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/430x932/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/430x932/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/430x932/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/430x932/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/430x932/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/430x932/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/430x932/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/430x932/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/430x932/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/430x932/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "844x390",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/844x390/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/844x390/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/844x390/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/844x390/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/844x390/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/844x390/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/844x390/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/844x390/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/844x390/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/844x390/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "1440x900",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/1440x900/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/1440x900/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/1440x900/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/1440x900/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/1440x900/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/1440x900/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/1440x900/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/1440x900/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/1440x900/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/1440x900/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "390x844-dark",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/390x844-dark/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/390x844-dark/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/390x844-dark/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/390x844-dark/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/390x844-dark/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/390x844-dark/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/390x844-dark/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/390x844-dark/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/390x844-dark/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/390x844-dark/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "1440x900-dark",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/1440x900-dark/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/1440x900-dark/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/1440x900-dark/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/1440x900-dark/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/1440x900-dark/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/1440x900-dark/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/1440x900-dark/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/1440x900-dark/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/1440x900-dark/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/1440x900-dark/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "390x844-reduced",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/390x844-reduced/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/390x844-reduced/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/390x844-reduced/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/390x844-reduced/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/390x844-reduced/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/390x844-reduced/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/390x844-reduced/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/390x844-reduced/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/390x844-reduced/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/390x844-reduced/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "chromium",
+   "size": "1440x900-reduced",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/chromium/1440x900-reduced/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/chromium/1440x900-reduced/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/chromium/1440x900-reduced/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/chromium/1440x900-reduced/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/chromium/1440x900-reduced/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/chromium/1440x900-reduced/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/chromium/1440x900-reduced/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/chromium/1440x900-reduced/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/chromium/1440x900-reduced/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/chromium/1440x900-reduced/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "320x568",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/320x568/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/320x568/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/320x568/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/320x568/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/320x568/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/320x568/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/320x568/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/320x568/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/320x568/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/320x568/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "360x800",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/360x800/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/360x800/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/360x800/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/360x800/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/360x800/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/360x800/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/360x800/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/360x800/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/360x800/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/360x800/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "390x844",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/390x844/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/390x844/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/390x844/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/390x844/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/390x844/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/390x844/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/390x844/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/390x844/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/390x844/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/390x844/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "430x932",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/430x932/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/430x932/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/430x932/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/430x932/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/430x932/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/430x932/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/430x932/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/430x932/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/430x932/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/430x932/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "844x390",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/844x390/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/844x390/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/844x390/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/844x390/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/844x390/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/844x390/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/844x390/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/844x390/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/844x390/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/844x390/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "1440x900",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/1440x900/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/1440x900/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/1440x900/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/1440x900/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/1440x900/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/1440x900/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/1440x900/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/1440x900/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/1440x900/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/1440x900/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "390x844-dark",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/390x844-dark/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/390x844-dark/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/390x844-dark/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/390x844-dark/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/390x844-dark/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/390x844-dark/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/390x844-dark/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/390x844-dark/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/390x844-dark/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/390x844-dark/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "1440x900-dark",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/1440x900-dark/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/1440x900-dark/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/1440x900-dark/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/1440x900-dark/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/1440x900-dark/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/1440x900-dark/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/1440x900-dark/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/1440x900-dark/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/1440x900-dark/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/1440x900-dark/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "390x844-reduced",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/390x844-reduced/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/390x844-reduced/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/390x844-reduced/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/390x844-reduced/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/390x844-reduced/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/390x844-reduced/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/390x844-reduced/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/390x844-reduced/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/390x844-reduced/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/390x844-reduced/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  },
+  {
+   "browser": "webkit",
+   "size": "1440x900-reduced",
+   "steps": [
+    {
+     "step": "hook",
+     "file": "evidence/shots/webkit/1440x900-reduced/00-hook.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "hook"
+    },
+    {
+     "step": "tiles",
+     "file": "evidence/shots/webkit/1440x900-reduced/01-tiles.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tiles"
+    },
+    {
+     "step": "numbers",
+     "file": "evidence/shots/webkit/1440x900-reduced/02-numbers.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "numbers"
+    },
+    {
+     "step": "floors",
+     "file": "evidence/shots/webkit/1440x900-reduced/03-floors.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "floors"
+    },
+    {
+     "step": "guess",
+     "file": "evidence/shots/webkit/1440x900-reduced/04-guess.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "guess"
+    },
+    {
+     "step": "one-number",
+     "file": "evidence/shots/webkit/1440x900-reduced/05-one-number.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "one-number"
+    },
+    {
+     "step": "many-jobs",
+     "file": "evidence/shots/webkit/1440x900-reduced/06-many-jobs.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "many-jobs"
+    },
+    {
+     "step": "directions",
+     "file": "evidence/shots/webkit/1440x900-reduced/07-directions.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "directions"
+    },
+    {
+     "step": "crowded",
+     "file": "evidence/shots/webkit/1440x900-reduced/08-crowded.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "crowded"
+    },
+    {
+     "step": "recap-1",
+     "file": "evidence/shots/webkit/1440x900-reduced/09-recap-1.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-1"
+    }
+   ],
+   "errors": []
+  }
+ ],
+ "problems": 0
+}
