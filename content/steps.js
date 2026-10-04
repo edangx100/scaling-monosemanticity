@@ -19,6 +19,7 @@ export const ACTS = [
   { id: 'primer', name: 'How a language model reads', short: 'Primer' },
   { id: 'I', name: 'Why neurons don’t tell you much', short: 'Act I', numbered: true },
   { id: 'II', name: 'The tool: a sparse autoencoder', short: 'Act II', numbered: true },
+  { id: 'III', name: 'Are the features real?', short: 'Act III', numbered: true },
 ];
 
 export const STEPS = [
@@ -193,6 +194,73 @@ export const STEPS = [
     body: [
       'A middle-floor [[snapshot|snapshot]] goes into [[funnel|the funnel]], spreads into one score per feature, loses its negatives, and lights [[lamps|a few lamps]]. The lamps [[rebuild|rebuild the snapshot]].',
       'Training swings the arrows until rebuilding works with few lamps, and those arrows are the features.',
+    ],
+  },
+  // ---------------- Act III ----------------
+  {
+    id: 'lights', act: 'III', title: 'What lights it up',
+    body: [
+      'Features come out unnamed. To learn what one means, researchers read the text that lights it most, then give it a name. How strongly a feature lights is its {{brightness|brightness}}.',
+      'For the feature they named “[[ggb-lamp|Golden Gate Bridge]]”, the brightest examples are nearly all about the bridge, while fainter ones drift to nearby landmarks and other bridges. The paper shades each token from [[legend|white (off) to orange (brightest)]].',
+    ],
+    caption: `Tints on our sentence come from the toy. How the paper shows examples, and what its bridge feature responds to, ${sec('assessing-tour')}.`,
+    badges: ['paper', 'toy'],
+  },
+  {
+    id: 'grading', act: 'III', title: 'Grading the labels',
+    body: [
+      'The paper’s tour uses [[four|four example features]]: Golden Gate Bridge, brain sciences, tourist attractions and transit. Does a lit lamp really mean its name? A larger Claude model, Claude 3 Opus, acted as the grader. It scored about 1,000 lit moments per feature, [[bins|from 0 (unrelated) to 3 (clearly matches)]].',
+      'When a feature was bright, the text matched its name; fainter moments were fuzzier. These four were picked because they’re easy to read, so they aren’t typical.',
+    ],
+    caption: `Rubric and result, ${sec('assessing-tour-specificity')}. The dot pattern is schematic: we draw the trend the paper reports, not its counts.`,
+    badges: ['paper', 'schematic'],
+  },
+  {
+    id: 'languages', act: 'III', title: 'Any language, even pictures',
+    body: [
+      'The bridge feature also lights on the opening sentence of the bridge’s Wikipedia article in [[languages|several other languages]].',
+      'More surprising: show the model [[photos|photos of the bridge]], and the same feature lights, even though the SAE learned only from text. Features seem to track ideas, not particular words.',
+    ],
+    caption: `${sec('assessing-tour-specificity')}; multilingual and multimodal features, Key Results. The paper doesn’t name the languages; the scripts drawn are illustrative. Image examples were hand-picked (${sec('appendix-methods-dataset')}).`,
+    badges: ['paper', 'schematic'],
+  },
+  {
+    id: 'dial', act: 'III', title: 'Turn the dial',
+    body: [
+      'Lighting up isn’t proof that a feature <em>does</em> anything. The test is {{clamping|clamping}}. Researchers [[clamping|fix one feature at a chosen brightness]] in the rebuilt list, [[back|put that edited list back into the tower]] in place of the original, and let the model carry on to its [[guess|next-word guess]].',
+      { lead: 'The paper reports what happened in Sonnet:', list: [
+        'Golden Gate Bridge at **10×**. Asked about its body, it said it was the bridge.',
+        'Transit at 5×. Asked how to reach a nearby shop, it added a bridge to the route.',
+        'Brain sciences at 10×. Asked for the most interesting science, it chose neuroscience instead of physics.',
+        'Tourist attractions at 8×. Asked for a walk idea, it suggested the Eiffel Tower instead of a park.',
+      ] },
+    ],
+    caption: `How clamping works and what 10× means, ${sec('appendix-methods-steering')}. Results paraphrased from ${sec('assessing-tour-influence')}; the last two appear only in the paper’s figure. The dial and odds run the toy; no text on this page is Claude’s output.`,
+    badges: ['paper', 'toy'],
+    interaction: 'clamp-dial',
+  },
+  {
+    id: 'code', act: 'III', title: 'A feature for code mistakes',
+    body: [
+      'One feature lights on [[mistakes|mistakes in code]], such as a misspelled variable, in three programming languages, but not on [[typos|typos in ordinary English]].',
+      'The researchers asked the model what some code would print. Clamped to 3× on correct code, the model predicted an error that wasn’t there. Clamps can also go [[below|below zero]], which ReLU never produces on its own: a negative setting subtracts the feature’s arrow. At **−5×** on broken code, the model predicted the output as if the bug weren’t there.',
+    ],
+    caption: `${sec('assessing-sophisticated-code-error')}; negative clamps, ${sec('appendix-methods-steering')}. Clamp values are from the paper’s figures. It isn’t shown to cover every kind of code error. The paper also found an “addition” feature that, clamped to 5×, made the model treat a multiplication as an addition (${sec('assessing-sophisticated-functions')}). Tile glow is schematic; the card paraphrases the paper.`,
+    badges: ['paper', 'schematic'],
+  },
+  {
+    id: 'neurons', act: 'III', title: 'Features beat neurons',
+    body: [
+      'Are features just neurons with new names? {{correlation|Correlation}} measures how closely two things rise and fall together: 1 means in lockstep, 0 means unrelated. For [[shaded|**82%**]] of the features checked, no neuron in any floor below scored above [[line|0.3]], a weak match at best.',
+      'Graded the same way as before, features came out more interpretable and more specific than neurons, by margins the paper calls significant.',
+    ],
+    caption: `${sec('assessing-features-v-neurons')}. Dot positions are schematic; only the 82% and 0.3 come from the paper, which gives no numeric scores.`,
+    badges: ['paper', 'schematic'],
+  },
+  {
+    id: 'recap-3', act: 'III', recap: true, title: 'Are they real?',
+    body: [
+      '[[lamps3|Features light up for one idea]], in other languages and in pictures. [[dials3|Clamping them]] steers what the model says. And they aren’t hiding inside single neurons.',
     ],
   },
 ];

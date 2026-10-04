@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T01:50:59.104Z",
+ "generated": "2026-10-04T03:55:05.502Z",
  "results": [
   {
    "browser": "chromium",
@@ -137,7 +137,7 @@
    "browser": "chromium",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 24, 48, 76, 100, 124 … 1500"
+   "detail": "0, 24, 52, 76, 100, 124 … 1500"
   },
   {
    "browser": "chromium",
@@ -147,7 +147,19 @@
   },
   {
    "browser": "chromium",
-   "name": "no console errors (Act II)",
+   "name": "III-4 clamp dial changes the toy’s next-word odds",
+   "ok": true,
+   "detail": "0% 0% 0% 100% → 4% 54% 42% 0%"
+  },
+  {
+   "browser": "chromium",
+   "name": "III-1 tints the bridge words, not the others",
+   "ok": true,
+   "detail": "0.00 0.00 0.00 0.00 0.20 0.45 0.75 0.09 0.00 0.00"
+  },
+  {
+   "browser": "chromium",
+   "name": "no console errors (Acts II–III)",
    "ok": true,
    "detail": ""
   },
@@ -155,13 +167,13 @@
    "browser": "chromium",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "17 transitions watched every frame"
+   "detail": "24 transitions watched every frame"
   },
   {
    "browser": "chromium",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3"
   },
   {
    "browser": "chromium",
@@ -305,11 +317,23 @@
    "browser": "webkit",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 20, 40, 60, 84, 104 … 1500"
+   "detail": "0, 20, 40, 60, 80, 104 … 1500"
   },
   {
    "browser": "webkit",
-   "name": "no console errors (Act II)",
+   "name": "III-4 clamp dial changes the toy’s next-word odds",
+   "ok": true,
+   "detail": "0% 0% 0% 100% → 4% 54% 42% 0%"
+  },
+  {
+   "browser": "webkit",
+   "name": "III-1 tints the bridge words, not the others",
+   "ok": true,
+   "detail": "0.00 0.00 0.00 0.00 0.20 0.45 0.75 0.09 0.00 0.00"
+  },
+  {
+   "browser": "webkit",
+   "name": "no console errors (Acts II–III)",
    "ok": true,
    "detail": ""
   },
@@ -317,13 +341,13 @@
    "browser": "webkit",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "17 transitions watched every frame"
+   "detail": "24 transitions watched every frame"
   },
   {
    "browser": "webkit",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3"
   },
   {
    "browser": "webkit",

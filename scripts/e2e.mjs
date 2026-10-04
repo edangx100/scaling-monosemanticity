@@ -147,7 +147,17 @@ try {
         const long = await page.evaluate(() => window.__long || []);
         check(name, 'live training causes no long tasks (>50 ms) on the main thread', long.length === 0, long.length ? long.join(',') + ' ms' : 'none');
       }
-      check(name, 'no console errors (Act II)', errors.length === 0, errors.join(' | '));
+      // Act III: the clamp dial drives the toy's next-word odds.
+      await showStep(page, await idx(page, 'dial'));
+      const odds = () => page.evaluate(() => [...document.querySelectorAll('[data-id="odds"] text.mono')].map(t => t.textContent).join(' '));
+      const at10 = await odds();
+      await page.locator('#ctl-dial').fill('-5'); await page.waitForTimeout(100);
+      const atMinus5 = await odds();
+      check(name, 'III-4 clamp dial changes the toy’s next-word odds', at10 !== atMinus5 && (await page.locator('#out-dial').textContent()) === '−5×', `${at10} → ${atMinus5}`);
+      await showStep(page, await idx(page, 'lights'));
+      const heat = await page.evaluate(() => [...document.querySelectorAll('[data-id^="tile-"]')].map(g => +(g.querySelector('.in > polygon:nth-of-type(4)')?.getAttribute('opacity') || 0)));
+      check(name, 'III-1 tints the bridge words, not the others', heat[6] > 0.5 && heat[0] === 0 && heat[3] === 0, heat.map(v => v.toFixed(2)).join(' '));
+      check(name, 'no console errors (Acts II–III)', errors.length === 0, errors.join(' | '));
       await ctx.close();
     }
 

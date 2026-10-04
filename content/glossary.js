@@ -19,4 +19,7 @@ export const GLOSSARY = {
   training: { term: 'Training', pic: 'arrows', def: 'Repeating a small adjustment many times, each one making the machine a little better at its task.' },
   loss: { term: 'Loss', pic: 'rope', def: 'A score for how badly the SAE is doing; training makes it smaller.', more: 'λ (lambda) is the knob that sets how much using many lamps counts against it.' },
   dead: { term: 'Dead feature', pic: 'shelf', def: 'A feature that never switches on, so it’s wasted space. The authors expect better training to reduce this.' },
+  brightness: { term: 'Brightness (activation)', pic: 'lamp', def: 'How strongly a feature lights for a token. Researchers call it the feature’s activation.' },
+  clamping: { term: 'Clamping', pic: 'dial', def: 'Fixing a feature at a chosen brightness and letting the model carry on. “10×” means ten times the brightest it got on its own in the researchers’ data.' },
+  correlation: { term: 'Correlation', pic: 'strip', def: 'How closely two quantities rise and fall together, from −1 to 1: near 1 means in lockstep, near 0 means unrelated.' },
 };

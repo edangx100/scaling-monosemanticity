@@ -12,7 +12,7 @@ for (const step of STEPS) {
     const scene = SCENES[step.id] && SCENES[step.id]();
     assert.ok(scene, `no scene for ${step.id}`);
     const final = scene.frames[scene.frames.length - 1].objs;
-    const text = step.body.join(' ');
+    const text = step.body.map(p => (typeof p === 'object' ? [p.lead, ...p.list].join(' ') : p)).join(' ');
     for (const [, key] of text.matchAll(/\[\[([\w-]+)\|/g)) {
       assert.ok(scene.words[key], `no colour for scene word "${key}"`);
       const hits = final.filter(o => [].concat(o.k || []).includes(key) && (o.o ?? 1) > 0);
@@ -27,8 +27,8 @@ for (const step of STEPS) {
 
 test('every technical term is introduced with a glossary note on first use', () => {
   const seen = new Set();
-  for (const step of STEPS) for (const [, term] of step.body.join(' ').matchAll(/\{\{([\w-]+)\|/g)) seen.add(term);
-  for (const term of ['token', 'vector', 'layer', 'next', 'neuron', 'polysemantic', 'direction', 'superposition', 'feature', 'sae', 'encoder', 'relu', 'decoder', 'training', 'loss', 'dead']) assert.ok(seen.has(term), term);
+  for (const step of STEPS) for (const [, term] of step.body.map(p => (typeof p === 'object' ? [p.lead, ...p.list].join(' ') : p)).join(' ').matchAll(/\{\{([\w-]+)\|/g)) seen.add(term);
+  for (const term of ['token', 'vector', 'layer', 'next', 'neuron', 'polysemantic', 'direction', 'superposition', 'feature', 'sae', 'encoder', 'relu', 'decoder', 'training', 'loss', 'dead', 'brightness', 'clamping', 'correlation']) assert.ok(seen.has(term), term);
 });
 
 test('the page renders with no unresolved marks', async () => {

@@ -11,7 +11,7 @@ const ease = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const lerp = (a, b, t) => a + (b - a) * t;
 
 // Fields that tween. Anything else is "static": changing it rebuilds the node.
-const ANIM = new Set(['at', 'o', 's', 'pxo', 'deadO', 'litO', 'fill', 'vals', 'segO', 'hiO', 'on', 'val', 'v', 'len', 'ps', 'flip', 'glow', 'tagO', 'lx', 'ly']);
+const ANIM = new Set(['at', 'o', 's', 'pxo', 'off', 'deadO', 'litO', 'fill', 'heat', 'drop', 'shadeO', 'vals', 'segO', 'hiO', 'on', 'val', 'v', 'len', 'ps', 'flip', 'glow', 'tagO', 'lx', 'ly']);
 const staticKey = o => JSON.stringify(Object.keys(o).filter(k => !ANIM.has(k) && k !== 'id').sort().map(k => [k, o[k]]));
 
 function mix(a, b, t) {
@@ -35,6 +35,9 @@ export class Stage {
     const pat = el('pattern', { id: 'hatch', width: 6, height: 6, patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(45)' }, defs);
     el('rect', { width: 6, height: 6, class: 'hatch-bg' }, pat);
     el('line', { x1: 0, y1: 0, x2: 0, y2: 6, class: 'hatch-line' }, pat);
+    const grad = el('linearGradient', { id: 'heatgrad' }, defs);
+    el('stop', { offset: '0', class: 'heat-0' }, grad);
+    el('stop', { offset: '1', class: 'heat-1' }, grad);
     this.world = el('g', { class: 'world' }, this.svg);
     this.layers = [0, 1, 2, 3].map(i => el('g', { class: `layer l${i}` }, this.world));
     host.appendChild(this.svg);

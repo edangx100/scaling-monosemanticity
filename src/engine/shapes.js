@@ -70,16 +70,19 @@ export const TYPES = {
       el('polygon', { points: pts([P(0, d, h), P(w, d, h), P(w, d, 0), P(0, d, 0)]), style: `fill:${faceFill('paper', 'left')}` }, g);
       el('polygon', { points: pts([P(w, d, h), P(w, 0, h), P(w, 0, 0), P(w, d, 0)]), style: `fill:${faceFill('paper', 'right')}` }, g);
       el('polygon', { points: pts([P(0, 0, h), P(w, 0, h), P(w, d, h), P(0, d, h)]), class: 'tile-top', style: `fill:${faceFill('paper', 'top')}` }, g);
+      // Brightness tint (III-1): white = off, the feature's colour = brightest.
+      const heat = el('polygon', { points: pts([P(0, 0, h), P(w, 0, h), P(w, d, h), P(0, d, h)]), style: `fill:${col(o.heatC || 'bridge')}`, opacity: 0 }, g);
       const [cx, cy] = P(w / 2, d / 2, h);
       const tg = el('g', { class: 'fixed', 'data-x': cx, 'data-y': cy }, g);
       fixedText(tg, o.word, { size: o.size || 13, weight: 600, dy: '0.35em', cls: 'tile-word' });
       const tag = el('g', { class: 'fixed tag', 'data-x': cx, 'data-y': cy }, g);
       const tagText = fixedText(tag, o.tag ?? '', { size: 11, dy: '-1.05em', cls: 'mono dim' });
-      return { tag, tagText };
+      return { tag, tagText, heat };
     },
     update(h, o) {
       if (h.tagText.textContent !== String(o.tag ?? '')) h.tagText.textContent = o.tag ?? '';
       h.tag.style.opacity = o.tagO ?? (o.tag ? 1 : 0);
+      h.heat.setAttribute('opacity', f2(Math.max(0, Math.min(1, o.heat ?? 0)) * 0.85));
     },
   },
 
@@ -165,7 +168,7 @@ export const TYPES = {
     },
     update(h, o) {
       h.needle.setAttribute('transform', `rotate(${f2(dialAngle(o.val ?? 0))})`);
-      const txt = `${Math.round(o.val ?? 0)}×`;
+      const v = Math.round(o.val ?? 0), txt = o.off ? 'off' : `${v < 0 ? '−' + Math.abs(v) : v}×`;
       if (h.label.textContent !== txt) h.label.textContent = txt;
     },
   },
@@ -266,7 +269,7 @@ export const TYPES = {
         el('rect', { x: 0, y, width: W, height: 13, rx: 3, class: 'odds-track' }, tg);
         const f = el('rect', { x: 0, y, width: W, height: 13, rx: 3, style: `fill:${col('raw')}` }, tg);
         const pct = el('text', { x: W + 6, y: y + 11, class: 't mono', 'font-size': 11 }, tg);
-        if (i === 0) f.classList.add('odds-win');
+        if (i === 0 && !o.noWin) f.classList.add('odds-win');
         return { f, pct };
       });
       return { fills, W };
@@ -394,6 +397,60 @@ export const TYPES = {
     update(h, o) { h.grow.setAttribute('transform', `scale(${Math.max(0.001, o.fill ?? 1).toFixed(3)},1)`); },
   },
 
+  // Specificity bins (III-2, schematic): four bins 0–3 with dots dropping in.
+  bins: {
+    build(g, o) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const BW = 52, GAP = 10, H = 70;
+      const counts = o.counts || [2, 2, 3, 9];
+      const dots = el('g', {}, tg);
+      counts.forEach((n, b) => {
+        const x = b * (BW + GAP);
+        el('rect', { x, y: 0, width: BW, height: H, rx: 4, class: 'bin' }, tg);
+        const t = el('text', { x: x + BW / 2, y: H + 16, class: 't', 'text-anchor': 'middle', 'font-size': 13, 'font-weight': 700 }, tg); t.textContent = String(b);
+        for (let k = 0; k < n; k++) el('circle', { cx: x + 9 + (k % 4) * 11.5, cy: H - 8 - Math.floor(k / 4) * 11, r: 4.2, class: b === 3 ? 'dot-good' : 'dot' }, dots);
+      });
+      const cap = el('text', { x: (4 * BW + 3 * GAP) / 2, y: -10, class: 't dim', 'text-anchor': 'middle', 'font-size': 12 }, tg); cap.textContent = o.caption || '';
+      return { dots };
+    },
+    update(h, o) { const d = o.drop ?? 1; h.dots.setAttribute('opacity', f2(d)); h.dots.setAttribute('transform', `translate(0,${f2(-40 * (1 - d))})`); },
+  },
+
+  // Strip chart (III-6, schematic dots; the 0.3 line and 82% are the paper's).
+  strip: {
+    build(g, o) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const W = o.wpx || 260, H = 90, x3 = W * 0.3;
+      const shade = el('rect', { x: 0, y: 0, width: x3, height: H, class: 'strip-shade' }, tg);
+      el('line', { x1: 0, y1: H, x2: W, y2: H, class: 'strip-axis' }, tg);
+      el('line', { x1: x3, y1: -6, x2: x3, y2: H + 4, class: 'strip-line' }, tg);
+      for (const [v, ty] of [[0, '0'], [0.3, '0.3'], [1, '1']]) { const t = el('text', { x: v * W, y: H + 16, class: 't mono', 'text-anchor': 'middle', 'font-size': 11 }, tg); t.textContent = ty; }
+      const ax = el('text', { x: W / 2, y: H + 32, class: 't dim', 'text-anchor': 'middle', 'font-size': 12 }, tg); ax.textContent = 'best match with any neuron';
+      const dots = el('g', {}, tg);
+      const pts = o.pts || [];
+      pts.forEach(([u, v]) => el('circle', { cx: u * W, cy: 8 + v * (H - 16), r: 3.6, class: 'dot-lamp' }, dots));
+      const pct = el('text', { x: x3 / 2, y: -10, class: 't', 'text-anchor': 'middle', 'font-size': 15, 'font-weight': 700 }, tg); pct.textContent = o.label || '';
+      return { dots, shade, pct };
+    },
+    update(h, o) {
+      const d = o.drop ?? 1, sh = o.shadeO ?? 1;
+      h.dots.setAttribute('opacity', f2(d)); h.dots.setAttribute('transform', `translate(0,${f2(-30 * (1 - d))})`);
+      h.shade.setAttribute('opacity', f2(sh * 0.22)); h.pct.setAttribute('opacity', f2(sh));
+    },
+  },
+
+  // White-to-colour legend for brightness (III-1).
+  legend: {
+    build(g, o) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const W = o.wpx || 150;
+      el('rect', { x: 0, y: 0, width: W, height: 12, rx: 3, style: 'fill:url(#heatgrad)', class: 'legend-bar' }, tg);
+      const a = el('text', { x: 0, y: 28, class: 't dim', 'font-size': 12 }, tg); a.textContent = o.left || 'off';
+      const b = el('text', { x: W, y: 28, class: 't dim', 'font-size': 12, 'text-anchor': 'end' }, tg); b.textContent = o.right || 'brightest';
+      return {};
+    },
+  },
+
   // A static polyline through world points (relative to the anchor).
   path: {
     build(g, o) {
@@ -425,6 +482,9 @@ export const EXTENT = {
   room: o => { const h = (o.size || 2.2) / 2; const pts = []; for (const x of [-h, h]) for (const y of [-h, h]) for (const z of [-h, h]) pts.push([x, y, z]); return { pts }; },
   flash: () => ({ lb: [-0.95, -0.95, 0.95, 0.95] }),
   path: o => ({ pts: o.pts }),
+  bins: () => ({ px: [0, -24, 4 * 52 + 3 * 10, 92] }),
+  strip: o => ({ px: [-8, -28, (o.wpx || 260) + 8, 128] }),
+  legend: o => ({ px: [0, 0, o.wpx || 150, 34] }),
   trap: o => { const w = o.w || 2, h = Math.max(o.h0 || 0.8, o.h1 || 2.4) / 2; return { lb: [0, -h, w, h], px: o.label ? [-40, 0, 40, 24] : null, pxLocal: [w / 2, h] }; },
   shelf: o => ({ lb: [-0.3, -0.3, ((o.n || 10) - 1) * (o.gap ?? 0.42) + 0.3, 0.3], px: o.label ? [-8 - textW(o.label, 12), -8, 0, 8] : null, pxLocal: [-0.4, 0] }),
   splitbar: o => ({ px: [0, 0, o.wpx || 180, 36] }),
@@ -438,6 +498,9 @@ function drawGlyph(g, kind) {
     el('path', { d: 'M-24 6 Q0 -26 24 6 M-14 -9 L-14 12 M14 -9 L14 12 M-26 12 L26 12', class: 'glyph', style: `stroke:${col('bridge')}` }, g);
   } else if (kind === 'code') {
     const t = el('text', { y: 4, class: 't mono glyph-text', 'text-anchor': 'middle', 'font-size': 18, 'font-weight': 700 }, g); t.textContent = '{ ! }';
+  } else if (kind === 'photo') {
+    el('rect', { x: -26, y: -24, width: 52, height: 36, rx: 3, class: 'photo-frame' }, g);
+    el('path', { d: 'M-20 6 Q0 -18 20 6 M-11 -6 L-11 10 M11 -6 L11 10', class: 'glyph', style: `stroke:${col('bridge')}` }, g);
   } else if (kind === 'sad') {
     el('path', { d: 'M0 -20 C 10 -6 12 2 0 10 C -12 2 -10 -6 0 -20 Z', style: `fill:${col('raw')}` }, g);
   }

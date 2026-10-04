@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T01:50:59.505Z",
+ "generated": "2026-10-04T03:55:05.881Z",
  "runs": [
   {
    "browser": "chromium",
@@ -130,6 +130,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/320x568/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/320x568/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/320x568/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/320x568/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/320x568/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/320x568/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/320x568/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -263,6 +312,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/360x800/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/360x800/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/360x800/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/360x800/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/360x800/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/360x800/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/360x800/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -396,6 +494,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/390x844/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/390x844/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/390x844/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/390x844/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/390x844/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/390x844/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/390x844/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -529,6 +676,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/430x932/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/430x932/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/430x932/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/430x932/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/430x932/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/430x932/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/430x932/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -662,6 +858,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/844x390/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/844x390/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/844x390/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/844x390/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/844x390/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/844x390/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/844x390/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -795,6 +1040,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/1440x900/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/1440x900/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/1440x900/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/1440x900/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/1440x900/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/1440x900/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/1440x900/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -928,6 +1222,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/390x844-dark/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/390x844-dark/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/390x844-dark/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/390x844-dark/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/390x844-dark/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/390x844-dark/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/390x844-dark/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -1061,6 +1404,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/1440x900-dark/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/1440x900-dark/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/1440x900-dark/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/1440x900-dark/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/1440x900-dark/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/1440x900-dark/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/1440x900-dark/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -1194,6 +1586,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/390x844-reduced/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/390x844-reduced/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/390x844-reduced/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/390x844-reduced/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/390x844-reduced/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/390x844-reduced/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/390x844-reduced/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -1327,6 +1768,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/chromium/1440x900-reduced/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/chromium/1440x900-reduced/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/chromium/1440x900-reduced/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/chromium/1440x900-reduced/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/chromium/1440x900-reduced/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/chromium/1440x900-reduced/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/chromium/1440x900-reduced/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -1460,6 +1950,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/320x568/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/320x568/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/320x568/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/320x568/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/320x568/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/320x568/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/320x568/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -1593,6 +2132,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/360x800/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/360x800/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/360x800/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/360x800/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/360x800/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/360x800/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/360x800/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -1726,6 +2314,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/390x844/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/390x844/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/390x844/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/390x844/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/390x844/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/390x844/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/390x844/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -1859,6 +2496,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/430x932/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/430x932/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/430x932/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/430x932/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/430x932/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/430x932/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/430x932/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -1992,6 +2678,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/844x390/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/844x390/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/844x390/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/844x390/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/844x390/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/844x390/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/844x390/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -2125,6 +2860,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/1440x900/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/1440x900/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/1440x900/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/1440x900/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/1440x900/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/1440x900/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/1440x900/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -2258,6 +3042,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/390x844-dark/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/390x844-dark/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/390x844-dark/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/390x844-dark/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/390x844-dark/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/390x844-dark/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/390x844-dark/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -2391,6 +3224,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/1440x900-dark/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/1440x900-dark/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/1440x900-dark/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/1440x900-dark/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/1440x900-dark/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/1440x900-dark/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/1440x900-dark/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -2524,6 +3406,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/390x844-reduced/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/390x844-reduced/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/390x844-reduced/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/390x844-reduced/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/390x844-reduced/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/390x844-reduced/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/390x844-reduced/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []
@@ -2657,6 +3588,55 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-2"
+    },
+    {
+     "step": "lights",
+     "file": "evidence/shots/webkit/1440x900-reduced/18-lights.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "lights"
+    },
+    {
+     "step": "grading",
+     "file": "evidence/shots/webkit/1440x900-reduced/19-grading.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "grading"
+    },
+    {
+     "step": "languages",
+     "file": "evidence/shots/webkit/1440x900-reduced/20-languages.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "languages"
+    },
+    {
+     "step": "dial",
+     "file": "evidence/shots/webkit/1440x900-reduced/21-dial.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "dial"
+    },
+    {
+     "step": "code",
+     "file": "evidence/shots/webkit/1440x900-reduced/22-code.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "code"
+    },
+    {
+     "step": "neurons",
+     "file": "evidence/shots/webkit/1440x900-reduced/23-neurons.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neurons"
+    },
+    {
+     "step": "recap-3",
+     "file": "evidence/shots/webkit/1440x900-reduced/24-recap-3.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-3"
     }
    ],
    "errors": []

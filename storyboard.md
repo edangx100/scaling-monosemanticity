@@ -327,7 +327,7 @@ That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **New term:** *clamping*. Picture: a dial on a lamp, and the edited list sliding back into the tower. Glossary: "Clamping fixes a feature at a chosen brightness. '10×' means ten times the brightest it got on its own in the researchers' data." [D2]
 - **Scene words:** "clamping" → the dial; "back into the tower" → the returning arrow; "next-word guess" → the roof bars.
 - **Scene / aria:** "The bridge lamp's dial turns to 10×. The rebuilt list, now with a big bridge part, slides back into the tower's middle floor. On the roof, the toy's next-word bars shift toward bridge words. A card tagged 'from the paper' lists four results."
-- **Beats:** (1) the dial turns, 0.6s; (2) the edited list slides back into the tower, 0.7s; (3) the roof bars re-sort, 0.6s; (4) the paper card slides in, 0.4s.
+- **Beats:** (1) the dial turns, 0.6s; (2) the edited list slides back into the tower, 0.7s; (3) the roof bars re-sort, 0.6s. (As built, the paper card is not in the scene: the four results are already the step's bulleted list, and on phones the card crowded out the tower.)
 - **Interaction:** the dial (toy). Bars `TOY`.
 - **Caption:** "How clamping works and what 10× means, §appendix-methods-steering [D1, D2]. Results paraphrased from §assessing-tour-influence [D5–D8]; the last two appear only in the paper's figure. Bars are the toy `TOY`; no text on this page is Claude's output."
 

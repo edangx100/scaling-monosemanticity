@@ -254,6 +254,9 @@ SCENES['recap-1'] = () => {
   };
 };
 
+// Shared with later acts so the same street, tower and snapshot carry over.
+export { tiles, floors, climbAt, tileTop, column, middleLabel, SIDE, TOWER, STREET, roofZ, add3 };
+
 /** Toy values the copy refers to ({toy:name}). */
 export const TOY_VALUES = {
   closestAngle: () => String(Math.round(toy.closestPair().angle)),

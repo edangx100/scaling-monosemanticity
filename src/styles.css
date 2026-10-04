@@ -151,6 +151,8 @@ kbd { font: 12px var(--f-mono); border: 1px solid var(--line-2); border-bottom-w
 .gl-note b { color: var(--ink); }
 .gl-note p { margin: 4px 0 0; font-size: 14px; }
 
+ul.results { margin: -4px 0 12px; padding-left: 1.2em; color: var(--ink-2); }
+ul.results li { margin: 4px 0; }
 details.maths { margin: 4px 0 10px; font-size: 15px; }
 details.maths summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; color: var(--ink-2); font-weight: 600; }
 details.maths code { font: 14px var(--f-mono); }
@@ -236,6 +238,18 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 .stage-svg .gate { stroke: var(--machine); stroke-width: 3; stroke-linecap: round; }
 .stage-svg .t.gap-text { fill: var(--gap); }
 .stage-svg .t.halo { paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
+
+.stage-svg .bin { fill: none; stroke: var(--ink-3); stroke-width: 1.5; }
+.stage-svg .dot { fill: var(--ink-3); }
+.stage-svg .dot-good { fill: var(--cite); }
+.stage-svg .dot-lamp { fill: var(--lamp); }
+.stage-svg .strip-shade { fill: var(--cite); }
+.stage-svg .strip-axis { stroke: var(--ink-3); stroke-width: 1.5; }
+.stage-svg .strip-line { stroke: var(--ink); stroke-width: 2; stroke-dasharray: 5 3; }
+.stage-svg .photo-frame { fill: none; stroke: var(--ink-3); stroke-width: 2; }
+.stage-svg .heat-0 { stop-color: var(--panel); }
+.stage-svg .heat-1 { stop-color: var(--bridge); }
+.stage-svg .legend-bar { stroke: var(--ink-3); stroke-width: 1; }
 
 /* highlight from a scene word: dim the rest, outline and pulse the match */
 .stage-svg .obj > .in { transition: opacity .2s; }

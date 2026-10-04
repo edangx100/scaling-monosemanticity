@@ -3,7 +3,7 @@
 // words highlight scene objects, glossary terms open notes.
 
 import { Stage, reducedMotion } from './engine/stage.js';
-import { SCENES, directionsObjs, tugObjs, trainingObjs } from './scenes/index.js';
+import { SCENES, directionsObjs, tugObjs, trainingObjs, clampObjs } from './scenes/index.js';
 import { TRAINED } from './toy/trained.js';
 import { makeTrainer, directions } from './toy/train.js';
 import { SENTENCE } from './toy/model.js';
@@ -203,6 +203,19 @@ $$('[data-control="lambda-slider"]').forEach(input => {
     if (i !== active) activate(i);
     stage.finish();
     stage.patch(tugObjs(idx));
+  });
+});
+
+$$('[data-control="clamp-dial"]').forEach(input => {
+  const out = document.getElementById(`out-${input.closest('.step').dataset.step}`);
+  input.addEventListener('input', () => {
+    const v = +input.value, txt = `${v < 0 ? '−' + Math.abs(v) : v}×`;
+    out.textContent = txt;
+    input.setAttribute('aria-valuetext', `${v} times`);
+    const i = steps.indexOf(input.closest('.step'));
+    if (i !== active) activate(i);
+    stage.finish();
+    stage.patch(clampObjs(v));
   });
 });
 
