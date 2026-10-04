@@ -77,13 +77,13 @@ That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **Takeaway:** The list changes floor by floor; the paper studies snapshots from the middle floor.
 - **New term:** *layer*. Picture: the tower's floors. Glossary: "A layer is one processing step. The model passes the list through many of them in order."
 - **Scene words:** "middle floor" → the highlighted slab; "snapshot" → the camera flash.
-- **Scene / aria:** "The camera pans to a tower. Each tile's column climbs floor by floor, its bars shifting a little at each one. At the middle floor a small camera flashes and a copy of the column slides out to the side."
+- **Scene / aria:** "The camera pans to a tower. The Bridge tile's column climbs floor by floor, its bars shifting a little at each one. At the middle floor a small camera flashes and a copy of the column slides out to the side." (As built, only the Bridge column climbs, for clarity.)
 - **Beats:** (1) pan to the tower, 0.6s; (2) the column climbs, bars nudging at each floor, 1.2s; (3) flash and copy at the middle floor, 0.5s.
 - **Caption:** "The paper studies the residual stream halfway through the model, §scaling-sae-experiments [A3]. Floor count drawn `SCHEMATIC`; the real count isn't reported [A2]."
 
 ### P4 · The top floor makes a guess
 **Body**
-> At the top of the tower, the list is turned into the model's real job: a guess at the next word, as a set of odds. [M1]
+> At the top of the tower, the list is turned into the model's real job: a guess at the next word, as a set of odds. This is called next-word prediction. [M1]
 >
 > "We drove across the Golden Gate Bridge at…" Our toy's guesses: sunset, night, dawn. Write the winner down, add it to the text, and go round again.
 
@@ -156,7 +156,7 @@ That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 ### Recap I · So far
 > Words become tiles, tiles become lists of numbers, and the lists climb a tower toward a next-word guess. At the middle floor, single slots are a jumble because many ideas share the same space.
 >
-> To read the model, we need a tool that pulls the overlapping ideas back apart.
+> To read the model, we need a tool that pulls the overlapping ideas back apart. That's Act II.
 
 - **Scene / aria:** "Zoomed out: the tile street, the tower with its middle floor lit and odds on the roof, and the crowded room floating beside it."
 - **Beats:** camera pulls back, 1.0s; each item gets a 0.3s outline in turn.
@@ -180,7 +180,7 @@ That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 
 ### II-2 · Widen
 **Body**
-> A sparse autoencoder, or SAE, is a small machine that finds these features. For now, assume it has already learned them; II-5 shows how.
+> A sparse autoencoder, or SAE, is a small machine that finds these features. For now, assume it has already learned them; you'll see how in three steps.
 >
 > Its first half, the encoder, spreads the toy's 3 numbers into a longer row of 8: one lamp per idea. It needs more lamps than numbers because there are more ideas than numbers. [A11] Each lamp gets a score: how much of its idea the list seems to hold.
 
@@ -546,4 +546,5 @@ Every bracketed ID above exists in `research/facts.md` (checked by script). Chan
 11. **Act I order:** directions before superposition.
 12. **λ = 5** is moved from the body to the caption, since it's meaningless without the paper's scaling [A9].
 13. **Checkpoint 1 changes:** the three-dictionaries step was folded into the receipts step (II-7); III-3 gains a Chinese tile in the system font stack; the background definitions (M) are cited to *Toy Models* or *Towards Monosemanticity* where they come from there.
-14. **Additions** from the beginner review: P4 next-word guess [M1]; II-5 training [M7]; III-4 "put the edited list back" [D1]; IV-4 ablation via the John example [I4, I5]; V-3 self-questions [J16]. Each is a background statement or a `facts.md` value.
+14. **Copy changes made while building** (Phases 1–2): P4 adds "This is called next-word prediction." so the glossary term appears in the text; Recap I ends "That's Act II."; II-2 says "you'll see how in three steps" instead of naming II-5; II-1's caption carries the smoothie analogy's limit; II-6's scene adds a toy readout "features that match an idea: N of 8". The toy SAE is trained at λ = 0.3, the setting at which it recovers all 8 hidden ideas; the paper's λ = 5 stays in the caption with its caveat [A9].
+15. **Additions** from the beginner review: P4 next-word guess [M1]; II-5 training [M7]; III-4 "put the edited list back" [D1]; IV-4 ablation via the John example [I4, I5]; V-3 self-questions [J16]. Each is a background statement or a `facts.md` value.

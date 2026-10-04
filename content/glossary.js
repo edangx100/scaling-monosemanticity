@@ -11,4 +11,12 @@ export const GLOSSARY = {
   polysemantic: { term: 'Polysemantic', pic: 'cards', def: 'One unit responds to several unrelated things.', more: 'Defined this way in Towards Monosemanticity (2023).' },
   direction: { term: 'Direction', pic: 'arrow', def: 'A way to point in the space of number lists. Moving along it turns one idea up.' },
   superposition: { term: 'Superposition', pic: 'arrows', def: 'Storing more ideas than there are numbers, by giving each idea its own direction even though the directions overlap.', more: 'In high dimensions, very many directions can be almost perpendicular (Toy Models of Superposition, 2022).' },
+  feature: { term: 'Feature', pic: 'lamp', def: 'One learned ingredient: a direction that stands for one idea. We draw it as a lamp on an arrow.' },
+  sae: { term: 'Sparse autoencoder (SAE)', pic: 'funnel', def: 'A small machine trained to rebuild the model’s lists from a few features at a time. Its two halves are the encoder and the decoder.' },
+  encoder: { term: 'Encoder', pic: 'funnel', def: 'The half of the SAE that turns the model’s list into one score per feature.' },
+  relu: { term: 'ReLU', pic: 'gate', def: 'A rule that keeps positive numbers and turns negative ones into zero.' },
+  decoder: { term: 'Decoder', pic: 'funnel', def: 'The half of the SAE that adds the lit features back up to rebuild the list.' },
+  training: { term: 'Training', pic: 'arrows', def: 'Repeating a small adjustment many times, each one making the machine a little better at its task.' },
+  loss: { term: 'Loss', pic: 'rope', def: 'A score for how badly the SAE is doing; training makes it smaller.', more: 'λ (lambda) is the knob that sets how much using many lamps counts against it.' },
+  dead: { term: 'Dead feature', pic: 'shelf', def: 'A feature that never switches on, so it’s wasted space. The authors expect better training to reduce this.' },
 };

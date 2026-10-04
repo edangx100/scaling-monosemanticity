@@ -114,6 +114,43 @@ try {
       await ctx.close();
     }
 
+    // ---- Act II: λ slider, maths toggle, live training replay ----
+    {
+      const ctx = await browser.newContext(contextOptions(name, { width: 390, height: 844 }));
+      const page = await ctx.newPage();
+      const errors = []; page.on('pageerror', e => errors.push(e.message));
+      await page.goto(server.url, { waitUntil: 'networkidle' });
+
+      await showStep(page, await idx(page, 'tug'));
+      const knot = () => page.evaluate(() => document.querySelector('[data-id="knot"] text').textContent);
+      const before = await knot();
+      await page.locator('#ctl-tug').fill('0'); await page.waitForTimeout(100);
+      const after = await knot();
+      const out = await page.locator('#out-tug').textContent();
+      check(name, 'II-6 λ slider moves the knot and updates the readout', before !== after && after.includes('λ = 0') && out === '0', `${before} → ${after}`);
+
+      await showStep(page, await idx(page, 'relu'));
+      const sum = page.locator('#step-relu details.maths summary');
+      await sum.tap(); await page.waitForTimeout(100);
+      check(name, '“Show the maths” opens', await page.evaluate(() => document.querySelector('#step-relu details.maths').open));
+
+      await showStep(page, await idx(page, 'training'));
+      if (name === 'chromium') await page.evaluate(() => { window.__long = []; try { new PerformanceObserver(l => l.getEntries().forEach(e => window.__long.push(Math.round(e.duration)))).observe({ type: 'longtask' }); } catch {} });
+      await page.locator('#step-training [data-replay]').tap();
+      // Live training shows rounds that the saved keyframes (0, 40, 150, 400, 1500) never do.
+      const rounds = [];
+      for (let k = 0; k < 40; k++) { rounds.push(+(await page.evaluate(() => document.querySelector('[data-id="round"] text').textContent.replace('round ', '')))); if (rounds.at(-1) === 1500) break; await page.waitForTimeout(100); }
+      const keyframes = new Set([0, 40, 150, 400, 1500]);
+      const live = rounds.filter(r => !keyframes.has(r));
+      check(name, 'II-5 Replay retrains the toy live, round by round, to round 1500', live.length >= 3 && rounds.at(-1) === 1500 && rounds.every((r, k) => k === 0 || r >= rounds[k - 1]), `${rounds.slice(0, 6).join(', ')} … ${rounds.at(-1)}`);
+      if (name === 'chromium') {
+        const long = await page.evaluate(() => window.__long || []);
+        check(name, 'live training causes no long tasks (>50 ms) on the main thread', long.length === 0, long.length ? long.join(',') + ' ms' : 'none');
+      }
+      check(name, 'no console errors (Act II)', errors.length === 0, errors.join(' | '));
+      await ctx.close();
+    }
+
     // ---- regression: no oversized-text flash, no step flip-flop mid-scroll ----
     // Real smooth scrolling (no __instant), dark mode, stepping through every step.
     {

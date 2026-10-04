@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T11:33:19.791Z",
+ "generated": "2026-10-04T01:50:59.505Z",
  "runs": [
   {
    "browser": "chromium",
@@ -74,6 +74,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/320x568/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/320x568/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/320x568/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/320x568/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/320x568/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/320x568/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/320x568/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/320x568/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -151,6 +207,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/360x800/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/360x800/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/360x800/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/360x800/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/360x800/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/360x800/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/360x800/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/360x800/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -228,6 +340,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/390x844/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/390x844/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/390x844/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/390x844/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/390x844/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/390x844/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/390x844/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/390x844/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -305,6 +473,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/430x932/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/430x932/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/430x932/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/430x932/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/430x932/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/430x932/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/430x932/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/430x932/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -382,6 +606,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/844x390/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/844x390/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/844x390/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/844x390/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/844x390/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/844x390/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/844x390/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/844x390/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -459,6 +739,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/1440x900/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/1440x900/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/1440x900/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/1440x900/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/1440x900/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/1440x900/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/1440x900/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/1440x900/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -536,6 +872,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/390x844-dark/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/390x844-dark/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/390x844-dark/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/390x844-dark/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/390x844-dark/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/390x844-dark/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/390x844-dark/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/390x844-dark/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -613,6 +1005,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/1440x900-dark/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/1440x900-dark/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/1440x900-dark/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/1440x900-dark/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/1440x900-dark/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/1440x900-dark/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/1440x900-dark/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/1440x900-dark/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -690,6 +1138,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/390x844-reduced/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/390x844-reduced/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/390x844-reduced/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/390x844-reduced/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/390x844-reduced/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/390x844-reduced/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/390x844-reduced/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/390x844-reduced/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -767,6 +1271,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/chromium/1440x900-reduced/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/chromium/1440x900-reduced/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/chromium/1440x900-reduced/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/chromium/1440x900-reduced/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/chromium/1440x900-reduced/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/chromium/1440x900-reduced/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/chromium/1440x900-reduced/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/chromium/1440x900-reduced/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -844,6 +1404,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/320x568/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/320x568/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/320x568/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/320x568/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/320x568/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/320x568/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/320x568/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/320x568/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -921,6 +1537,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/360x800/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/360x800/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/360x800/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/360x800/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/360x800/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/360x800/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/360x800/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/360x800/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -998,6 +1670,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/390x844/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/390x844/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/390x844/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/390x844/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/390x844/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/390x844/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/390x844/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/390x844/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -1075,6 +1803,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/430x932/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/430x932/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/430x932/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/430x932/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/430x932/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/430x932/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/430x932/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/430x932/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -1152,6 +1936,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/844x390/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/844x390/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/844x390/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/844x390/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/844x390/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/844x390/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/844x390/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/844x390/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -1229,6 +2069,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/1440x900/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/1440x900/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/1440x900/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/1440x900/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/1440x900/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/1440x900/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/1440x900/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/1440x900/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -1306,6 +2202,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/390x844-dark/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/390x844-dark/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/390x844-dark/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/390x844-dark/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/390x844-dark/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/390x844-dark/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/390x844-dark/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/390x844-dark/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -1383,6 +2335,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/1440x900-dark/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/1440x900-dark/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/1440x900-dark/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/1440x900-dark/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/1440x900-dark/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/1440x900-dark/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/1440x900-dark/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/1440x900-dark/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -1460,6 +2468,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/390x844-reduced/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/390x844-reduced/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/390x844-reduced/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/390x844-reduced/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/390x844-reduced/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/390x844-reduced/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/390x844-reduced/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/390x844-reduced/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []
@@ -1537,6 +2601,62 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-1"
+    },
+    {
+     "step": "ingredients",
+     "file": "evidence/shots/webkit/1440x900-reduced/10-ingredients.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ingredients"
+    },
+    {
+     "step": "widen",
+     "file": "evidence/shots/webkit/1440x900-reduced/11-widen.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "widen"
+    },
+    {
+     "step": "relu",
+     "file": "evidence/shots/webkit/1440x900-reduced/12-relu.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "relu"
+    },
+    {
+     "step": "rebuild",
+     "file": "evidence/shots/webkit/1440x900-reduced/13-rebuild.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "rebuild"
+    },
+    {
+     "step": "training",
+     "file": "evidence/shots/webkit/1440x900-reduced/14-training.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "training"
+    },
+    {
+     "step": "tug",
+     "file": "evidence/shots/webkit/1440x900-reduced/15-tug.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "tug"
+    },
+    {
+     "step": "receipts",
+     "file": "evidence/shots/webkit/1440x900-reduced/16-receipts.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "receipts"
+    },
+    {
+     "step": "recap-2",
+     "file": "evidence/shots/webkit/1440x900-reduced/17-recap-2.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-2"
     }
    ],
    "errors": []

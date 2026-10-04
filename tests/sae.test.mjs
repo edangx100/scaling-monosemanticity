@@ -2,8 +2,8 @@
 // short training run that must recover the toy's hidden ideas.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { initSAE, loss, grads, rng, sampleBatch, adam, decoderDir } from '../src/toy/sae.js';
-import { DIRS, CONCEPTS } from '../src/toy/model.js';
+import { initSAE, loss, grads, rng, sampleBatch } from '../src/toy/sae.js';
+import { makeTrainer, recovered, TOY_TRAINING } from '../src/toy/train.js';
 
 const clone = p => JSON.parse(JSON.stringify(p));
 
@@ -35,20 +35,13 @@ for (const lambda of [0, 0.3]) {
   });
 }
 
-test('training recovers the 8 hidden ideas', () => {
-  const p = initSAE({ seed: 5 });
-  const step = adam(p, { lr: 0.02 });
-  const r = rng(21);
-  const before = loss(p, sampleBatch(rng(99), 256), 0.05).total;
-  for (let it = 0; it < 1500; it++) step(grads(p, sampleBatch(r, 64), 0.05));
-  const after = loss(p, sampleBatch(rng(99), 256), 0.05).total;
-  assert.ok(after < before * 0.5, `loss ${before} → ${after}`);
-  // Each hidden idea should have a learned decoder direction within ~25°.
-  const dirs = Array.from({ length: p.F }, (_, i) => decoderDir(p, i));
-  let matched = 0;
-  for (const c of CONCEPTS) {
-    const best = Math.max(...dirs.map(d => d.reduce((s, v, k) => s + v * DIRS[c.id][k], 0)));
-    if (best > Math.cos(25 * Math.PI / 180)) matched++;
+test('training recovers the 8 hidden ideas (toy settings, any seed)', () => {
+  for (const seed of [1, 2, 5]) {
+    const t = makeTrainer({ seed });
+    const before = loss(t.params, sampleBatch(rng(99), 256, { p: 0.1 }), 0.3).total;
+    t.step(TOY_TRAINING.steps);
+    const after = loss(t.params, sampleBatch(rng(99), 256, { p: 0.1 }), 0.3).total;
+    assert.ok(after < before * 0.5, `seed ${seed}: loss ${before} → ${after}`);
+    assert.equal(recovered(t.params, 15), 8, `seed ${seed}`);
   }
-  assert.ok(matched >= 6, `only ${matched}/8 ideas recovered`);
 });

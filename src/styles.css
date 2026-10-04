@@ -63,7 +63,6 @@ a { color: var(--w-raw); text-underline-offset: 3px; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 .skip { position: absolute; left: 8px; top: -60px; z-index: 50; background: var(--panel); padding: 10px 14px; border-radius: 8px; }
 .skip:focus { top: 8px; }
-.nw { white-space: nowrap; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* ---------- story layout (phones: scene on top, steps beneath) ---------- */
@@ -128,8 +127,9 @@ kbd { font: 12px var(--f-mono); border: 1px solid var(--line-2); border-bottom-w
 
 /* scene words and glossary terms */
 .sw {
-  font: inherit; font-weight: 650; background: none; border: 0; padding: 0; margin: 0; cursor: pointer;
+  font-weight: 650; cursor: pointer;
   color: var(--sw-c, var(--w-ink));
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
   text-decoration: underline solid 2px; text-decoration-color: color-mix(in oklab, var(--sw-c, var(--w-ink)) 45%, transparent); text-underline-offset: 4px;
   border-radius: 3px; touch-action: manipulation; -webkit-tap-highlight-color: transparent;
 }
@@ -142,7 +142,8 @@ kbd { font: 12px var(--f-mono); border: 1px solid var(--line-2); border-bottom-w
 .sw[data-c="ink"] { --sw-c: var(--w-ink); }
 @media (hover: hover) { .sw:hover { background: color-mix(in oklab, var(--sw-c, var(--ink)) 10%, transparent); } }
 .gl {
-  font: inherit; color: var(--ink); background: none; border: 0; padding: 0; margin: 0; cursor: pointer;
+  color: var(--ink); cursor: pointer;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
   text-decoration: underline dotted 2px; text-decoration-color: var(--ink-3); text-underline-offset: 4px; touch-action: manipulation;
 }
 .gl[aria-expanded="true"] { background: color-mix(in oklab, var(--ink) 8%, transparent); }
@@ -217,6 +218,24 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 .stage-svg .seg-a-text { fill: var(--w-lamp); }
 .stage-svg .seg-b-text { fill: var(--gap); }
 .stage-svg .seg-c-text { fill: var(--w-raw); }
+
+.stage-svg .arrow-shaft.dashed { stroke-dasharray: 5 4; }
+.stage-svg .trap { opacity: .85; }
+.stage-svg .trap-label { fill: var(--w-machine); }
+.stage-svg .shelf-board { stroke: var(--ink-3); stroke-width: 2; }
+.stage-svg .shelf-lamp { fill: var(--panel); stroke: var(--lamp); stroke-width: 1.4; }
+.stage-svg .shelf-dead { fill: var(--dead); }
+.stage-svg .shelf-x { stroke: var(--ink-3); stroke-width: 1.4; }
+.stage-svg .shelf-lit { fill: var(--lamp); }
+.stage-svg .shelf-halo { fill: var(--lamp); opacity: .3; }
+.stage-svg .split-track { fill: var(--frame); }
+.stage-svg .split-missed { fill: url(#hatch); }
+.stage-svg .hatch-bg { fill: color-mix(in oklab, var(--gap) 18%, var(--panel)); }
+.stage-svg .hatch-line { stroke: var(--gap); stroke-width: 2.5; }
+.stage-svg .path.rope { stroke: var(--ink-2); stroke-width: 3; stroke-dasharray: 2 3; }
+.stage-svg .gate { stroke: var(--machine); stroke-width: 3; stroke-linecap: round; }
+.stage-svg .t.gap-text { fill: var(--gap); }
+.stage-svg .t.halo { paint-order: stroke; stroke: var(--bg); stroke-width: 6px; stroke-linejoin: round; }
 
 /* highlight from a scene word: dim the rest, outline and pulse the match */
 .stage-svg .obj > .in { transition: opacity .2s; }

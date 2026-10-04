@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { STEPS } from '../content/steps.js';
 import { GLOSSARY } from '../content/glossary.js';
-import { SCENES } from '../src/scenes/slice.js';
+import { SCENES } from '../src/scenes/index.js';
 import { renderPage } from '../scripts/render.mjs';
 
 for (const step of STEPS) {
@@ -28,7 +28,7 @@ for (const step of STEPS) {
 test('every technical term is introduced with a glossary note on first use', () => {
   const seen = new Set();
   for (const step of STEPS) for (const [, term] of step.body.join(' ').matchAll(/\{\{([\w-]+)\|/g)) seen.add(term);
-  for (const term of ['token', 'vector', 'layer', 'next', 'neuron', 'polysemantic', 'direction', 'superposition']) assert.ok(seen.has(term), term);
+  for (const term of ['token', 'vector', 'layer', 'next', 'neuron', 'polysemantic', 'direction', 'superposition', 'feature', 'sae', 'encoder', 'relu', 'decoder', 'training', 'loss', 'dead']) assert.ok(seen.has(term), term);
 });
 
 test('the page renders with no unresolved marks', async () => {

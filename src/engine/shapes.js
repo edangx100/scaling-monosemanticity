@@ -175,14 +175,15 @@ export const TYPES = {
   arrow: {
     build(g, o) {
       const shaft = el('g', {}, g);
-      el('line', { x1: 0, y1: 0, x2: 1, y2: 0, class: 'arrow-shaft', style: `stroke:${col(o.c || 'lamp')}`, 'stroke-width': o.sw ?? 3, 'vector-effect': 'non-scaling-stroke' }, shaft);
+      el('line', { x1: 0, y1: 0, x2: 1, y2: 0, class: `arrow-shaft${o.dash ? ' dashed' : ''}`, style: `stroke:${col(o.c || 'lamp')}`, 'stroke-width': o.sw ?? 3, 'vector-effect': 'non-scaling-stroke' }, shaft);
       const head = el('g', {}, g);
       if (!o.nohead) el('polygon', { points: '0,0 -0.26,-0.11 -0.26,0.11', style: `fill:${col(o.c || 'lamp')}` }, head);
       let tip = null, label = null;
       if (o.lamp) {
         tip = el('g', {}, g);
-        el('circle', { r: 0.42, style: `fill:${col(o.c || 'lamp')}`, opacity: 0.25 }, tip);
-        el('circle', { r: 0.2, style: `fill:${col(o.c || 'lamp')}` }, tip);
+        const tr = o.tipR ?? 0.2;
+        el('circle', { r: tr * 2.1, style: `fill:${col(o.c || 'lamp')}`, opacity: 0.25 }, tip);
+        el('circle', { r: tr, style: `fill:${col(o.c || 'lamp')}` }, tip);
       }
       if (o.label) {
         label = el('g', { class: 'fixed' }, g);
@@ -197,7 +198,7 @@ export const TYPES = {
       const headLen = o.nohead ? 0 : Math.min(0.26, L * 0.5);
       h.shaft.setAttribute('transform', `rotate(${f2(ang)}) scale(${f2(Math.max(0, L - headLen * 0.6))},1)`);
       h.head.setAttribute('transform', `translate(${f2(sx)},${f2(sy)}) rotate(${f2(ang)}) scale(${f2(L > 0.05 ? 1 : 0)})`);
-      if (h.tip) h.tip.setAttribute('transform', `translate(${f2(sx + Math.cos(ang * Math.PI / 180) * 0.3)},${f2(sy + Math.sin(ang * Math.PI / 180) * 0.3)})`);
+      if (h.tip) { const off = (o.tipR ?? 0.2) * 1.5; h.tip.setAttribute('transform', `translate(${f2(sx + Math.cos(ang * Math.PI / 180) * off)},${f2(sy + Math.sin(ang * Math.PI / 180) * off)})`); }
       if (h.label) {
         const ux = Math.cos(ang * Math.PI / 180), uy = Math.sin(ang * Math.PI / 180);
         h.label.dataset.x = sx + ux * 0.6 + (o.lx ?? 0);
@@ -338,6 +339,61 @@ export const TYPES = {
     build(g) { el('circle', { r: 0.9, class: 'flash', 'vector-effect': 'non-scaling-stroke' }, g); return {}; },
   },
 
+  // One half of the SAE funnel, facing the reader: a trapezoid from a narrow
+  // mouth (h0) to a wide end (h1) over length w. dir 1 widens to the right.
+  trap: {
+    build(g, o) {
+      const w = o.w || 2, h0 = o.h0 || 0.8, h1 = o.h1 || 2.4, d = o.dir ?? 1;
+      const [x0, x1] = d > 0 ? [0, w] : [w, 0];
+      el('polygon', { points: `${x0},${-h0 / 2} ${x1},${-h1 / 2} ${x1},${h1 / 2} ${x0},${h0 / 2}`, class: 'trap', style: `fill:${col(o.c || 'machine')}` }, g);
+      if (o.label) { const lg = el('g', { class: 'fixed', 'data-x': w / 2, 'data-y': Math.max(h0, h1) / 2 }, g); fixedText(lg, o.label, { size: 12, weight: 600, dy: '1.3em', cls: 'trap-label' }); }
+      return {};
+    },
+  },
+
+  // A shelf of n small lamps (one drawn lamp stands for many features).
+  // dead: share greyed with an ×, shown with deadO (0..1); lit: indices that
+  // blink on with litO (0..1). Only two groups animate.
+  shelf: {
+    build(g, o) {
+      const n = o.n || 10, gap = o.gap ?? 0.42, r = 0.13;
+      el('line', { x1: -0.25, y1: 0.24, x2: (n - 1) * gap + 0.25, y2: 0.24, class: 'shelf-board', 'vector-effect': 'non-scaling-stroke' }, g);
+      const base = el('g', {}, g), dead = el('g', {}, g), lit = el('g', {}, g);
+      const nDead = Math.round(n * (o.dead || 0)), litSet = new Set(o.lit || []);
+      for (let i = 0; i < n; i++) {
+        const x = i * gap;
+        el('circle', { cx: x, cy: 0, r, class: 'shelf-lamp', 'vector-effect': 'non-scaling-stroke' }, base);
+        if (i >= n - nDead) {
+          el('circle', { cx: x, cy: 0, r: r * 1.05, class: 'shelf-dead' }, dead);
+          el('path', { d: `M${x - r * 0.6},${-r * 0.6} L${x + r * 0.6},${r * 0.6} M${x + r * 0.6},${-r * 0.6} L${x - r * 0.6},${r * 0.6}`, class: 'shelf-x', 'vector-effect': 'non-scaling-stroke' }, dead);
+        } else if (litSet.has(i)) {
+          el('circle', { cx: x, cy: 0, r: r * 1.9, class: 'shelf-halo' }, lit);
+          el('circle', { cx: x, cy: 0, r, class: 'shelf-lit' }, lit);
+        }
+      }
+      if (o.label) { const lg = el('g', { class: 'fixed', 'data-x': -0.4, 'data-y': 0 }, g); fixedText(lg, o.label, { size: 12, weight: 600, anchor: 'end', dy: '0.35em', cls: 'mono' }); }
+      return { dead, lit };
+    },
+    update(h, o) { h.dead.setAttribute('opacity', (o.deadO ?? 1).toFixed(3)); h.lit.setAttribute('opacity', (o.litO ?? 1).toFixed(3)); },
+  },
+
+  // A pixel-sized bar split into an explained part and a hatched missed part.
+  // share: explained fraction; fill: 0..1 grows it in.
+  splitbar: {
+    build(g, o) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const W = o.wpx || 180, H = 18, share = o.share ?? 0.65;
+      el('rect', { x: 0, y: 0, width: W, height: H, rx: 4, class: 'split-track' }, tg);
+      const grow = el('g', {}, tg);
+      el('rect', { x: 0, y: 0, width: W * share, height: H, rx: 4, style: `fill:${col('raw')}` }, grow);
+      el('rect', { x: W * share, y: 0, width: W * (1 - share), height: H, class: 'split-missed' }, grow);
+      const t1 = el('text', { x: 0, y: H + 15, class: 't', 'font-size': 12 }, tg); t1.textContent = o.left || '';
+      const t2 = el('text', { x: W, y: H + 15, class: 't dim', 'font-size': 12, 'text-anchor': 'end' }, tg); t2.textContent = o.right || '';
+      return { grow };
+    },
+    update(h, o) { h.grow.setAttribute('transform', `scale(${Math.max(0.001, o.fill ?? 1).toFixed(3)},1)`); },
+  },
+
   // A static polyline through world points (relative to the anchor).
   path: {
     build(g, o) {
@@ -362,13 +418,16 @@ export const EXTENT = {
   arrow: o => { const v = o.v || [1, 0, 0], L = o.len ?? 1; const tip = [v[0] * L, v[1] * L, v[2] * L]; return { pts: [[0, 0, 0], tip], px: o.label ? [0, -9, textW(o.label, 12) + 14, 9] : null, pxAt: tip }; },
   label: o => { const w = textW(o.text, o.size || 13), lines = String(o.text).split('\n').length, h = lines * (o.size || 13) * 1.25; const a = o.anchor || 'middle'; const x0 = a === 'start' ? 0 : a === 'end' ? -w : -w / 2; return { px: [x0, -h / 2, x0 + w, h / 2 + (lines - 1) * (o.size || 13) * 0.6] }; },
   bubble: o => { const h = 20 + (o.lines || []).length * 17 + (o.badge ? 22 : 0); return { px: [-(o.w || 200) / 2, -h, (o.w || 200) / 2, 10] }; },
-  meter: o => ({ px: [-12, -(o.hpx || 90), 12, 26 + 0] }),
+  meter: o => { const w = Math.max(12, textW(o.label || '', 12) / 2 + 2); return { px: [-w, -(o.hpx || 90) - 22, w, 26] }; },
   odds: o => ({ px: [-textW('sunset', 12) - 10, -4, (o.wpx || 110) + 40, o.rows.length * 20] }),
   card: () => ({ px: [-44, -46, 44, 46] }),
   bridge: o => { const sp = o.span || 5; return { pts: [[0, 0, 0], [sp, 0, 0], [sp * 0.25, 0, 1.9], [sp * 0.75, 0, 1.9]] }; },
   room: o => { const h = (o.size || 2.2) / 2; const pts = []; for (const x of [-h, h]) for (const y of [-h, h]) for (const z of [-h, h]) pts.push([x, y, z]); return { pts }; },
   flash: () => ({ lb: [-0.95, -0.95, 0.95, 0.95] }),
   path: o => ({ pts: o.pts }),
+  trap: o => { const w = o.w || 2, h = Math.max(o.h0 || 0.8, o.h1 || 2.4) / 2; return { lb: [0, -h, w, h], px: o.label ? [-40, 0, 40, 24] : null, pxLocal: [w / 2, h] }; },
+  shelf: o => ({ lb: [-0.3, -0.3, ((o.n || 10) - 1) * (o.gap ?? 0.42) + 0.3, 0.3], px: o.label ? [-8 - textW(o.label, 12), -8, 0, 8] : null, pxLocal: [-0.4, 0] }),
+  splitbar: o => ({ px: [0, 0, o.wpx || 180, 36] }),
 };
 
 // −5× … +10× mapped to −120° … +120°.

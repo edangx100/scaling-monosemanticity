@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T11:36:29.212Z",
+ "generated": "2026-10-04T01:50:59.104Z",
  "results": [
   {
    "browser": "chromium",
@@ -123,15 +123,45 @@
   },
   {
    "browser": "chromium",
+   "name": "II-6 λ slider moves the knot and updates the readout",
+   "ok": true,
+   "detail": "◆ λ = 0.3 → ◆ λ = 0"
+  },
+  {
+   "browser": "chromium",
+   "name": "“Show the maths” opens",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
+   "ok": true,
+   "detail": "0, 24, 48, 76, 100, 124 … 1500"
+  },
+  {
+   "browser": "chromium",
+   "name": "live training causes no long tasks (>50 ms) on the main thread",
+   "ok": true,
+   "detail": "none"
+  },
+  {
+   "browser": "chromium",
+   "name": "no console errors (Act II)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "9 transitions watched every frame"
+   "detail": "17 transitions watched every frame"
   },
   {
    "browser": "chromium",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2"
   },
   {
    "browser": "chromium",
@@ -261,15 +291,39 @@
   },
   {
    "browser": "webkit",
+   "name": "II-6 λ slider moves the knot and updates the readout",
+   "ok": true,
+   "detail": "◆ λ = 0.3 → ◆ λ = 0"
+  },
+  {
+   "browser": "webkit",
+   "name": "“Show the maths” opens",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
+   "ok": true,
+   "detail": "0, 20, 40, 60, 84, 104 … 1500"
+  },
+  {
+   "browser": "webkit",
+   "name": "no console errors (Act II)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "9 transitions watched every frame"
+   "detail": "17 transitions watched every frame"
   },
   {
    "browser": "webkit",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2"
   },
   {
    "browser": "webkit",

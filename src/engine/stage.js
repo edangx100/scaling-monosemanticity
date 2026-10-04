@@ -11,7 +11,7 @@ const ease = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const lerp = (a, b, t) => a + (b - a) * t;
 
 // Fields that tween. Anything else is "static": changing it rebuilds the node.
-const ANIM = new Set(['at', 'o', 's', 'pxo', 'vals', 'segO', 'hiO', 'on', 'val', 'v', 'len', 'ps', 'flip', 'glow', 'tagO', 'lx', 'ly']);
+const ANIM = new Set(['at', 'o', 's', 'pxo', 'deadO', 'litO', 'fill', 'vals', 'segO', 'hiO', 'on', 'val', 'v', 'len', 'ps', 'flip', 'glow', 'tagO', 'lx', 'ly']);
 const staticKey = o => JSON.stringify(Object.keys(o).filter(k => !ANIM.has(k) && k !== 'id').sort().map(k => [k, o[k]]));
 
 function mix(a, b, t) {
@@ -30,6 +30,11 @@ export class Stage {
     this.svg = el('svg', { class: 'stage-svg', role: 'img', 'aria-labelledby': 'stage-title stage-desc', preserveAspectRatio: 'xMidYMid meet' });
     const t = el('title', { id: 'stage-title' }, this.svg); t.textContent = title;
     this.desc = el('desc', { id: 'stage-desc' }, this.svg);
+    // Hatching for "missed" / error areas (a pattern, not a filter).
+    const defs = el('defs', {}, this.svg);
+    const pat = el('pattern', { id: 'hatch', width: 6, height: 6, patternUnits: 'userSpaceOnUse', patternTransform: 'rotate(45)' }, defs);
+    el('rect', { width: 6, height: 6, class: 'hatch-bg' }, pat);
+    el('line', { x1: 0, y1: 0, x2: 0, y2: 6, class: 'hatch-line' }, pat);
     this.world = el('g', { class: 'world' }, this.svg);
     this.layers = [0, 1, 2, 3].map(i => el('g', { class: `layer l${i}` }, this.world));
     host.appendChild(this.svg);

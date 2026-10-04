@@ -3,7 +3,9 @@
 // words highlight scene objects, glossary terms open notes.
 
 import { Stage, reducedMotion } from './engine/stage.js';
-import { SCENES, directionsObjs } from './scenes/slice.js';
+import { SCENES, directionsObjs, tugObjs, trainingObjs } from './scenes/index.js';
+import { TRAINED } from './toy/trained.js';
+import { makeTrainer, directions } from './toy/train.js';
 import { SENTENCE } from './toy/model.js';
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -45,7 +47,13 @@ function activate(i, { force = false } = {}) {
 }
 
 // ---------- scroll → active step ----------
-const triggerY = () => innerHeight * (mobile.matches ? 0.74 : 0.5);
+// The reading area: below the sticky scene on phones, the whole height on
+// wide screens, above the bottom nav either way.
+function readingArea() {
+  const navTop = stepper.hidden ? innerHeight : stepper.getBoundingClientRect().top;
+  const top = mobile.matches ? $('.stage-wrap').getBoundingClientRect().bottom : 0;
+  return [Math.max(0, top), Math.min(innerHeight, navTop)];
+}
 // While a button/key/link scrolls the page to a step, ignore the steps it
 // passes on the way; otherwise the scene restarts several times mid-scroll.
 let heading = null, headingTimer = 0;
@@ -53,12 +61,18 @@ const release = () => { heading = null; clearTimeout(headingTimer); };
 ['wheel', 'touchstart', 'pointerdown'].forEach(ev => addEventListener(ev, release, { passive: true }));
 addEventListener('keydown', e => { if (!['ArrowLeft', 'ArrowRight'].includes(e.key)) release(); });
 
+// The active step is the one whose card top has passed a line near the top of
+// the reading area (30% down it on phones, the middle on wide screens). A card
+// then stays active until the next card's opening lines arrive, so its own
+// Replay button and controls are always reachable while it's active. (Phone
+// cards can be taller than the reading area, so "most visible card" fails.)
 function pick() {
-  const y = triggerY();
+  const [top, bottom] = readingArea();
+  const line = mobile.matches ? top + 0.3 * (bottom - top) : innerHeight * 0.5;
   let best = 0;
   for (let i = 0; i < steps.length; i++) {
-    const r = steps[i].getBoundingClientRect();
-    if (r.top <= y) best = i; else break;
+    const r = (mobile.matches ? $('.card', steps[i]) : steps[i]).getBoundingClientRect();
+    if (r.top <= line) best = i; else break;
   }
   if (heading != null) { if (best === heading) release(); else return; }
   activate(best);
@@ -92,10 +106,33 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') { e.preventDefault(); go(active - 1); }
 });
 $$('[data-replay]').forEach(b => b.addEventListener('click', () => {
+  // Replay always replays its own step, even if scrolling down to reach the
+  // button has already made the next step active.
   const i = steps.indexOf(b.closest('.step'));
-  if (i !== active) { go(i); return; }
-  clearWords(); stage.replay();
+  if (i !== active) activate(i);
+  clearWords();
+  const sc = sceneFor(steps[i].dataset.step);
+  if (sc && sc.liveReplay) trainLive(i); else stage.replay();
 }));
+
+// II-5's Replay retrains the toy SAE from a new random start, a few rounds
+// per animation frame so scrolling never stutters.
+let liveTimer = 0;
+function trainLive(i) {
+  cancelAnimationFrame(liveTimer);
+  stage.finish();
+  const t = makeTrainer({ seed: 1 + Math.floor(Math.random() * 1e6) });
+  const show = () => stage.patch(trainingObjs(directions(t.params), t.round));
+  if (reducedMotion()) { t.step(t.opts.steps); show(); return; }
+  const tick = () => {
+    if (active !== i) return;               // left the step: stop quietly
+    const done = t.step(t.round < 200 ? 4 : 24);
+    show();
+    if (!done) liveTimer = requestAnimationFrame(tick);
+  };
+  show();
+  liveTimer = requestAnimationFrame(tick);
+}
 
 // ---------- scene words ----------
 let pressed = null;
@@ -123,6 +160,12 @@ if (matchMedia('(hover: hover)').matches) {
   });
 }
 
+// Scene words and glossary terms are inline spans with role="button" (so long
+// phrases wrap like text); give them the keyboard behaviour of a button.
+$$('.sw, .gl').forEach(el => el.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+}));
+
 // ---------- glossary notes ----------
 $$('.gl').forEach(g => g.addEventListener('click', () => {
   const note = document.getElementById(g.getAttribute('aria-controls'));
@@ -148,6 +191,19 @@ $$('[data-control="shadow-slider"]').forEach(input => {
 addEventListener('hashchange', () => {
   const i = steps.findIndex(s => s.dataset.step === location.hash.slice(1));
   if (i >= 0 && i !== active) go(i);
+});
+
+$$('[data-control="lambda-slider"]').forEach(input => {
+  const out = document.getElementById(`out-${input.closest('.step').dataset.step}`);
+  input.addEventListener('input', () => {
+    const idx = +input.value, lam = TRAINED.sweep[idx].lambda;
+    out.textContent = String(lam);
+    input.setAttribute('aria-valuetext', `λ ${lam}`);
+    const i = steps.indexOf(input.closest('.step'));
+    if (i !== active) activate(i);
+    stage.finish();
+    stage.patch(tugObjs(idx));
+  });
 });
 
 // ---------- start ----------
