@@ -110,6 +110,32 @@ SCENES['limits'] = () => {
   };
 };
 
+// ---------- Recap V ----------
+// One small icon per Act V step, in a 2 × 2 grid, each with a short name.
+const RC = [0, -96, 0];
+SCENES['recap-5'] = () => {
+  const cell = (c, r) => add3(RC, add3(across(c * 7), [r * 6.5, r * 6.5, 0]));
+  const name = (id, at, text, k) => ({ id, type: 'label', at, pxo: [0, 34], text, size: 12, weight: 600, layer: 3, k: [k] });
+  const A = cell(0, 0), B = cell(1, 0), C = cell(0, 1), D = cell(1, 1);
+  const objs = [
+    { id: 'r5-cabinet', type: 'box', at: add3(A, [-0.7, -0.5, 0]), w: 1.4, d: 1, h: 2.4, c: 'frame', layer: 1, k: ['sharp5'] },
+    { id: 'r5-lock', type: 'lock', at: add3(A, [0.7, 0.5, 1.4]), pxo: [8, 0], shut: 1, layer: 3, k: ['sharp5'] },
+    name('r5-cabinet-name', A, 'risky ideas, filed', 'sharp5'),
+    { id: 'r5-conflict', type: 'lamp', at: add3(B, [0, 0, 1.0]), pxo: [-18, 0], r: 0.36, c: 'lamp', on: 1, layer: 2, k: ['fib5'] },
+    { id: 'r5-conflict-dial', type: 'dial', at: add3(B, [0, 0, 1.0]), pxo: [24, 0], r: 0.4, val: 2, layer: 2, k: ['fib5'] },
+    name('r5-conflict-name', B, 'internal conflict', 'fib5'),
+    { id: 'r5-persona', type: 'lamp', at: add3(C, [0, 0, 1.0]), r: 0.36, c: 'lamp', on: 0.8, layer: 2, k: ['persona5'] },
+    { id: 'r5-mask', type: 'mask', at: add3(C, [0, 0, 1.0]), lift: 0.4, layer: 3, k: ['persona5'] },
+    { id: 'r5-persona-dial', type: 'dial', at: add3(C, [0, 0, 1.0]), pxo: [42, 0], r: 0.4, val: -2, layer: 2, k: ['persona5'] },
+    name('r5-persona-name', C, 'assistant persona', 'persona5'),
+    { id: 'r5-floor', type: 'plane', at: add3(D, [-1.8, -1.8, 0]), w: 3.6, d: 3.6, c: 'frame', layer: 0, k: ['limits5'] },
+    ...[[-0.8, -0.8], [0.8, -0.8], [-0.8, 0.8], [0.8, 0.8]].map(([x, y], n) => ({ id: `r5-crack-${n}`, type: 'path', at: add3(D, [x, y, 0]), pts: crackPts().map(([a, b, c]) => [a * 0.5, b * 0.5, c]), cls: 'crack', layer: 1, k: ['limits5'] })),
+    { ...name('r5-floor-name', add3(D, [1.8, 1.8, 0]), 'the limits', 'limits5'), pxo: [0, 16] },
+  ];
+  const aria = 'Four small pictures, one per step of Act V: a locked cabinet of risky ideas, the internal-conflict lamp with its dial at 2×, the assistant lamp with its mask lifted and its dial at −2×, and a floor with four cracks for the limits.';
+  return { words: { sharp5: 'ink', fib5: 'lamp', persona5: 'lamp', limits5: 'ink' }, frames: [{ objs, aria, enter: 1.0, cam: { maxS: 34 } }] };
+};
+
 // ---------- Close · A vocabulary, not yet a grammar ----------
 SCENES['close'] = () => {
   // Back to the hook's city and bridge, now ringed by word tiles.

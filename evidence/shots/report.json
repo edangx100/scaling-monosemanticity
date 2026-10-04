@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T14:04:13.775Z",
+ "generated": "2026-10-04T14:38:24.216Z",
  "runs": [
   {
    "browser": "chromium",
@@ -216,43 +216,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/320x568/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/320x568/30-recap-4.png",
+     "file": "evidence/shots/chromium/320x568/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/320x568/31-sharp.png",
+     "file": "evidence/shots/chromium/320x568/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/320x568/32-fib.png",
+     "file": "evidence/shots/chromium/320x568/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/320x568/33-persona.png",
+     "file": "evidence/shots/chromium/320x568/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/320x568/34-limits.png",
+     "file": "evidence/shots/chromium/320x568/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/320x568/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/320x568/35-close.png",
+     "file": "evidence/shots/chromium/320x568/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -487,43 +501,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/360x800/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/360x800/30-recap-4.png",
+     "file": "evidence/shots/chromium/360x800/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/360x800/31-sharp.png",
+     "file": "evidence/shots/chromium/360x800/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/360x800/32-fib.png",
+     "file": "evidence/shots/chromium/360x800/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/360x800/33-persona.png",
+     "file": "evidence/shots/chromium/360x800/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/360x800/34-limits.png",
+     "file": "evidence/shots/chromium/360x800/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/360x800/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/360x800/35-close.png",
+     "file": "evidence/shots/chromium/360x800/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -758,43 +786,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/390x844/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/390x844/30-recap-4.png",
+     "file": "evidence/shots/chromium/390x844/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/390x844/31-sharp.png",
+     "file": "evidence/shots/chromium/390x844/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/390x844/32-fib.png",
+     "file": "evidence/shots/chromium/390x844/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/390x844/33-persona.png",
+     "file": "evidence/shots/chromium/390x844/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/390x844/34-limits.png",
+     "file": "evidence/shots/chromium/390x844/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/390x844/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/390x844/35-close.png",
+     "file": "evidence/shots/chromium/390x844/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -1029,43 +1071,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/430x932/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/430x932/30-recap-4.png",
+     "file": "evidence/shots/chromium/430x932/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/430x932/31-sharp.png",
+     "file": "evidence/shots/chromium/430x932/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/430x932/32-fib.png",
+     "file": "evidence/shots/chromium/430x932/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/430x932/33-persona.png",
+     "file": "evidence/shots/chromium/430x932/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/430x932/34-limits.png",
+     "file": "evidence/shots/chromium/430x932/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/430x932/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/430x932/35-close.png",
+     "file": "evidence/shots/chromium/430x932/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -1300,43 +1356,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/844x390/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/844x390/30-recap-4.png",
+     "file": "evidence/shots/chromium/844x390/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/844x390/31-sharp.png",
+     "file": "evidence/shots/chromium/844x390/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/844x390/32-fib.png",
+     "file": "evidence/shots/chromium/844x390/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/844x390/33-persona.png",
+     "file": "evidence/shots/chromium/844x390/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/844x390/34-limits.png",
+     "file": "evidence/shots/chromium/844x390/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/844x390/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/844x390/35-close.png",
+     "file": "evidence/shots/chromium/844x390/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -1571,43 +1641,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/1440x900/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/1440x900/30-recap-4.png",
+     "file": "evidence/shots/chromium/1440x900/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/1440x900/31-sharp.png",
+     "file": "evidence/shots/chromium/1440x900/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/1440x900/32-fib.png",
+     "file": "evidence/shots/chromium/1440x900/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/1440x900/33-persona.png",
+     "file": "evidence/shots/chromium/1440x900/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/1440x900/34-limits.png",
+     "file": "evidence/shots/chromium/1440x900/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/1440x900/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/1440x900/35-close.png",
+     "file": "evidence/shots/chromium/1440x900/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -1842,43 +1926,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/390x844-dark/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/390x844-dark/30-recap-4.png",
+     "file": "evidence/shots/chromium/390x844-dark/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/390x844-dark/31-sharp.png",
+     "file": "evidence/shots/chromium/390x844-dark/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/390x844-dark/32-fib.png",
+     "file": "evidence/shots/chromium/390x844-dark/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/390x844-dark/33-persona.png",
+     "file": "evidence/shots/chromium/390x844-dark/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/390x844-dark/34-limits.png",
+     "file": "evidence/shots/chromium/390x844-dark/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/390x844-dark/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/390x844-dark/35-close.png",
+     "file": "evidence/shots/chromium/390x844-dark/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -2113,43 +2211,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/1440x900-dark/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/1440x900-dark/30-recap-4.png",
+     "file": "evidence/shots/chromium/1440x900-dark/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/1440x900-dark/31-sharp.png",
+     "file": "evidence/shots/chromium/1440x900-dark/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/1440x900-dark/32-fib.png",
+     "file": "evidence/shots/chromium/1440x900-dark/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/1440x900-dark/33-persona.png",
+     "file": "evidence/shots/chromium/1440x900-dark/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/1440x900-dark/34-limits.png",
+     "file": "evidence/shots/chromium/1440x900-dark/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/1440x900-dark/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/1440x900-dark/35-close.png",
+     "file": "evidence/shots/chromium/1440x900-dark/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -2384,43 +2496,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/390x844-reduced/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/390x844-reduced/30-recap-4.png",
+     "file": "evidence/shots/chromium/390x844-reduced/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/390x844-reduced/31-sharp.png",
+     "file": "evidence/shots/chromium/390x844-reduced/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/390x844-reduced/32-fib.png",
+     "file": "evidence/shots/chromium/390x844-reduced/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/390x844-reduced/33-persona.png",
+     "file": "evidence/shots/chromium/390x844-reduced/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/390x844-reduced/34-limits.png",
+     "file": "evidence/shots/chromium/390x844-reduced/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/390x844-reduced/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/390x844-reduced/35-close.png",
+     "file": "evidence/shots/chromium/390x844-reduced/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -2655,43 +2781,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/chromium/1440x900-reduced/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/chromium/1440x900-reduced/30-recap-4.png",
+     "file": "evidence/shots/chromium/1440x900-reduced/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/chromium/1440x900-reduced/31-sharp.png",
+     "file": "evidence/shots/chromium/1440x900-reduced/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/chromium/1440x900-reduced/32-fib.png",
+     "file": "evidence/shots/chromium/1440x900-reduced/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/chromium/1440x900-reduced/33-persona.png",
+     "file": "evidence/shots/chromium/1440x900-reduced/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/chromium/1440x900-reduced/34-limits.png",
+     "file": "evidence/shots/chromium/1440x900-reduced/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/chromium/1440x900-reduced/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/chromium/1440x900-reduced/35-close.png",
+     "file": "evidence/shots/chromium/1440x900-reduced/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -2926,43 +3066,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/320x568/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/320x568/30-recap-4.png",
+     "file": "evidence/shots/webkit/320x568/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/320x568/31-sharp.png",
+     "file": "evidence/shots/webkit/320x568/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/320x568/32-fib.png",
+     "file": "evidence/shots/webkit/320x568/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/320x568/33-persona.png",
+     "file": "evidence/shots/webkit/320x568/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/320x568/34-limits.png",
+     "file": "evidence/shots/webkit/320x568/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/320x568/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/320x568/35-close.png",
+     "file": "evidence/shots/webkit/320x568/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -3197,43 +3351,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/360x800/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/360x800/30-recap-4.png",
+     "file": "evidence/shots/webkit/360x800/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/360x800/31-sharp.png",
+     "file": "evidence/shots/webkit/360x800/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/360x800/32-fib.png",
+     "file": "evidence/shots/webkit/360x800/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/360x800/33-persona.png",
+     "file": "evidence/shots/webkit/360x800/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/360x800/34-limits.png",
+     "file": "evidence/shots/webkit/360x800/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/360x800/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/360x800/35-close.png",
+     "file": "evidence/shots/webkit/360x800/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -3468,43 +3636,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/390x844/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/390x844/30-recap-4.png",
+     "file": "evidence/shots/webkit/390x844/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/390x844/31-sharp.png",
+     "file": "evidence/shots/webkit/390x844/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/390x844/32-fib.png",
+     "file": "evidence/shots/webkit/390x844/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/390x844/33-persona.png",
+     "file": "evidence/shots/webkit/390x844/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/390x844/34-limits.png",
+     "file": "evidence/shots/webkit/390x844/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/390x844/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/390x844/35-close.png",
+     "file": "evidence/shots/webkit/390x844/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -3739,43 +3921,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/430x932/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/430x932/30-recap-4.png",
+     "file": "evidence/shots/webkit/430x932/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/430x932/31-sharp.png",
+     "file": "evidence/shots/webkit/430x932/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/430x932/32-fib.png",
+     "file": "evidence/shots/webkit/430x932/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/430x932/33-persona.png",
+     "file": "evidence/shots/webkit/430x932/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/430x932/34-limits.png",
+     "file": "evidence/shots/webkit/430x932/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/430x932/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/430x932/35-close.png",
+     "file": "evidence/shots/webkit/430x932/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -4010,43 +4206,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/844x390/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/844x390/30-recap-4.png",
+     "file": "evidence/shots/webkit/844x390/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/844x390/31-sharp.png",
+     "file": "evidence/shots/webkit/844x390/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/844x390/32-fib.png",
+     "file": "evidence/shots/webkit/844x390/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/844x390/33-persona.png",
+     "file": "evidence/shots/webkit/844x390/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/844x390/34-limits.png",
+     "file": "evidence/shots/webkit/844x390/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/844x390/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/844x390/35-close.png",
+     "file": "evidence/shots/webkit/844x390/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -4281,43 +4491,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/1440x900/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/1440x900/30-recap-4.png",
+     "file": "evidence/shots/webkit/1440x900/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/1440x900/31-sharp.png",
+     "file": "evidence/shots/webkit/1440x900/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/1440x900/32-fib.png",
+     "file": "evidence/shots/webkit/1440x900/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/1440x900/33-persona.png",
+     "file": "evidence/shots/webkit/1440x900/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/1440x900/34-limits.png",
+     "file": "evidence/shots/webkit/1440x900/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/1440x900/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/1440x900/35-close.png",
+     "file": "evidence/shots/webkit/1440x900/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -4552,43 +4776,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/390x844-dark/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/390x844-dark/30-recap-4.png",
+     "file": "evidence/shots/webkit/390x844-dark/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/390x844-dark/31-sharp.png",
+     "file": "evidence/shots/webkit/390x844-dark/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/390x844-dark/32-fib.png",
+     "file": "evidence/shots/webkit/390x844-dark/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/390x844-dark/33-persona.png",
+     "file": "evidence/shots/webkit/390x844-dark/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/390x844-dark/34-limits.png",
+     "file": "evidence/shots/webkit/390x844-dark/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/390x844-dark/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/390x844-dark/35-close.png",
+     "file": "evidence/shots/webkit/390x844-dark/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -4823,43 +5061,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/1440x900-dark/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/1440x900-dark/30-recap-4.png",
+     "file": "evidence/shots/webkit/1440x900-dark/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/1440x900-dark/31-sharp.png",
+     "file": "evidence/shots/webkit/1440x900-dark/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/1440x900-dark/32-fib.png",
+     "file": "evidence/shots/webkit/1440x900-dark/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/1440x900-dark/33-persona.png",
+     "file": "evidence/shots/webkit/1440x900-dark/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/1440x900-dark/34-limits.png",
+     "file": "evidence/shots/webkit/1440x900-dark/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/1440x900-dark/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/1440x900-dark/35-close.png",
+     "file": "evidence/shots/webkit/1440x900-dark/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -5094,43 +5346,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/390x844-reduced/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/390x844-reduced/30-recap-4.png",
+     "file": "evidence/shots/webkit/390x844-reduced/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/390x844-reduced/31-sharp.png",
+     "file": "evidence/shots/webkit/390x844-reduced/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/390x844-reduced/32-fib.png",
+     "file": "evidence/shots/webkit/390x844-reduced/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/390x844-reduced/33-persona.png",
+     "file": "evidence/shots/webkit/390x844-reduced/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/390x844-reduced/34-limits.png",
+     "file": "evidence/shots/webkit/390x844-reduced/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/390x844-reduced/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/390x844-reduced/35-close.png",
+     "file": "evidence/shots/webkit/390x844-reduced/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"
@@ -5365,43 +5631,57 @@
      "active": "chain"
     },
     {
+     "step": "shortcut",
+     "file": "evidence/shots/webkit/1440x900-reduced/30-shortcut.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "shortcut"
+    },
+    {
      "step": "recap-4",
-     "file": "evidence/shots/webkit/1440x900-reduced/30-recap-4.png",
+     "file": "evidence/shots/webkit/1440x900-reduced/31-recap-4.png",
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
     },
     {
      "step": "sharp",
-     "file": "evidence/shots/webkit/1440x900-reduced/31-sharp.png",
+     "file": "evidence/shots/webkit/1440x900-reduced/32-sharp.png",
      "overflowX": false,
      "clipped": [],
      "active": "sharp"
     },
     {
      "step": "fib",
-     "file": "evidence/shots/webkit/1440x900-reduced/32-fib.png",
+     "file": "evidence/shots/webkit/1440x900-reduced/33-fib.png",
      "overflowX": false,
      "clipped": [],
      "active": "fib"
     },
     {
      "step": "persona",
-     "file": "evidence/shots/webkit/1440x900-reduced/33-persona.png",
+     "file": "evidence/shots/webkit/1440x900-reduced/34-persona.png",
      "overflowX": false,
      "clipped": [],
      "active": "persona"
     },
     {
      "step": "limits",
-     "file": "evidence/shots/webkit/1440x900-reduced/34-limits.png",
+     "file": "evidence/shots/webkit/1440x900-reduced/35-limits.png",
      "overflowX": false,
      "clipped": [],
      "active": "limits"
     },
     {
+     "step": "recap-5",
+     "file": "evidence/shots/webkit/1440x900-reduced/36-recap-5.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-5"
+    },
+    {
      "step": "close",
-     "file": "evidence/shots/webkit/1440x900-reduced/35-close.png",
+     "file": "evidence/shots/webkit/1440x900-reduced/37-close.png",
      "overflowX": false,
      "clipped": [],
      "active": "close"

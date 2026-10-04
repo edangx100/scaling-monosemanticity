@@ -307,10 +307,18 @@ export const STEPS = [
   {
     id: 'chain', act: 'IV', title: 'A chain of ideas',
     body: [
-      'Ask Sonnet for the capital of the state where Kobe Bryant played basketball, and it answers Sacramento. That takes three hops. Kobe played for the Lakers in Los Angeles; Los Angeles is in California; California’s capital is Sacramento. The five features that mattered most [[chain|stood for those links]]: Kobe Bryant, the Lakers, Los Angeles, California and “capital”.',
+      'Ask Sonnet for the capital of the state where Kobe Bryant played basketball, and it answers Sacramento. That takes three hops. Kobe played for the Lakers in Los Angeles; Los Angeles is in California; California’s capital is Sacramento.',
+      'The five features that mattered most [[chain|stood for those links]]: Kobe Bryant, the Lakers, Los Angeles, California and “capital”. So the in-between steps show up as features, even though the answer never names them. The paper warns that this example is “somewhat cherry-picked”: many other prompts showed no such middle steps.',
+    ],
+    caption: `${sec('computational-multistep')}.`,
+    badges: ['paper'],
+  },
+  {
+    id: 'shortcut', act: 'IV', title: 'A shortcut: estimate it',
+    body: [
       'Switching off features one at a time is slow, so researchers use {{attribution|attribution}}, a quick estimate of what switching each one off would do. The [[brightest|brightest lamps]] weren’t the important ones: the Lakers feature was only the 70th brightest. Take the 10 features whose switching-off changed the answer most: only 3 of them were in the brightness top 10, but **8** were in [[attribution|attribution’s top 10]].',
     ],
-    caption: `${sec('computational-multistep')}; attribution and ablation agree at 0.8 correlation, ${sec('computational')}. The paper calls this example “somewhat cherry-picked”.`,
+    caption: `${sec('computational-multistep')}; attribution and ablation agree at 0.8 correlation, ${sec('computational')}.`,
     badges: ['paper'],
     interaction: 'rank-toggle',
   },
@@ -367,6 +375,13 @@ export const STEPS = [
     ] },
     caption: `${sec('discussion-limitations')}. The rebuild gap from “Read the receipts” is another way to see it.`,
     badges: ['paper'],
+  },
+  {
+    id: 'recap-5', act: 'V', recap: true, title: 'Safety, so far',
+    body: [
+      'Some features [[sharp5|track risky ideas]], but a feature existing isn’t the model acting on it. Turning one up [[fib5|turned a false claim into an honest one]], and turning another down [[persona5|changed who the model said it was]].',
+      'And [[limits5|the limits]] are real: there’s no answer key, and most ideas are still missing.',
+    ],
   },
   {
     id: 'close', act: 'close', title: 'A vocabulary, not yet a grammar',

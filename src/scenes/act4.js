@@ -150,7 +150,7 @@ const CHAIN = [
   { id: 'california', name: 'California' }, { id: 'capital', name: '“capital”' },
 ];
 const chainAt = i => add3(KOBE, across(i * 2.3));
-export function kobeObjs(mode = 'attribution', lit = CHAIN.length) {
+export function kobeObjs(mode = 'attribution', lit = CHAIN.length, ten = 1) {
   const objs = [];
   CHAIN.forEach((c, i) => {
     objs.push({ id: `kobe-${c.id}`, type: 'lamp', at: add3(chainAt(i), [0, 0, 1.2]), r: 0.32, c: 'lamp', on: i < lit ? 1 : 0.1, layer: 2, k: ['chain'] });
@@ -159,20 +159,32 @@ export function kobeObjs(mode = 'attribution', lit = CHAIN.length) {
   });
   objs.push({ id: 'kobe-answer', type: 'tile', at: add3(chainAt(CHAIN.length), [-0.2, -0.4, 0.6]), w: 3.4, word: 'Sacramento', tag: 'answer', tagO: 1, o: lit >= CHAIN.length ? 1 : 0, layer: 1, k: ['chain'] });
   const bright = mode === 'brightness';
-  objs.push({ id: 'kobe-ten', type: 'tenrow', at: add3(KOBE, [0, 0, -1.4]), pxo: [-20, 46], title: bright ? 'Top 10 by brightness' : 'Top 10 by attribution', filled: bright ? 3 : 8, note: bright ? 'Only 3 of the 10 features that mattered most. (Lakers: 70th brightest.)' : '8 of the 10 features that mattered most.', layer: 3, k: ['brightest', 'attribution'] });
+  objs.push({ id: 'kobe-ten', type: 'tenrow', at: add3(KOBE, [0, 0, -1.4]), pxo: [-20, 46], title: bright ? 'Top 10 by brightness' : 'Top 10 by attribution', filled: bright ? 3 : 8, note: bright ? 'Only 3 of the 10 features that mattered most. (Lakers: 70th brightest.)' : '8 of the 10 features that mattered most.', o: ten, layer: 3, k: ['brightest', 'attribution'] });
   return objs;
 }
 SCENES['chain'] = () => {
-  const aria = 'A chain of linked lamps, Kobe Bryant, Lakers, Los Angeles, California and “capital”, lights link by link and leads to a tile reading Sacramento. Below, ten slots for the top 10 features: ranked by attribution, 8 of them are among the 10 that mattered most; ranked by brightness, only 3 are, and the Lakers feature is only the 70th brightest.';
+  const aria = 'A chain of linked lamps, Kobe Bryant, Lakers, Los Angeles, California and “capital”, lights link by link and leads to a tile reading Sacramento.';
   return {
-    words: { chain: 'lamp', brightest: 'ink', attribution: 'machine' },
+    words: { chain: 'lamp' },
+    frames: [
+      { objs: kobeObjs('brightness', 0, 0), aria, enter: 0.6 },
+      { objs: kobeObjs('brightness', 2, 0), dur: 0.4, aria, hold: 0.05 },
+      { objs: kobeObjs('brightness', 4, 0), dur: 0.4, aria, hold: 0.05 },
+      { objs: kobeObjs('brightness', 5, 0), dur: 0.4, aria },
+    ],
+  };
+};
+
+// ---------- IV-6 · A shortcut: estimate it ----------
+SCENES['shortcut'] = () => {
+  const aria = 'The Kobe chain stays lit. Below it, ten slots for the top 10 features: ranked by brightness, only 3 are among the 10 that mattered most, and the Lakers feature is only the 70th brightest; ranked by attribution, 8 are.';
+  return {
+    words: { brightest: 'ink', attribution: 'machine' },
     interaction: 'rank-toggle',
     frames: [
-      { objs: kobeObjs('brightness', 0), aria, enter: 0.6 },
-      { objs: kobeObjs('brightness', 2), dur: 0.4, aria, hold: 0.05 },
-      { objs: kobeObjs('brightness', 4), dur: 0.4, aria, hold: 0.05 },
-      { objs: kobeObjs('brightness', 5), dur: 0.4, aria, hold: 0.5 },
-      { objs: kobeObjs('attribution', 5), dur: 0.5, aria },
+      { objs: kobeObjs('brightness', 5, 0), aria, enter: 0.4 },
+      { objs: kobeObjs('brightness', 5, 1), dur: 0.4, aria, hold: 0.6 },
+      { objs: kobeObjs('attribution', 5, 1), dur: 0.5, aria },
     ],
   };
 };

@@ -1,20 +1,20 @@
 {
- "generated": "2026-10-04T14:11:56.614Z",
+ "generated": "2026-10-04T14:46:28.637Z",
  "cpuThrottle": "4×",
  "viewport": "390×844 (phone emulation)",
  "build": "production (dist/)",
  "steps": {
-  "count": 35,
-  "frames": 5124,
+  "count": 37,
+  "frames": 5404,
   "meanFps": 60,
-  "slowFrames": 3,
+  "slowFrames": 2,
   "worst": [
    {
     "step": "close",
     "frames": 144,
     "fps": 59.2,
     "median": 16.7,
-    "p95": 16.8,
+    "p95": 16.7,
     "max": 50,
     "slow": 1,
     "slowShare": 0.7
@@ -30,18 +30,18 @@
     "slowShare": 0.7
    },
    {
-    "step": "neurons",
+    "step": "tiles",
     "frames": 146,
-    "fps": 59.6,
+    "fps": 60,
     "median": 16.7,
-    "p95": 16.7,
-    "max": 33.4,
-    "slow": 1,
-    "slowShare": 0.7
+    "p95": 16.8,
+    "max": 16.8,
+    "slow": 0,
+    "slowShare": 0
    },
    {
-    "step": "tiles",
-    "frames": 147,
+    "step": "numbers",
+    "frames": 146,
     "fps": 60,
     "median": 16.7,
     "p95": 16.7,
@@ -50,8 +50,8 @@
     "slowShare": 0
    },
    {
-    "step": "numbers",
-    "frames": 145,
+    "step": "floors",
+    "frames": 146,
     "fps": 60,
     "median": 16.7,
     "p95": 16.7,
@@ -62,29 +62,29 @@
   ]
  },
  "lab1Training": {
-  "frames": 372,
+  "frames": 366,
   "fps": 60,
   "median": 16.7,
-  "p95": 16.8,
+  "p95": 16.7,
   "max": 16.8,
   "slow": 0,
   "slowShare": 0,
-  "rounds": "2,960"
+  "rounds": "2,904"
  },
  "perStep": [
   {
    "step": "tiles",
-   "frames": 147,
+   "frames": 146,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.7,
+   "p95": 16.8,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
   },
   {
    "step": "numbers",
-   "frames": 145,
+   "frames": 146,
    "fps": 60,
    "median": 16.7,
    "p95": 16.7,
@@ -107,7 +107,7 @@
    "frames": 145,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.8,
+   "p95": 16.7,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -137,17 +137,17 @@
    "frames": 145,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.8,
+   "p95": 16.7,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
   },
   {
    "step": "crowded",
-   "frames": 146,
+   "frames": 145,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.8,
+   "p95": 16.7,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -167,7 +167,7 @@
    "frames": 146,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.7,
+   "p95": 16.8,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -177,14 +177,14 @@
    "frames": 145,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.7,
+   "p95": 16.8,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
   },
   {
    "step": "relu",
-   "frames": 145,
+   "frames": 144,
    "fps": 60,
    "median": 16.7,
    "p95": 16.7,
@@ -194,7 +194,7 @@
   },
   {
    "step": "rebuild",
-   "frames": 145,
+   "frames": 146,
    "fps": 60,
    "median": 16.7,
    "p95": 16.7,
@@ -204,7 +204,7 @@
   },
   {
    "step": "training",
-   "frames": 146,
+   "frames": 145,
    "fps": 60,
    "median": 16.7,
    "p95": 16.7,
@@ -214,10 +214,10 @@
   },
   {
    "step": "tug",
-   "frames": 146,
+   "frames": 145,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.7,
+   "p95": 16.8,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -264,10 +264,10 @@
   },
   {
    "step": "languages",
-   "frames": 147,
+   "frames": 146,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.7,
+   "p95": 16.8,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -277,7 +277,7 @@
    "frames": 146,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.7,
+   "p95": 16.8,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -287,7 +287,7 @@
    "frames": 145,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.8,
+   "p95": 16.7,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -295,16 +295,16 @@
   {
    "step": "neurons",
    "frames": 146,
-   "fps": 59.6,
+   "fps": 60,
    "median": 16.7,
-   "p95": 16.7,
-   "max": 33.4,
-   "slow": 1,
-   "slowShare": 0.7
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
   },
   {
    "step": "recap-3",
-   "frames": 146,
+   "frames": 145,
    "fps": 60,
    "median": 16.7,
    "p95": 16.8,
@@ -314,17 +314,17 @@
   },
   {
    "step": "neighbourhoods",
-   "frames": 146,
+   "frames": 144,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.7,
+   "p95": 16.8,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
   },
   {
    "step": "splitting",
-   "frames": 145,
+   "frames": 146,
    "fps": 60,
    "median": 16.7,
    "p95": 16.7,
@@ -334,17 +334,7 @@
   },
   {
    "step": "missing",
-   "frames": 146,
-   "fps": 60,
-   "median": 16.7,
-   "p95": 16.7,
-   "max": 16.8,
-   "slow": 0,
-   "slowShare": 0
-  },
-  {
-   "step": "ablation",
-   "frames": 146,
+   "frames": 145,
    "fps": 60,
    "median": 16.7,
    "p95": 16.8,
@@ -353,11 +343,31 @@
    "slowShare": 0
   },
   {
-   "step": "chain",
-   "frames": 146,
+   "step": "ablation",
+   "frames": 145,
    "fps": 60,
    "median": 16.7,
    "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "chain",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "shortcut",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -374,10 +384,10 @@
   },
   {
    "step": "sharp",
-   "frames": 147,
+   "frames": 146,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.8,
+   "p95": 16.7,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
@@ -394,16 +404,26 @@
   },
   {
    "step": "persona",
-   "frames": 146,
+   "frames": 145,
    "fps": 60,
    "median": 16.7,
-   "p95": 16.8,
+   "p95": 16.7,
    "max": 16.8,
    "slow": 0,
    "slowShare": 0
   },
   {
    "step": "limits",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "recap-5",
    "frames": 145,
    "fps": 60,
    "median": 16.7,
@@ -417,7 +437,7 @@
    "frames": 144,
    "fps": 59.2,
    "median": 16.7,
-   "p95": 16.8,
+   "p95": 16.7,
    "max": 50,
    "slow": 1,
    "slowShare": 0.7

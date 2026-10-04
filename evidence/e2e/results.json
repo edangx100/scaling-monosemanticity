@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T14:00:23.955Z",
+ "generated": "2026-10-04T14:34:26.606Z",
  "results": [
   {
    "browser": "chromium",
@@ -137,7 +137,7 @@
    "browser": "chromium",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 24, 48, 72, 96, 124 … 1500"
+   "detail": "0, 24, 48, 72, 100, 124 … 1500"
   },
   {
    "browser": "chromium",
@@ -165,7 +165,7 @@
   },
   {
    "browser": "chromium",
-   "name": "IV-5 toggle switches the top 10 between attribution (8) and brightness (3)",
+   "name": "IV-6 toggle switches the top 10 between attribution (8) and brightness (3)",
    "ok": true,
    "detail": "Top 10 by attribution · 8 → Top 10 by brightness · 3"
   },
@@ -209,13 +209,13 @@
    "browser": "chromium",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "35 transitions watched every frame"
+   "detail": "37 transitions watched every frame"
   },
   {
    "browser": "chromium",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,recap-4,sharp,fib,persona,limits,close"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,shortcut,recap-4,sharp,fib,persona,limits,recap-5,close"
   },
   {
    "browser": "chromium",
@@ -365,7 +365,7 @@
    "browser": "webkit",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 16, 36, 52, 72, 92 … 1500"
+   "detail": "4, 24, 44, 64, 88, 108 … 1500"
   },
   {
    "browser": "webkit",
@@ -387,7 +387,7 @@
   },
   {
    "browser": "webkit",
-   "name": "IV-5 toggle switches the top 10 between attribution (8) and brightness (3)",
+   "name": "IV-6 toggle switches the top 10 between attribution (8) and brightness (3)",
    "ok": true,
    "detail": "Top 10 by attribution · 8 → Top 10 by brightness · 3"
   },
@@ -401,7 +401,7 @@
    "browser": "webkit",
    "name": "Lab 1 trains: rounds advance and the readouts update",
    "ok": true,
-   "detail": "{\"status\":\"Training…\",\"round\":\"816\",\"loss\":\"0.124\",\"lit\":\"1.03\",\"dead\":\"0 of 8\",\"found\":\"6 of 8\"}"
+   "detail": "{\"status\":\"Training…\",\"round\":\"912\",\"loss\":\"0.121\",\"lit\":\"0.90\",\"dead\":\"0 of 8\",\"found\":\"8 of 8\"}"
   },
   {
    "browser": "webkit",
@@ -425,13 +425,13 @@
    "browser": "webkit",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "35 transitions watched every frame"
+   "detail": "37 transitions watched every frame"
   },
   {
    "browser": "webkit",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,recap-4,sharp,fib,persona,limits,close"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,shortcut,recap-4,sharp,fib,persona,limits,recap-5,close"
   },
   {
    "browser": "webkit",

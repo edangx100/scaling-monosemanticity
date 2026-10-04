@@ -164,13 +164,13 @@ try {
       await page.locator('#ctl-missing').fill('0'); await page.waitForTimeout(100);
       const at1 = await level();
       check(name, 'IV-3 slider lowers coverage from 34M (12 of 20) to 1M', at34.includes('34M · 12 of 20') && at1.includes('1M') && !at1.includes('12 of 20'), `${at34} → ${at1}`);
-      await showStep(page, await idx(page, 'chain'));
+      await showStep(page, await idx(page, 'shortcut'));
       const row = () => page.evaluate(() => document.querySelector('[data-id="kobe-ten"] text').textContent + ' · ' + document.querySelectorAll('[data-id="kobe-ten"] .slot-on').length);
       const byAttr = await row();
-      await page.locator('#step-chain [data-rank="brightness"]').tap(); await page.waitForTimeout(100);
+      await page.locator('#step-shortcut [data-rank="brightness"]').tap(); await page.waitForTimeout(100);
       const byBright = await row();
-      const pressed = await page.locator('#step-chain [data-rank="brightness"]').getAttribute('aria-pressed');
-      check(name, 'IV-5 toggle switches the top 10 between attribution (8) and brightness (3)', byAttr.endsWith('· 8') && byBright.endsWith('· 3') && pressed === 'true', `${byAttr} → ${byBright}`);
+      const pressed = await page.locator('#step-shortcut [data-rank="brightness"]').getAttribute('aria-pressed');
+      check(name, 'IV-6 toggle switches the top 10 between attribution (8) and brightness (3)', byAttr.endsWith('· 8') && byBright.endsWith('· 3') && pressed === 'true', `${byAttr} → ${byBright}`);
       // Act V: the collapsed list of further limitations.
       await showStep(page, await idx(page, 'limits'));
       const more = page.locator('#step-limits details.maths summary', { hasText: 'More limitations' });

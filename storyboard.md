@@ -558,4 +558,8 @@ Every bracketed ID above exists in `research/facts.md` (checked by script). Chan
   - IV-5 defines "mattered most" as "whose switching-off changed the answer most".
   - V-2 is retitled "The word it said it forgot" and adds that the paper doesn't claim to know why this works.
   - The glossary "vector" entry drops "activations".
-16. **Additions** from the beginner review: P4 next-word guess [M1]; II-5 training [M7]; III-4 "put the edited list back" [D1]; IV-4 ablation via the John example [I4, I5]; V-3 self-questions [J16]. Each is a background statement or a `facts.md` value.
+16. **Structure changes after Phase 3:**
+  - IV-5 is split in two because it carried two ideas. "A chain of ideas" keeps the three hops and the five features, plus the paper's caveat that the example is "somewhat cherry-picked" and many prompts showed no middle steps [I9, I13]. The new IV-6, "A shortcut: estimate it", introduces attribution and keeps the brightness/attribution toggle [I10, I11].
+  - Recap V ("Safety, so far") is added before the close, so every act now ends with a recap. It introduces no new numbers.
+  - The story now has 37 steps.
+17. **Additions** from the beginner review: P4 next-word guess [M1]; II-5 training [M7]; III-4 "put the edited list back" [D1]; IV-4 ablation via the John example [I4, I5]; V-3 self-questions [J16]. Each is a background statement or a `facts.md` value.
