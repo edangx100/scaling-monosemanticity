@@ -29,8 +29,14 @@ await build({
   bundle: true, minify: true, external: ['../assets/*'], logLevel: 'warning',
 });
 await cp(path.join(ROOT, 'assets'), path.join(DIST, 'assets'), { recursive: true });
-await writeFile(path.join(DIST, 'index.html'), await renderPage());
+// Inline the (small) stylesheet so the first paint doesn't wait for a second
+// request; font URLs move from ../assets (relative to src/) to ./assets.
+const cssText = readFileSync(path.join(DIST, 'src/styles.css'), 'utf8').replaceAll('../assets/', './assets/');
+const page = (await renderPage()).replace('<link rel="stylesheet" href="./src/styles.css">', `<style>${cssText}</style>`);
+if (!page.includes('<style>')) throw new Error('stylesheet link not found for inlining');
+await writeFile(path.join(DIST, 'index.html'), page);
 await writeFile(path.join(DIST, '.nojekyll'), '');
+await cp(path.join(ROOT, 'og.png'), path.join(DIST, 'og.png'));   // OG/Twitter image (node scripts/og.mjs)
 
 const js = readFileSync(path.join(DIST, 'src/main.js'));
 const css = readFileSync(path.join(DIST, 'src/styles.css'));

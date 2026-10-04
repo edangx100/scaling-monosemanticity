@@ -34,3 +34,7 @@ test('I-3: the Bridge token casts a longer shadow on the bridge idea than "the" 
   const m = toy.MIDDLE_FLOOR;
   assert.ok(toy.shadowOn(toy.listAt('Bridge', m), 'ggb') > toy.shadowOn(toy.listAt('the', m), 'ggb') + 0.5);
 });
+
+test('saved idea directions match a fresh computation (run node scripts/train-toy.mjs if this fails)', () => {
+  assert.deepEqual(toy.DIRS, toy.buildDirections());
+});

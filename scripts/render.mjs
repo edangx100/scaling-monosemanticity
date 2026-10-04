@@ -93,8 +93,50 @@ export async function renderPage({ bust = false } = {}) {
 </section>`;
   }).join('\n');
 
+  const { LABS } = await load('content/labs.js', bust);
+  const { CONCEPTS } = await load('src/toy/model.js', bust);
+  const { featureIdea, featureName } = await load('src/toy/trained.js', bust);
+  const labHead = l => `<div class="lab-head"><p class="lab-tag">${esc(l.tag)}</p><h2 id="h-${l.id}">${esc(l.title)}</h2><p>${esc(l.dek)}</p></div>`;
+  const tryCard = l => `<aside class="try"><h3>What to try</h3><ol>${l.tryList.map(t => `<li>${esc(t)}</li>`).join('')}</ol><p class="caption">${esc(l.note)}</p></aside>`;
+  const lab1 = LABS[0], lab2 = LABS[1];
+  const nFeat = CONCEPTS.length;
+  const featChips = Array.from({ length: nFeat }, (_, i) => `<button type="button" class="chip" role="radio" data-feature="${i}" aria-checked="${featureIdea(i) === 'ggb'}">${esc(featureName(i))}</button>`).join('');
+  const labs = `<section class="lab" id="${lab1.id}" aria-labelledby="h-${lab1.id}">
+  ${labHead(lab1)}
+  <div class="lab-body">
+    <div class="lab-stage-wrap"><div class="lab-stage"></div><div class="hud"><span class="badge toy">Toy</span></div></div>
+    <div class="lab-panel">
+      <div class="lab-buttons"><button class="btn primary" type="button" data-lab1="train" aria-pressed="false">Train</button><button class="btn" type="button" data-lab1="reset">Reset</button><span class="lab-status" data-out="status" aria-live="polite"></span></div>
+      <div class="control"><label for="lab1-lambda">λ (sparsity)</label><input type="range" id="lab1-lambda" min="0" max="1.5" step="0.05" value="0.3"><output id="lab1-lambda-out" for="lab1-lambda">0.30</output></div>
+      <div class="control"><label for="lab1-width">Lamps</label><input type="range" id="lab1-width" min="4" max="16" step="1" value="8"><output id="lab1-width-out" for="lab1-width">8</output></div>
+      <dl class="readouts">
+        <div><dt>Round</dt><dd data-out="round">0</dd></div>
+        <div><dt>Loss</dt><dd data-out="loss">–</dd></div>
+        <div><dt>Lamps lit per input</dt><dd data-out="lit">–</dd></div>
+        <div><dt>Dead lamps</dt><dd data-out="dead">–</dd></div>
+        <div><dt>Ideas found</dt><dd data-out="found">–</dd></div>
+      </dl>
+      ${tryCard(lab1)}
+    </div>
+  </div>
+</section>
+
+<section class="lab" id="${lab2.id}" aria-labelledby="h-${lab2.id}">
+  ${labHead(lab2)}
+  <div class="lab-body">
+    <div class="lab-stage-wrap"><div class="lab-stage"></div><div class="hud"><span class="badge toy">Toy</span></div></div>
+    <div class="lab-panel">
+      <div class="control seg" role="group" aria-label="Sentence"><button type="button" class="btn small" data-prompt="bridge" aria-pressed="true">Bridge sentence</button><button type="button" class="btn small" data-prompt="lunch" aria-pressed="false">Lunch sentence</button></div>
+      <div class="chips" role="radiogroup" aria-label="Feature to clamp">${featChips}</div>
+      <div class="control"><label for="lab2-mult">Clamp</label><input type="range" id="lab2-mult" min="-5" max="10" step="0.5" value="10" aria-valuetext="10 times"><output id="lab2-mult-out" for="lab2-mult">10×</output><button type="button" class="btn small" data-lab2="release">Release</button></div>
+      <div class="completion"><p data-out="completion"></p><span class="badge toy">Toy output · a tiny hand-built model, not Claude</span></div>
+      ${tryCard(lab2)}
+    </div>
+  </div>
+</section>`;
+
   const sources = `<h2>Sources</h2>\n${SOURCES.map(s => `<p>${s}</p>`).join('\n')}\n<h2>About the figures</h2>\n<p>${ABOUT}</p>`;
-  return template.replace('<!--STEPS-->', html).replace('<!--SOURCES-->', sources);
+  return template.replace('<!--STEPS-->', html).replace('<!--LABS-->', labs).replace('<!--SOURCES-->', sources);
 }
 
 // CLI: print the rendered page.

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T12:10:57.640Z",
+ "generated": "2026-10-04T13:08:29.366Z",
  "results": [
   {
    "browser": "chromium",
@@ -137,7 +137,7 @@
    "browser": "chromium",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 24, 48, 72, 100, 124 … 1500"
+   "detail": "0, 24, 48, 76, 100, 124 … 1500"
   },
   {
    "browser": "chromium",
@@ -177,7 +177,31 @@
   },
   {
    "browser": "chromium",
-   "name": "no console errors (Acts II–V)",
+   "name": "Lab 1 trains: rounds advance and the readouts update",
+   "ok": true,
+   "detail": "{\"status\":\"Training…\",\"round\":\"1,440\",\"loss\":\"0.119\",\"lit\":\"0.81\",\"dead\":\"0 of 8\",\"found\":\"8 of 8\"}"
+  },
+  {
+   "browser": "chromium",
+   "name": "Lab 1 training causes no long tasks (>50 ms)",
+   "ok": true,
+   "detail": "none"
+  },
+  {
+   "browser": "chromium",
+   "name": "the step nav hides once the story is scrolled past",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "chromium",
+   "name": "Lab 2 steers the toy: bridge, then tears, then back to lunch when released",
+   "ok": true,
+   "detail": "Let’s meet tomorrow for bridge. / Let’s meet tomorrow for tears. / Let’s meet tomorrow for lunch."
+  },
+  {
+   "browser": "chromium",
+   "name": "no console errors (Acts II–V and labs)",
    "ok": true,
    "detail": ""
   },
@@ -335,7 +359,7 @@
    "browser": "webkit",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 20, 40, 60, 80, 104 … 1500"
+   "detail": "4, 20, 40, 60, 80, 100 … 1500"
   },
   {
    "browser": "webkit",
@@ -369,7 +393,25 @@
   },
   {
    "browser": "webkit",
-   "name": "no console errors (Acts II–V)",
+   "name": "Lab 1 trains: rounds advance and the readouts update",
+   "ok": true,
+   "detail": "{\"status\":\"Training…\",\"round\":\"864\",\"loss\":\"0.122\",\"lit\":\"0.92\",\"dead\":\"0 of 8\",\"found\":\"7 of 8\"}"
+  },
+  {
+   "browser": "webkit",
+   "name": "the step nav hides once the story is scrolled past",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "browser": "webkit",
+   "name": "Lab 2 steers the toy: bridge, then tears, then back to lunch when released",
+   "ok": true,
+   "detail": "Let’s meet tomorrow for bridge. / Let’s meet tomorrow for tears. / Let’s meet tomorrow for lunch."
+  },
+  {
+   "browser": "webkit",
+   "name": "no console errors (Acts II–V and labs)",
    "ok": true,
    "detail": ""
   },

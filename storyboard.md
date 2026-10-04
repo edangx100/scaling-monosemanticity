@@ -512,14 +512,14 @@ That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 ## Labs
 
 ### Lab 1 · hands on · Train a sparse autoencoder
-- The toy's 8 hidden ideas, packed into 3 numbers. Press **Train**: a real training loop runs in small per-frame chunks, and the SAE's arrows swing onto the hidden ideas (the full version of II-5).
-- **Controls:** λ slider; number of lamps (4–16); Train / Pause / Reset. **Readouts:** loss, lamps lit per input, dead lamps. All tagged `TOY`.
-- **What to try:** (1) Set λ to 0 and watch many lamps light. (2) Use only 4 lamps and see ideas merge. (3) Push λ high and watch lamps die.
+- The toy's 8 hidden ideas, packed into 3 numbers. Press **Train**: a real training loop runs in small per-frame chunks (paused when the lab is off-screen), and the SAE's arrows swing onto the hidden ideas (the full version of II-5).
+- **Controls:** λ slider (0–1.5); number of lamps (4–16); Train / Pause / Reset. **Readouts:** round, loss, lamps lit per input, dead lamps, ideas found (of 8). All tagged `TOY`.
+- **What to try** (as built; each one is checked against the toy in `tests/labs.test.mjs`): (1) set λ to 0: about four lamps light per input and almost none of the arrows line up with the ideas; (2) use only 4 lamps: most arrows settle between ideas and the rebuild gets worse; (3) use 16 lamps: some lamps may never switch on (dead); (4) push λ to 1.2 or more: hardly any lamps light and most of each list goes unexplained. (The draft's "push λ high and watch lamps die" turned out false for this toy: at high λ the gap grows but lamps don't die; dead lamps appear with more lamps than ideas.)
 
 ### Lab 2 · hands on · Steer a toy model
-- Pick one of the 8 toy features and clamp it from −5× to +10×. Watch the toy's next-word bars and a templated completion shift.
-- The tag "A tiny hand-built model, not Claude" sits directly on the completion box, not in a footer.
-- **What to try:** (1) Turn up "Golden Gate Bridge" on a sentence about lunch. (2) Clamp "code error" negative. (3) Go past 10× and watch the toy break; the paper notes extremes produce nonsense [D3].
+- Two sentences (the bridge sentence and "Let's meet tomorrow for…"); pick one of the 8 toy features and clamp it from −5× to +10× (Release for no clamp). Clamping works as in III-4: the SAE's rebuild with that feature fixed, error term kept. The toy's top five next-word odds and a filled-in sentence update live.
+- The tag "Toy output · a tiny hand-built model, not Claude" sits on the completion box itself.
+- **What to try** (checked in `tests/labs.test.mjs`): (1) Golden Gate Bridge on the lunch sentence: "bridge" takes over; (2) code error or sadness push their own words ("error", "tears"); (3) go below zero: in a 3-number toy, pushing one idea down pushes others up (superposition); (4) the paper notes far more extreme clamps (around ±100×) made the real model produce nonsense [D3]; the toy stops at 10×.
 
 ---
 

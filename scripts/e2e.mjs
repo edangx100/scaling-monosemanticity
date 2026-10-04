@@ -177,7 +177,27 @@ try {
       await more.tap(); await page.waitForTimeout(100);
       const items = await page.evaluate(() => { const d = [...document.querySelectorAll('#step-limits details.maths')].find(x => x.textContent.includes('More limitations')); return { open: d.open, n: d.querySelectorAll('li').length }; });
       check(name, 'V-4 “More limitations” opens with five more', items.open && items.n === 5, JSON.stringify(items));
-      check(name, 'no console errors (Acts II–V)', errors.length === 0, errors.join(' | '));
+      // Labs.
+      await page.evaluate(() => document.querySelector('#lab-train').scrollIntoView());
+      await page.waitForTimeout(200);
+      if (name === 'chromium') await page.evaluate(() => { window.__long2 = []; try { new PerformanceObserver(l => l.getEntries().forEach(e => window.__long2.push(Math.round(e.duration)))).observe({ type: 'longtask' }); } catch {} });
+      await page.locator('[data-lab1="train"]').tap();
+      await page.waitForTimeout(3000);
+      const r1 = await page.evaluate(() => Object.fromEntries([...document.querySelectorAll('#lab-train [data-out]')].map(d => [d.dataset.out, d.textContent])));
+      await page.locator('[data-lab1="train"]').tap();
+      check(name, 'Lab 1 trains: rounds advance and the readouts update', +r1.round.replace(/,/g, '') > 100 && r1.loss !== '–' && /of 8/.test(r1.found), JSON.stringify(r1));
+      if (name === 'chromium') { const long = await page.evaluate(() => window.__long2 || []); check(name, 'Lab 1 training causes no long tasks (>50 ms)', long.length === 0, long.join(',') || 'none'); }
+      const stepperAway = await page.evaluate(() => document.querySelector('#stepper').classList.contains('away'));
+      check(name, 'the step nav hides once the story is scrolled past', stepperAway);
+      await page.evaluate(() => document.querySelector('#lab-steer').scrollIntoView());
+      await page.locator('#lab-steer [data-prompt="lunch"]').tap();
+      const lunchGgb = await page.locator('#lab-steer [data-out="completion"]').textContent();
+      await page.locator('#lab-steer [data-feature]', { hasText: 'sadness' }).tap();
+      const lunchSad = await page.locator('#lab-steer [data-out="completion"]').textContent();
+      await page.locator('#lab-steer [data-lab2="release"]').tap();
+      const lunchOff = await page.locator('#lab-steer [data-out="completion"]').textContent();
+      check(name, 'Lab 2 steers the toy: bridge, then tears, then back to lunch when released', lunchGgb.includes('bridge.') && lunchSad.includes('tears.') && lunchOff.includes('lunch.'), `${lunchGgb} / ${lunchSad} / ${lunchOff}`);
+      check(name, 'no console errors (Acts II–V and labs)', errors.length === 0, errors.join(' | '));
       await ctx.close();
     }
 

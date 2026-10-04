@@ -85,8 +85,12 @@ function buildDirections() {
   return dirs;
 }
 
-/** Unit direction (length-3 array) for each concept id. */
-export const DIRS = buildDirections();
+/** Unit direction (length-3 array) for each concept id. Computed once by
+ *  buildDirections() and saved (scripts/train-toy.mjs → dirs.data.js), so the
+ *  page doesn't run 3,000 repulsion steps on load; a test checks they match. */
+import SAVED_DIRS from './dirs.data.js';
+export { buildDirections };
+export const DIRS = SAVED_DIRS;
 
 /** Angle in degrees between two concept directions. */
 export const angleBetween = (a, b) => Math.acos(Math.max(-1, Math.min(1, dot(DIRS[a], DIRS[b])))) * 180 / Math.PI;
@@ -185,3 +189,34 @@ export function nextWordOdds(list, candidates = Object.keys(CANDIDATES)) {
 
 /** Length of the shadow a list casts on an idea's direction (I-3). */
 export const shadowOn = (list, id) => dot(list, DIRS[id]);
+
+// ---------- Lab 2: prompts the reader can steer ----------
+// Each next word leans toward at most one or two ideas; each prompt sets how
+// likely each word is to begin with. Hand-set toy semantics, nothing more.
+const LEANS = {
+  sunset: { landmark: 1.2, ggb: 0.4 }, night: { transit: 0.4 }, dawn: { landmark: 0.3 },
+  bridge: { ggb: 1.5, bridge: 1.8 }, city: { sf: 2.0 }, view: { landmark: 1.6 }, train: { transit: 2.0 },
+  error: { code: 2.2 }, tears: { sad: 2.2 }, sum: { add: 2.2 }, lunch: {}, coffee: {}, dinner: {},
+};
+export const PROMPTS = {
+  bridge: {
+    text: 'We drove across the Golden Gate Bridge at', last: 'at',
+    base: { sunset: 1.3, night: 1.2, dawn: 0.9, bridge: -0.6, city: -0.8, view: -0.4, train: -0.9, error: -1.5, tears: -1.5, sum: -1.6 },
+  },
+  lunch: {
+    text: 'Let’s meet tomorrow for', last: 'for',
+    base: { lunch: 1.4, coffee: 1.1, dinner: 1.0, bridge: -1.2, city: -1.2, view: -1.0, train: -1.0, error: -1.6, tears: -1.6, sum: -1.6 },
+  },
+};
+
+/** Softmax odds over a prompt's candidate words, given the roof list. Sorted, highest first. */
+export function promptOdds(promptId, roofList) {
+  const P = PROMPTS[promptId], words = Object.keys(P.base);
+  const scores = words.map(w => {
+    let lean = [0, 0, 0];
+    for (const [k, a] of Object.entries(LEANS[w])) lean = add(lean, scale(DIRS[k], a));
+    return P.base[w] + dot(lean, roofList);
+  });
+  const mx = Math.max(...scores), ex = scores.map(s => Math.exp(s - mx)), z = ex.reduce((a, b) => a + b, 0);
+  return words.map((w, i) => ({ word: w, p: ex[i] / z })).sort((a, b) => b.p - a.p);
+}

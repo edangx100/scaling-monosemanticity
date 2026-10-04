@@ -167,9 +167,12 @@ export class Stage {
   }
 
   // Update some objects immediately, without a tween (live controls).
-  patch(objs) {
+  patch(objs, { fit = false } = {}) {
     this.stop();
     for (const o of objs) { const full = { o: 1, ...o }; this.ensure(full); this.state.set(o.id, full); }
+    // Scenes driven only by patch (the labs) fit the camera on request and
+    // remember the frame so a resize can refit it.
+    if (fit || !this.lastFrame) { this.lastFrame = { objs: [...this.state.values()] }; Object.assign(this.cam, this.fit(this.lastFrame)); }
     this.order([...this.state.values()]);
     this.draw();
   }

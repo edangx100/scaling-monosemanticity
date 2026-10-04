@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T12:10:58.082Z",
+ "generated": "2026-10-04T13:08:39.499Z",
  "runs": [
   {
    "browser": "chromium",
@@ -256,6 +256,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/320x568/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/320x568/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -515,6 +527,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/360x800/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/360x800/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -774,6 +798,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/390x844/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/390x844/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -1033,6 +1069,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/430x932/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/430x932/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -1292,6 +1340,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/844x390/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/844x390/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -1551,6 +1611,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/1440x900/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/1440x900/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -1810,6 +1882,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/390x844-dark/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/390x844-dark/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -2069,6 +2153,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/1440x900-dark/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/1440x900-dark/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -2328,6 +2424,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/390x844-reduced/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/390x844-reduced/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -2587,6 +2695,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/chromium/1440x900-reduced/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/chromium/1440x900-reduced/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -2846,6 +2966,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/320x568/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/320x568/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -3105,6 +3237,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/360x800/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/360x800/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -3364,6 +3508,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/390x844/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/390x844/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -3623,6 +3779,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/430x932/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/430x932/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -3882,6 +4050,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/844x390/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/844x390/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -4141,6 +4321,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/1440x900/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/1440x900/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -4400,6 +4592,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/390x844-dark/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/390x844-dark/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -4659,6 +4863,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/1440x900-dark/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/1440x900-dark/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -4918,6 +5134,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/390x844-reduced/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/390x844-reduced/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []
@@ -5177,6 +5405,18 @@
      "overflowX": false,
      "clipped": [],
      "active": "close"
+    },
+    {
+     "step": "lab-train",
+     "file": "evidence/shots/webkit/1440x900-reduced/90-lab-train.png",
+     "overflowX": false,
+     "clipped": []
+    },
+    {
+     "step": "lab-steer",
+     "file": "evidence/shots/webkit/1440x900-reduced/90-lab-steer.png",
+     "overflowX": false,
+     "clipped": []
     }
    ],
    "errors": []

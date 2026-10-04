@@ -4,8 +4,7 @@
 // labels or schematic marks, never computed.
 
 import * as toy from '../toy/model.js';
-import { run, featureIdea, decoderCol } from '../toy/trained.js';
-import { sampleBatch, rng } from '../toy/sae.js';
+import { run, featureIdea, decoderCol, featureMax } from '../toy/trained.js';
 import { tiles, floors, climbAt, column, SIDE, TOWER, roofZ, add3 } from './slice.js';
 
 const MID = toy.MIDDLE_FLOOR;
@@ -17,13 +16,9 @@ const WORDS = toy.SENTENCE;
 const GGB = [...Array(8).keys()].find(i => featureIdea(i) === 'ggb');
 // Its strongest natural brightness over toy data: the unit for "10×" (as in
 // the paper, where clamps are multiples of the max over the SAE's data [D2]).
-const GGB_MAX = (() => {
-  let m = 0;
-  for (const x of sampleBatch(rng(4242), 4000, { p: 0.1 })) m = Math.max(m, run(x).f[GGB]);
-  for (const w of WORDS) m = Math.max(m, run(toy.listAt(w, MID)).f[GGB]);
-  return m;
-})();
-const heatOf = w => run(toy.listAt(w, MID)).f[GGB] / GGB_MAX;
+// Computed on first use, not at page load.
+const ggbMax = () => featureMax(GGB);
+const heatOf = w => run(toy.listAt(w, MID)).f[GGB] / ggbMax();
 
 // ---------- III-1 · What lights it up ----------
 const LAMP_AT = [6.5, -2.5, 2.6];
@@ -106,7 +101,7 @@ const CANDS = ['sunset', 'night', 'dawn', 'bridge'];
 export function clampResult(mult) {
   const mid = toy.listAt('at', MID), roof = toy.listAt('at', toy.FLOORS);
   const f0 = run(mid).f[GGB];
-  const delta = mult == null ? 0 : mult * GGB_MAX - f0;
+  const delta = mult == null ? 0 : mult * ggbMax() - f0;
   const W = decoderCol(GGB);
   const edited = mid.map((v, k) => v + delta * W[k]);
   const roofEdited = roof.map((v, k) => v + delta * W[k]);
@@ -123,7 +118,7 @@ export function clampObjs(mult, { stage = 'done' } = {}) {
   const col = column('col-snap', r.edited, back ? climbAt(MID) : COL_SIDE, { k: ['back'], c: 'raw', unit: 0.32, layer: 3 });
   const odds = { id: 'odds', type: 'odds', at: [TOWER.x + 1.5, TOWER.y + 1.5, roofZ + 1.0], pxo: [-30, -96], rows: CANDS.map(w => ({ word: w, p: 0 })), ps: stage === 'done' ? r.ps : clampResult(null).ps, noWin: true, wpx: 100, layer: 3, k: ['guess'] };
   const lampAt = add3(DIAL_AT, [0, 0, 1.9]);
-  const lamp = { ...ggbLamp(mult == null ? run(toy.listAt('at', MID)).f[GGB] / GGB_MAX : Math.max(0, Math.min(1, mult / 2))), at: lampAt };
+  const lamp = { ...ggbLamp(mult == null ? run(toy.listAt('at', MID)).f[GGB] / ggbMax() : Math.max(0, Math.min(1, mult / 2))), at: lampAt };
   const lampName = { id: 'ggb3-name', type: 'label', at: lampAt, pxo: [18, 0], text: 'Golden Gate Bridge', anchor: 'start', size: 12, weight: 600, layer: 3, k: ['clamping'] };
   const dial = { id: 'dial-ggb3', type: 'dial', at: DIAL_AT, r: 0.62, val: mult ?? 0, off: mult == null, layer: 3, k: ['clamping'] };
   return [...fl, col, odds, lamp, lampName, dial];

@@ -43,18 +43,37 @@ try {
           const overflowX = doc.scrollWidth > doc.clientWidth + 1;
           const st = document.querySelector('.stage').getBoundingClientRect();
           const clipped = [];
-          document.querySelectorAll('.stage-svg .world text').forEach(t => {
+          document.querySelectorAll('#stage .stage-svg .world text').forEach(t => {   // the story's scene only (labs are checked below)
             let el = t, hidden = false;
             while (el && el.tagName !== 'svg') { const cs = getComputedStyle(el); if (cs.display === 'none' || +cs.opacity === 0 || +(el.getAttribute('opacity') ?? 1) <= 0.02) { hidden = true; break; } el = el.parentNode; }
             if (hidden || !t.textContent.trim()) return;
             const r = t.getBoundingClientRect();
             if (r.left < st.left - 1 || r.right > st.right + 1 || r.top < st.top - 1 || r.bottom > st.bottom + 1) clipped.push(t.textContent.trim().slice(0, 30));
           });
-          const sizes = [...document.querySelectorAll('.stage-svg .world text')].map(t => t.getBoundingClientRect().height).filter(h => h > 0);
-          return { overflowX, clipped, active: window.__story.active };
+                    return { overflowX, clipped, active: window.__story.active };
         });
         if (check.overflowX || check.clipped.length) problems++;
         run.steps.push({ step: ids[i], file: path.relative(ROOT, file), ...check });
+      }
+      // The labs, after the story.
+      for (const lab of ['lab-train', 'lab-steer']) {
+        await page.evaluate(id => document.getElementById(id).scrollIntoView(), lab);
+        await page.waitForTimeout(400);
+        const file = path.join(dir, `90-${lab}.png`);
+        await page.screenshot({ path: file });
+        const check = await page.evaluate(id => {
+          const doc = document.documentElement, st = document.querySelector(`#${id} .lab-stage`).getBoundingClientRect(), clipped = [];
+          document.querySelectorAll(`#${id} .stage-svg .world text`).forEach(t => {
+            let el = t, hidden = false;
+            while (el && el.tagName !== 'svg') { const cs = getComputedStyle(el); if (cs.display === 'none' || +cs.opacity === 0 || +(el.getAttribute('opacity') ?? 1) <= 0.02) { hidden = true; break; } el = el.parentNode; }
+            if (hidden || !t.textContent.trim()) return;
+            const r = t.getBoundingClientRect();
+            if (r.left < st.left - 1 || r.right > st.right + 1 || r.top < st.top - 1 || r.bottom > st.bottom + 1) clipped.push(t.textContent.trim().slice(0, 30));
+          });
+          return { overflowX: doc.scrollWidth > doc.clientWidth + 1, clipped };
+        }, lab);
+        if (check.overflowX || check.clipped.length) problems++;
+        run.steps.push({ step: lab, file: path.relative(ROOT, file), ...check });
       }
       run.errors = errors;
       if (errors.length) problems++;

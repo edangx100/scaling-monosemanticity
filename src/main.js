@@ -6,6 +6,8 @@ import { Stage, reducedMotion } from './engine/stage.js';
 import { SCENES, directionsObjs, tugObjs, trainingObjs, clampObjs, waterObjs, kobeObjs, WATER_KEYS } from './scenes/index.js';
 import { TRAINED } from './toy/trained.js';
 import { makeTrainer, directions } from './toy/train.js';
+import { mountLab1 } from './labs/lab1.js';
+import { mountLab2 } from './labs/lab2.js';
 import { SENTENCE } from './toy/model.js';
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -239,10 +241,24 @@ $$('[data-rank]').forEach(btn => btn.addEventListener('click', () => {
   stage.patch(kobeObjs(btn.dataset.rank));
 }));
 
+// ---------- labs (after the story) ----------
+// Mounted only as they approach the screen, so they cost nothing at load.
+const labs = {};
+const lazyLab = (id, mount) => {
+  const root = document.getElementById(id); if (!root) return;
+  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); labs[id] = mount(root); } }, { rootMargin: '600px 0px' });
+  io.observe(root);
+};
+lazyLab('lab-train', mountLab1);
+lazyLab('lab-steer', mountLab2);
+// The step nav belongs to the story: hide it once the story is off-screen.
+const navAway = () => stepper.classList.toggle('away', $('#story').getBoundingClientRect().bottom < innerHeight * 0.55);
+addEventListener('scroll', () => requestAnimationFrame(navAway), { passive: true });
+
 // ---------- start ----------
 const hashIdx = steps.findIndex(s => s.dataset.step === location.hash.slice(1));
 if (hashIdx > 0) { activate(hashIdx); requestAnimationFrame(() => go(hashIdx, { instant: true })); } else pick();
 document.documentElement.classList.add('js');
 
 // Test hook (Playwright): read state without poking internals.
-window.__story = { stage, get active() { return steps[active]?.dataset.step; }, go: i => go(i), steps: steps.map(s => s.dataset.step) };
+window.__story = { labs, stage, get active() { return steps[active]?.dataset.step; }, go: i => go(i), steps: steps.map(s => s.dataset.step) };
