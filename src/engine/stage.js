@@ -11,7 +11,7 @@ const ease = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const lerp = (a, b, t) => a + (b - a) * t;
 
 // Fields that tween. Anything else is "static": changing it rebuilds the node.
-const ANIM = new Set(['at', 'o', 's', 'pxo', 'off', 'deadO', 'litO', 'fill', 'heat', 'drop', 'shadeO', 'vals', 'segO', 'hiO', 'on', 'val', 'v', 'len', 'ps', 'flip', 'glow', 'tagO', 'lx', 'ly']);
+const ANIM = new Set(['at', 'o', 's', 'pxo', 'off', 'deadO', 'litO', 'fill', 'heat', 'drop', 'shadeO', 'level', 'lampsO', 'vals', 'segO', 'hiO', 'on', 'val', 'v', 'len', 'ps', 'flip', 'glow', 'tagO', 'lx', 'ly']);
 const staticKey = o => JSON.stringify(Object.keys(o).filter(k => !ANIM.has(k) && k !== 'id').sort().map(k => [k, o[k]]));
 
 function mix(a, b, t) {
@@ -57,6 +57,8 @@ export class Stage {
     const r = this.host.getBoundingClientRect();
     this.W = Math.max(100, Math.round(r.width));
     this.H = Math.max(100, Math.round(r.height));
+    // Pixel-sized things (labels, charts, offsets) grow a little on big stages.
+    this.pxk = Math.max(1, Math.min(1.5, Math.min(this.W, this.H) / 440));
     this.svg.setAttribute('viewBox', `0 0 ${this.W} ${this.H}`);
     if (this.lastFrame && !this.timeline) Object.assign(this.cam, this.fit(this.lastFrame));
     this.draw();
@@ -93,7 +95,7 @@ export class Stage {
       for (const it of items) {
         it.pts.forEach(p => grow(p[0] * s, p[1] * s));
         if (it.lb) { grow(it.lb[0] * s, it.lb[1] * s); grow(it.lb[2] * s, it.lb[3] * s); }
-        if (it.px) { const ax = it.pxAt[0] * s, ay = it.pxAt[1] * s; grow(ax + it.px[0], ay + it.px[1]); grow(ax + it.px[2], ay + it.px[3]); }
+        if (it.px) { const k = this.pxk, ax = it.pxAt[0] * s, ay = it.pxAt[1] * s; grow(ax + it.px[0] * k, ay + it.px[1] * k); grow(ax + it.px[2] * k, ay + it.px[3] * k); }
       }
       return b;
     };
@@ -140,13 +142,13 @@ export class Stage {
     for (const [id, o] of this.state) {
       const n = this.nodes.get(id); if (!n) continue;
       let [x, y] = project(...(o.at || [0, 0, 0]));
-      if (o.pxo) { x += o.pxo[0] / sc; y += o.pxo[1] / sc; }   // fixed pixel offset from the anchor
+      if (o.pxo) { x += o.pxo[0] * this.pxk / sc; y += o.pxo[1] * this.pxk / sc; }   // fixed pixel offset from the anchor
       const s = o.s ?? 1;
       n.g.setAttribute('transform', `translate(${x.toFixed(3)},${y.toFixed(3)})${s !== 1 ? ` scale(${s.toFixed(3)})` : ''}`);
       n.g.setAttribute('opacity', Math.max(0, Math.min(1, o.o ?? 1)).toFixed(3));
       n.g.style.display = (o.o ?? 1) <= 0.001 ? 'none' : '';
       if (n.type.update) n.type.update(n.handle, o, this);
-      const inv = 1 / (sc * s);
+      const inv = this.pxk / (sc * s);
       for (const f of n.fixed) f.setAttribute('transform', `translate(${(+f.dataset.x || 0).toFixed(3)},${(+f.dataset.y || 0).toFixed(3)}) scale(${inv.toFixed(4)})`);
     }
   }

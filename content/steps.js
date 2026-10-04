@@ -20,6 +20,7 @@ export const ACTS = [
   { id: 'I', name: 'Why neurons don’t tell you much', short: 'Act I', numbered: true },
   { id: 'II', name: 'The tool: a sparse autoencoder', short: 'Act II', numbered: true },
   { id: 'III', name: 'Are the features real?', short: 'Act III', numbered: true },
+  { id: 'IV', name: 'A map of a mind', short: 'Act IV', numbered: true },
 ];
 
 export const STEPS = [
@@ -261,6 +262,60 @@ export const STEPS = [
     id: 'recap-3', act: 'III', recap: true, title: 'Are they real?',
     body: [
       '[[lamps3|Features light up for one idea]], in other languages and in pictures. [[dials3|Clamping them]] steers what the model says. And they aren’t hiding inside single neurons.',
+    ],
+  },
+  // ---------------- Act IV ----------------
+  {
+    id: 'neighbourhoods', act: 'IV', title: 'Neighbourhoods',
+    body: [
+      'Features whose arrows {{similar|point in similar directions}} tend to mean similar things. Next to the Golden Gate Bridge sit features for [[inner|Alcatraz and the Presidio]]. Further out are [[middle|Lake Tahoe and Yosemite]]. Further still are tourist spots far away, like [[outer|the Isle of Skye]].',
+    ],
+    caption: `${sec('feature-survey-neighborhoods')}, ${sec('feature-survey-neighborhoods-golden')}. The layout is schematic; the paper’s own map is interactive.`,
+    badges: ['paper', 'schematic'],
+  },
+  {
+    id: 'splitting', act: 'IV', title: 'Features split',
+    body: [
+      'Give the SAE more lamps and broad features break into finer ones; this is called {{splitting|feature splitting}}. One “[[sf|San Francisco]]” feature in the 1M dictionary became 2 in the 4M and [[eleven|**11**]] in the 34M.',
+      'Bigger dictionaries also find ideas the small one missed. A group of [[quake|earthquake features]] appears in the larger SAEs, with nothing like it nearby in the smallest.',
+    ],
+    caption: `${sec('feature-survey-neighborhoods-golden')}. Cluster layout is schematic.`,
+    badges: ['paper', 'schematic'],
+  },
+  {
+    id: 'missing', act: 'IV', title: 'What’s missing',
+    body: [
+      'Sonnet can list every London borough, yet the 34M dictionary has features for only [[sixty|about **60%**]] of them.',
+      'The rule: the more often an idea appears in the text the SAE learned from, the likelier it gets a feature. A dictionary with N working features usually has a feature for ideas that show up roughly once every N tokens. For the 34M SAE, N is about 12 million. Rarer ideas sit below [[waterline|the waterline]]. A missing feature doesn’t mean missing knowledge, because the model can combine other features.',
+    ],
+    maths: 'The paper finds a concept becomes more than 50% likely to have a feature at a frequency slightly below 1 ÷ (number of working features). By that rule, an idea seen once in a billion tokens would need a dictionary of roughly a billion working features.',
+    caption: `${sec('feature-survey-completeness')}. “Usually” means the paper’s more-than-50% point, which sits slightly below one over the number of working features. Bar heights and the 1M and 4M water levels are schematic; at 34M, 12 of these 20 boroughs sit above the line, matching the paper’s 60%.`,
+    badges: ['paper', 'schematic'],
+    interaction: 'water-slider',
+  },
+  {
+    id: 'ablation', act: 'IV', title: 'Switch one off',
+    body: [
+      'Which lit lamps actually matter for an answer? [[switch|Switch one off]], rerun the model, and see whether the answer changes. That’s called {{ablation|ablation}}.',
+      'The paper tried this on a short story: John says he wants to be alone right now; “John feels…”. The two features that pushed hardest toward “sad” rather than “happy” were one for [[alone|wanting to be alone]] and one for [[sadness|sadness]].',
+    ],
+    caption: `${sec('computational-sad')}; ablation is defined in ${sec('computational')}. Bar sizes are schematic. By raw brightness, the 2nd and 3rd features were just the words “be” and “alone”.`,
+    badges: ['paper', 'schematic'],
+  },
+  {
+    id: 'chain', act: 'IV', title: 'A chain of ideas',
+    body: [
+      'Ask Sonnet for the capital of the state where Kobe Bryant played basketball, and it answers Sacramento. That takes three hops. Kobe played for the Lakers in Los Angeles; Los Angeles is in California; California’s capital is Sacramento. The five features that mattered most [[chain|stood for those links]]: Kobe Bryant, the Lakers, Los Angeles, California and “capital”.',
+      'Switching off features one at a time is slow, so researchers use {{attribution|attribution}}, a quick estimate of what switching each one off would do. The [[brightest|brightest lamps]] weren’t the important ones: the Lakers feature was only the 70th brightest. Of the 10 features that mattered most, only 3 made the brightness top 10. **8** made [[attribution|attribution’s top 10]].',
+    ],
+    caption: `${sec('computational-multistep')}; attribution and ablation agree at 0.8 correlation, ${sec('computational')}. The paper calls this example “somewhat cherry-picked”.`,
+    badges: ['paper'],
+    interaction: 'rank-toggle',
+  },
+  {
+    id: 'recap-4', act: 'IV', recap: true, title: 'The map so far',
+    body: [
+      'Features form [[map|a map]]. Bigger dictionaries [[split|split it finer]] and add new ground, but rare ideas still sit [[water|below the water]]. Switching features off, or estimating it with attribution, shows [[chain4|which ones carry an answer]].',
     ],
   },
 ];

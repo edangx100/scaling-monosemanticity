@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T03:55:05.502Z",
+ "generated": "2026-10-04T11:35:25.514Z",
  "results": [
   {
    "browser": "chromium",
@@ -137,7 +137,7 @@
    "browser": "chromium",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 24, 52, 76, 100, 124 … 1500"
+   "detail": "0, 24, 48, 76, 100, 124 … 1500"
   },
   {
    "browser": "chromium",
@@ -159,7 +159,19 @@
   },
   {
    "browser": "chromium",
-   "name": "no console errors (Acts II–III)",
+   "name": "IV-3 slider lowers coverage from 34M (12 of 20) to 1M",
+   "ok": true,
+   "detail": "Water level: 34M · 12 of 20 above → Water level: 1M · 3 of 20 above"
+  },
+  {
+   "browser": "chromium",
+   "name": "IV-5 toggle switches the top 10 between attribution (8) and brightness (3)",
+   "ok": true,
+   "detail": "Top 10 by attribution · 8 → Top 10 by brightness · 3"
+  },
+  {
+   "browser": "chromium",
+   "name": "no console errors (Acts II–IV)",
    "ok": true,
    "detail": ""
   },
@@ -167,13 +179,13 @@
    "browser": "chromium",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "24 transitions watched every frame"
+   "detail": "30 transitions watched every frame"
   },
   {
    "browser": "chromium",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,recap-4"
   },
   {
    "browser": "chromium",
@@ -317,7 +329,7 @@
    "browser": "webkit",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 20, 40, 60, 80, 104 … 1500"
+   "detail": "0, 16, 36, 56, 76, 96 … 1500"
   },
   {
    "browser": "webkit",
@@ -333,7 +345,19 @@
   },
   {
    "browser": "webkit",
-   "name": "no console errors (Acts II–III)",
+   "name": "IV-3 slider lowers coverage from 34M (12 of 20) to 1M",
+   "ok": true,
+   "detail": "Water level: 34M · 12 of 20 above → Water level: 1M · 3 of 20 above"
+  },
+  {
+   "browser": "webkit",
+   "name": "IV-5 toggle switches the top 10 between attribution (8) and brightness (3)",
+   "ok": true,
+   "detail": "Top 10 by attribution · 8 → Top 10 by brightness · 3"
+  },
+  {
+   "browser": "webkit",
+   "name": "no console errors (Acts II–IV)",
    "ok": true,
    "detail": ""
   },
@@ -341,13 +365,13 @@
    "browser": "webkit",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "24 transitions watched every frame"
+   "detail": "30 transitions watched every frame"
   },
   {
    "browser": "webkit",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,recap-4"
   },
   {
    "browser": "webkit",

@@ -160,6 +160,8 @@ details.maths code { font: 14px var(--f-mono); }
 /* controls */
 .control { display: flex; align-items: center; gap: 12px; margin: 6px 0 12px; flex-wrap: wrap; }
 .control label { font-size: 15px; color: var(--ink-2); }
+.control.seg { gap: 8px; }
+.control.seg .btn[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .control output { font: 15px var(--f-mono); color: var(--ink); min-width: 6ch; }
 input[type="range"] { -webkit-appearance: none; appearance: none; width: min(260px, 100%); height: 44px; background: transparent; touch-action: none; cursor: pointer; font-size: 16px; }
 input[type="range"]::-webkit-slider-runnable-track { height: 6px; background: var(--line-2); border-radius: 3px; }
@@ -250,6 +252,15 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 .stage-svg .heat-0 { stop-color: var(--panel); }
 .stage-svg .heat-1 { stop-color: var(--bridge); }
 .stage-svg .legend-bar { stroke: var(--ink-3); stroke-width: 1; }
+
+.stage-svg .freq-bar { fill: var(--raw-dim); }
+.stage-svg .water-sea { fill: var(--machine); opacity: .16; }
+.stage-svg .water-line { stroke: var(--machine); stroke-width: 2.5; }
+.stage-svg .slot-on { fill: var(--lamp); }
+.stage-svg .slot-off { fill: none; stroke: var(--ink-3); stroke-width: 1.5; }
+.stage-svg .path.slash { stroke: var(--ink); stroke-width: 3.5; stroke-linecap: round; }
+.stage-svg .path.link { stroke: var(--ink-3); stroke-width: 2.5; }
+.stage-svg .island { opacity: .9; }
 
 /* highlight from a scene word: dim the rest, outline and pulse the match */
 .stage-svg .obj > .in { transition: opacity .2s; }

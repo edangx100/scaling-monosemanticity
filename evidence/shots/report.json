@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T03:55:05.881Z",
+ "generated": "2026-10-04T11:24:05.310Z",
  "runs": [
   {
    "browser": "chromium",
@@ -179,6 +179,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/320x568/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/320x568/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/320x568/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/320x568/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/320x568/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/320x568/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -361,6 +403,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/360x800/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/360x800/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/360x800/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/360x800/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/360x800/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/360x800/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -543,6 +627,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/390x844/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/390x844/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/390x844/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/390x844/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/390x844/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/390x844/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -725,6 +851,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/430x932/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/430x932/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/430x932/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/430x932/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/430x932/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/430x932/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -907,6 +1075,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/844x390/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/844x390/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/844x390/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/844x390/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/844x390/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/844x390/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -1089,6 +1299,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/1440x900/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/1440x900/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/1440x900/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/1440x900/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/1440x900/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/1440x900/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -1271,6 +1523,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/390x844-dark/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/390x844-dark/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/390x844-dark/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/390x844-dark/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/390x844-dark/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/390x844-dark/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -1453,6 +1747,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/1440x900-dark/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/1440x900-dark/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/1440x900-dark/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/1440x900-dark/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/1440x900-dark/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/1440x900-dark/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -1635,6 +1971,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/390x844-reduced/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/390x844-reduced/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/390x844-reduced/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/390x844-reduced/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/390x844-reduced/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/390x844-reduced/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -1817,6 +2195,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/chromium/1440x900-reduced/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/chromium/1440x900-reduced/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/chromium/1440x900-reduced/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/chromium/1440x900-reduced/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/chromium/1440x900-reduced/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/chromium/1440x900-reduced/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -1999,6 +2419,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/320x568/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/320x568/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/320x568/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/320x568/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/320x568/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/320x568/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -2181,6 +2643,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/360x800/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/360x800/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/360x800/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/360x800/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/360x800/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/360x800/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -2363,6 +2867,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/390x844/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/390x844/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/390x844/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/390x844/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/390x844/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/390x844/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -2545,6 +3091,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/430x932/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/430x932/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/430x932/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/430x932/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/430x932/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/430x932/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -2727,6 +3315,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/844x390/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/844x390/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/844x390/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/844x390/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/844x390/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/844x390/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -2909,6 +3539,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/1440x900/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/1440x900/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/1440x900/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/1440x900/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/1440x900/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/1440x900/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -3091,6 +3763,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/390x844-dark/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/390x844-dark/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/390x844-dark/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/390x844-dark/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/390x844-dark/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/390x844-dark/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -3273,6 +3987,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/1440x900-dark/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/1440x900-dark/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/1440x900-dark/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/1440x900-dark/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/1440x900-dark/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/1440x900-dark/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -3455,6 +4211,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/390x844-reduced/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/390x844-reduced/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/390x844-reduced/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/390x844-reduced/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/390x844-reduced/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/390x844-reduced/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []
@@ -3637,6 +4435,48 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-3"
+    },
+    {
+     "step": "neighbourhoods",
+     "file": "evidence/shots/webkit/1440x900-reduced/25-neighbourhoods.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "neighbourhoods"
+    },
+    {
+     "step": "splitting",
+     "file": "evidence/shots/webkit/1440x900-reduced/26-splitting.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "splitting"
+    },
+    {
+     "step": "missing",
+     "file": "evidence/shots/webkit/1440x900-reduced/27-missing.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "missing"
+    },
+    {
+     "step": "ablation",
+     "file": "evidence/shots/webkit/1440x900-reduced/28-ablation.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "ablation"
+    },
+    {
+     "step": "chain",
+     "file": "evidence/shots/webkit/1440x900-reduced/29-chain.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "chain"
+    },
+    {
+     "step": "recap-4",
+     "file": "evidence/shots/webkit/1440x900-reduced/30-recap-4.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "recap-4"
     }
    ],
    "errors": []

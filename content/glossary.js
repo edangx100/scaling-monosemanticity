@@ -22,4 +22,8 @@ export const GLOSSARY = {
   brightness: { term: 'Brightness (activation)', pic: 'lamp', def: 'How strongly a feature lights for a token. Researchers call it the feature’s activation.' },
   clamping: { term: 'Clamping', pic: 'dial', def: 'Fixing a feature at a chosen brightness and letting the model carry on. “10×” means ten times the brightest it got on its own in the researchers’ data.' },
   correlation: { term: 'Correlation', pic: 'strip', def: 'How closely two quantities rise and fall together, from −1 to 1: near 1 means in lockstep, near 0 means unrelated.' },
+  similar: { term: 'Similar directions', pic: 'arrows', def: 'Two arrows that point roughly the same way. Researchers measure this with cosine similarity: 1 for the same direction, 0 for perpendicular.' },
+  splitting: { term: 'Feature splitting', pic: 'lamps', def: 'When a bigger dictionary replaces one broad feature with several narrower ones nearby.' },
+  ablation: { term: 'Ablation', pic: 'slash', def: 'Switching one feature off and rerunning the model to see what changes.' },
+  attribution: { term: 'Attribution', pic: 'tenrow', def: 'A fast estimate of how much switching a feature off would change the answer, without rerunning the model for each one.' },
 };

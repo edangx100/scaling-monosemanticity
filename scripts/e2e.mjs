@@ -157,7 +157,21 @@ try {
       await showStep(page, await idx(page, 'lights'));
       const heat = await page.evaluate(() => [...document.querySelectorAll('[data-id^="tile-"]')].map(g => +(g.querySelector('.in > polygon:nth-of-type(4)')?.getAttribute('opacity') || 0)));
       check(name, 'III-1 tints the bridge words, not the others', heat[6] > 0.5 && heat[0] === 0 && heat[3] === 0, heat.map(v => v.toFixed(2)).join(' '));
-      check(name, 'no console errors (Acts II–III)', errors.length === 0, errors.join(' | '));
+      // Act IV: water-line slider and the brightness/attribution toggle.
+      await showStep(page, await idx(page, 'missing'));
+      const level = () => page.evaluate(() => [...document.querySelectorAll('[data-id="water"] text')].map(t => t.textContent).find(t => t.startsWith('Water level')));
+      const at34 = await level();
+      await page.locator('#ctl-missing').fill('0'); await page.waitForTimeout(100);
+      const at1 = await level();
+      check(name, 'IV-3 slider lowers coverage from 34M (12 of 20) to 1M', at34.includes('34M · 12 of 20') && at1.includes('1M') && !at1.includes('12 of 20'), `${at34} → ${at1}`);
+      await showStep(page, await idx(page, 'chain'));
+      const row = () => page.evaluate(() => document.querySelector('[data-id="kobe-ten"] text').textContent + ' · ' + document.querySelectorAll('[data-id="kobe-ten"] .slot-on').length);
+      const byAttr = await row();
+      await page.locator('#step-chain [data-rank="brightness"]').tap(); await page.waitForTimeout(100);
+      const byBright = await row();
+      const pressed = await page.locator('#step-chain [data-rank="brightness"]').getAttribute('aria-pressed');
+      check(name, 'IV-5 toggle switches the top 10 between attribution (8) and brightness (3)', byAttr.endsWith('· 8') && byBright.endsWith('· 3') && pressed === 'true', `${byAttr} → ${byBright}`);
+      check(name, 'no console errors (Acts II–IV)', errors.length === 0, errors.join(' | '));
       await ctx.close();
     }
 
@@ -174,8 +188,10 @@ try {
           document.querySelectorAll('.stage-svg .world text').forEach(t => {
             const g = t.closest('.obj'); if (!g || getComputedStyle(g).display === 'none' || +(g.getAttribute('opacity') ?? 1) < 0.05) return;
             const lines = t.querySelectorAll('tspan').length || 1;
-            const h = t.getBoundingClientRect().height / lines;   // per line; labels are 11–13px
-            if (h > 30) window.__big.push({ id: g.dataset.id, h: Math.round(h) });
+            // Per line. Scene text is at most 18px, ×1.5 on big stages (~35px tall);
+            // the flash this guards against painted text 740–870px tall.
+            const h = t.getBoundingClientRect().height / lines;
+            if (h > 60) window.__big.push({ id: g.dataset.id, h: Math.round(h) });
           });
           requestAnimationFrame(tick);
         };

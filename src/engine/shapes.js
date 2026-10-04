@@ -268,7 +268,7 @@ export const TYPES = {
         const t = el('text', { x: -6, y: y + 11, class: 't', 'text-anchor': 'end', 'font-size': 12 }, tg); t.textContent = r.word;
         el('rect', { x: 0, y, width: W, height: 13, rx: 3, class: 'odds-track' }, tg);
         const f = el('rect', { x: 0, y, width: W, height: 13, rx: 3, style: `fill:${col('raw')}` }, tg);
-        const pct = el('text', { x: W + 6, y: y + 11, class: 't mono', 'font-size': 11 }, tg);
+        const pct = el('text', { x: W + 6, y: y + 11, class: 't mono', 'font-size': 11, opacity: o.hidePct ? 0 : 1 }, tg);
         if (i === 0 && !o.noWin) f.classList.add('odds-win');
         return { f, pct };
       });
@@ -451,6 +451,46 @@ export const TYPES = {
     },
   },
 
+  // Concept-frequency bars under a water line (IV-3, schematic). heights 0..1,
+  // level 0..1 (animatable); bars above the line carry a lamp.
+  water: {
+    build(g, o) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const n = o.heights.length, BW = 9, GAP = 3, H = 110, W = n * (BW + GAP) - GAP;
+      const lamps = [];
+      o.heights.forEach((hh, i) => {
+        const x = i * (BW + GAP);
+        el('rect', { x, y: H - hh * H, width: BW, height: hh * H, rx: 2, class: 'freq-bar' }, tg);
+        lamps.push({ el: el('circle', { cx: x + BW / 2, cy: H - hh * H - 8, r: 4, class: 'dot-lamp' }, tg), h: hh });
+      });
+      const sea = el('rect', { x: -4, y: 0, width: W + 8, height: H, class: 'water-sea' }, tg);
+      const line = el('line', { x1: -4, y1: 0, x2: W + 4, y2: 0, class: 'water-line' }, tg);
+      el('line', { x1: 0, y1: H, x2: W, y2: H, class: 'strip-axis' }, tg);
+      const a = el('text', { x: 0, y: H + 16, class: 't dim', 'font-size': 12 }, tg); a.textContent = o.left || 'common';
+      const b = el('text', { x: W, y: H + 16, class: 't dim', 'font-size': 12, 'text-anchor': 'end' }, tg); b.textContent = o.right || 'rare';
+      const lab = el('text', { x: 0, y: -14, class: 't', 'font-size': 12, 'font-weight': 600 }, tg);
+      return { lamps, sea, line, lab, H };
+    },
+    update(h, o) {
+      const lv = Math.max(0, Math.min(1, o.level ?? 0)), y = h.H * (1 - lv);
+      h.sea.setAttribute('transform', `translate(0,${f2(y)}) scale(1,${f2(Math.max(0.001, lv))})`);
+      h.line.setAttribute('transform', `translate(0,${f2(y)})`);
+      if (h.lab.textContent !== (o.levelLabel || '')) h.lab.textContent = o.levelLabel || '';
+      h.lamps.forEach(l => l.el.setAttribute('opacity', l.h > lv + 0.005 ? f2(o.lampsO ?? 1) : 0));
+    },
+  },
+
+  // A row of ten slots with some filled (IV-5's top-10 comparison).
+  tenrow: {
+    build(g, o) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const t = el('text', { x: 0, y: -10, class: 't', 'font-size': 13, 'font-weight': 700 }, tg); t.textContent = o.title || '';
+      for (let i = 0; i < 10; i++) el('circle', { cx: 9 + i * 22, cy: 8, r: 8, class: i < (o.filled || 0) ? 'slot-on' : 'slot-off' }, tg);
+      const n = el('text', { x: 0, y: 36, class: 't dim', 'font-size': 12 }, tg); n.textContent = o.note || '';
+      return {};
+    },
+  },
+
   // A static polyline through world points (relative to the anchor).
   path: {
     build(g, o) {
@@ -482,6 +522,8 @@ export const EXTENT = {
   room: o => { const h = (o.size || 2.2) / 2; const pts = []; for (const x of [-h, h]) for (const y of [-h, h]) for (const z of [-h, h]) pts.push([x, y, z]); return { pts }; },
   flash: () => ({ lb: [-0.95, -0.95, 0.95, 0.95] }),
   path: o => ({ pts: o.pts }),
+  water: o => ({ px: [0, -30, o.heights.length * 12, 130] }),
+  tenrow: () => ({ px: [0, -26, 222, 42] }),
   bins: () => ({ px: [0, -24, 4 * 52 + 3 * 10, 92] }),
   strip: o => ({ px: [-8, -28, (o.wpx || 260) + 8, 128] }),
   legend: o => ({ px: [0, 0, o.wpx || 150, 34] }),

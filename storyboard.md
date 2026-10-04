@@ -399,7 +399,7 @@ That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **Takeaway:** Dictionaries catch common ideas first; rare ones need much bigger dictionaries.
 - **New term:** none.
 - **Scene words:** "60%" → the borough bars above the line; "waterline" → the water level.
-- **Scene / aria:** "Bars for concepts sorted from common to rare, with a water line across them. Bars above the line carry a lamp. A three-stop slider (1M / 4M / 34M) lowers the line."
+- **Scene / aria:** "Bars for concepts sorted from common to rare, with a water line across them. Bars above the line carry a lamp. A three-stop slider (1M / 4M / 34M) lowers the line." (As built: 20 bars for London boroughs; at 34M exactly 12 of 20 sit above the line, matching the paper's 60%.)
 - **Beats:** (1) bars rise, 0.6s; (2) water fills to the 34M level, 0.6s; (3) lamps pop onto the bars above it, 0.4s.
 - **Interaction:** the three-stop slider. Line positions `SCHEMATIC`, ordered by the paper's rule.
 - **Caption:** "§feature-survey-completeness [H1–H3, H6, B7]. 'Usually' means the paper's more-than-50% point, which sits slightly below one over the number of working features. Bars `SCHEMATIC`."
@@ -429,7 +429,7 @@ That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **Scene words:** "Kobe", "Lakers", "Los Angeles", "California", "capital" → the chain lamps; "brightest" and "attribution" → the toggle sides.
 - **Scene / aria:** "A chain of linked lamps, Kobe Bryant → Lakers → Los Angeles → California → capital, leading to a tile reading Sacramento. A toggle sorts a ranked list by brightness or by attribution; in the brightness list the Lakers lamp sits far down at 70."
 - **Beats:** (1) the chain lights link by link, 1.2s; (2) the toggle flips and the list reorders, 0.6s.
-- **Interaction:** the toggle "Sort by brightness | by attribution". Ranks are the paper's [I10, I11].
+- **Interaction:** the toggle "By brightness | By attribution". As built, it switches a row of ten slots (the top 10) between 3 filled (brightness) and 8 filled (attribution) [I11], with "Lakers: 70th brightest" [I10], instead of reordering a ranked list: the paper doesn't give the full ranks, so a list would have needed invented ones.
 - **Caption:** "§computational-multistep [I7–I11]; attribution and ablation agree at 0.8 correlation, §computational [I3]. The paper calls this example 'somewhat cherry-picked' [I13]."
 
 ### Recap IV

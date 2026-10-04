@@ -3,7 +3,7 @@
 // words highlight scene objects, glossary terms open notes.
 
 import { Stage, reducedMotion } from './engine/stage.js';
-import { SCENES, directionsObjs, tugObjs, trainingObjs, clampObjs } from './scenes/index.js';
+import { SCENES, directionsObjs, tugObjs, trainingObjs, clampObjs, waterObjs, kobeObjs, WATER_KEYS } from './scenes/index.js';
 import { TRAINED } from './toy/trained.js';
 import { makeTrainer, directions } from './toy/train.js';
 import { SENTENCE } from './toy/model.js';
@@ -218,6 +218,26 @@ $$('[data-control="clamp-dial"]').forEach(input => {
     stage.patch(clampObjs(v));
   });
 });
+
+$$('[data-control="water-slider"]').forEach(input => {
+  const out = document.getElementById(`out-${input.closest('.step').dataset.step}`);
+  input.addEventListener('input', () => {
+    const key = WATER_KEYS[+input.value], txt = key.toUpperCase();
+    out.textContent = txt; input.setAttribute('aria-valuetext', txt);
+    const i = steps.indexOf(input.closest('.step'));
+    if (i !== active) activate(i);
+    stage.finish();
+    stage.patch(waterObjs(key));
+  });
+});
+$$('[data-rank]').forEach(btn => btn.addEventListener('click', () => {
+  const step = btn.closest('.step');
+  $$('[data-rank]', step).forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+  const i = steps.indexOf(step);
+  if (i !== active) activate(i);
+  stage.finish();
+  stage.patch(kobeObjs(btn.dataset.rank));
+}));
 
 // ---------- start ----------
 const hashIdx = steps.findIndex(s => s.dataset.step === location.hash.slice(1));

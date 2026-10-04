@@ -58,6 +58,10 @@ export async function renderPage({ bust = false } = {}) {
       ? `<div class="control"><label for="ctl-${step.id}">Which token?</label><input type="range" id="ctl-${step.id}" min="0" max="9" step="1" value="6" data-control="shadow-slider"><output for="ctl-${step.id}" id="out-${step.id}">Bridge</output></div>`
       : step.interaction === 'clamp-dial'
         ? `<div class="control"><label for="ctl-${step.id}">Clamp (toy)</label><input type="range" id="ctl-${step.id}" min="-5" max="10" step="1" value="10" data-control="clamp-dial" aria-valuetext="10 times"><output for="ctl-${step.id}" id="out-${step.id}">10×</output></div>`
+      : step.interaction === 'water-slider'
+        ? `<div class="control"><label for="ctl-${step.id}">Dictionary size</label><input type="range" id="ctl-${step.id}" min="0" max="2" step="1" value="2" data-control="water-slider" aria-valuetext="34M"><output for="ctl-${step.id}" id="out-${step.id}">34M</output></div>`
+      : step.interaction === 'rank-toggle'
+        ? `<div class="control seg" role="group" aria-label="Rank the top 10 by"><button type="button" class="btn small" data-rank="brightness" aria-pressed="false">By brightness</button><button type="button" class="btn small" data-rank="attribution" aria-pressed="true">By attribution</button></div>`
       : step.interaction === 'lambda-slider'
         ? `<div class="control"><label for="ctl-${step.id}">λ (toy)</label><input type="range" id="ctl-${step.id}" min="0" max="${sweep.length - 1}" step="1" value="${TUG_DEFAULT}" data-control="lambda-slider" aria-valuetext="λ ${sweep[TUG_DEFAULT].lambda}"><output for="ctl-${step.id}" id="out-${step.id}">${sweep[TUG_DEFAULT].lambda}</output></div>`
         : '';
