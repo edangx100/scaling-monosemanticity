@@ -464,7 +464,7 @@ That's **31 story steps** (excluding the hook and recaps), above KICKOFF's ~24�
 - **New term:** none.
 - **Scene words:** "internal conflict" → the lamp; "2×" → its dial.
 - **Scene / aria:** "Two lanes. Left, unclamped: a bubble says the word is forgotten. Right, the conflict lamp's dial at 2×: a bubble says it can't forget and names the word, shown as a blank tile. Both bubbles are tagged 'paraphrased from the paper'."
-- **Beats:** (1) the left lane, 0.6s; (2) the right lamp lights, 0.4s; (3) the dial turns to 2×, 0.4s; (4) the right bubble appears, 0.4s.
+- **Beats:** (1) the left lane, 0.6s; (2) the right lamp lights, 0.4s; (3) the dial turns to 2×, 0.4s; (4) the right bubble appears, 0.4s. (As built: two pixel-laid-out columns so the bubbles never overlap on a 320px phone; the bubbles open "Not clamped:" and "At 2×:" and carry a short "PARAPHRASED" tag, with "from the paper" in the step's badge and caption.)
 - **Caption:** "Case study, §safety-relevant-deception-case-study [J9, J10]. No multiple is reported for the honesty feature. Bubbles paraphrased."
 
 ### V-3 · Who the assistant thinks it is

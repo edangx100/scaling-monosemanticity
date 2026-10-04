@@ -262,6 +262,14 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 .stage-svg .path.link { stroke: var(--ink-3); stroke-width: 2.5; }
 .stage-svg .island { opacity: .9; }
 
+.stage-svg .drawer { fill: var(--panel); stroke: var(--ink-3); stroke-width: 1.5; }
+.stage-svg .drawer-handle { fill: var(--ink-3); }
+.stage-svg .lock-body { fill: var(--ink-2); }
+.stage-svg .lock-shackle { fill: none; stroke: var(--ink-2); stroke-width: 4; }
+.stage-svg .mask { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+.stage-svg .mask-eye { fill: var(--ink); }
+.stage-svg .path.crack { stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
+
 /* highlight from a scene word: dim the rest, outline and pulse the match */
 .stage-svg .obj > .in { transition: opacity .2s; }
 .stage-svg.focusing .obj:not(.hl) > .in { opacity: .28; }

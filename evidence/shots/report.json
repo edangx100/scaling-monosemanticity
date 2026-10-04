@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T11:24:05.310Z",
+ "generated": "2026-10-04T12:10:58.082Z",
  "runs": [
   {
    "browser": "chromium",
@@ -221,6 +221,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/320x568/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/320x568/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/320x568/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/320x568/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/320x568/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -445,6 +480,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/360x800/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/360x800/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/360x800/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/360x800/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/360x800/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -669,6 +739,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/390x844/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/390x844/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/390x844/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/390x844/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/390x844/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -893,6 +998,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/430x932/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/430x932/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/430x932/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/430x932/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/430x932/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -1117,6 +1257,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/844x390/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/844x390/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/844x390/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/844x390/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/844x390/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -1341,6 +1516,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/1440x900/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/1440x900/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/1440x900/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/1440x900/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/1440x900/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -1565,6 +1775,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/390x844-dark/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/390x844-dark/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/390x844-dark/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/390x844-dark/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/390x844-dark/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -1789,6 +2034,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/1440x900-dark/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/1440x900-dark/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/1440x900-dark/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/1440x900-dark/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/1440x900-dark/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -2013,6 +2293,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/390x844-reduced/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/390x844-reduced/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/390x844-reduced/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/390x844-reduced/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/390x844-reduced/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -2237,6 +2552,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/chromium/1440x900-reduced/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/chromium/1440x900-reduced/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/chromium/1440x900-reduced/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/chromium/1440x900-reduced/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/chromium/1440x900-reduced/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -2461,6 +2811,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/320x568/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/320x568/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/320x568/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/320x568/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/320x568/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -2685,6 +3070,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/360x800/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/360x800/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/360x800/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/360x800/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/360x800/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -2909,6 +3329,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/390x844/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/390x844/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/390x844/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/390x844/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/390x844/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -3133,6 +3588,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/430x932/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/430x932/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/430x932/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/430x932/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/430x932/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -3357,6 +3847,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/844x390/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/844x390/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/844x390/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/844x390/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/844x390/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -3581,6 +4106,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/1440x900/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/1440x900/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/1440x900/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/1440x900/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/1440x900/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -3805,6 +4365,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/390x844-dark/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/390x844-dark/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/390x844-dark/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/390x844-dark/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/390x844-dark/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -4029,6 +4624,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/1440x900-dark/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/1440x900-dark/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/1440x900-dark/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/1440x900-dark/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/1440x900-dark/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -4253,6 +4883,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/390x844-reduced/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/390x844-reduced/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/390x844-reduced/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/390x844-reduced/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/390x844-reduced/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []
@@ -4477,6 +5142,41 @@
      "overflowX": false,
      "clipped": [],
      "active": "recap-4"
+    },
+    {
+     "step": "sharp",
+     "file": "evidence/shots/webkit/1440x900-reduced/31-sharp.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "sharp"
+    },
+    {
+     "step": "fib",
+     "file": "evidence/shots/webkit/1440x900-reduced/32-fib.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "fib"
+    },
+    {
+     "step": "persona",
+     "file": "evidence/shots/webkit/1440x900-reduced/33-persona.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "persona"
+    },
+    {
+     "step": "limits",
+     "file": "evidence/shots/webkit/1440x900-reduced/34-limits.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "limits"
+    },
+    {
+     "step": "close",
+     "file": "evidence/shots/webkit/1440x900-reduced/35-close.png",
+     "overflowX": false,
+     "clipped": [],
+     "active": "close"
     }
    ],
    "errors": []

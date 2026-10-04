@@ -491,6 +491,42 @@ export const TYPES = {
     },
   },
 
+  // A labelled drawer front (V-1's cabinet): label only, never contents.
+  drawer: {
+    build(g, o) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const W = o.wpx || 150;
+      el('rect', { x: -W / 2, y: -13, width: W, height: 26, rx: 4, class: 'drawer' }, tg);
+      el('rect', { x: -10, y: 4, width: 20, height: 4, rx: 2, class: 'drawer-handle' }, tg);
+      const t = el('text', { x: 0, y: -1, class: 't', 'text-anchor': 'middle', 'font-size': 12, 'font-weight': 600 }, tg); t.textContent = o.text;
+      return {};
+    },
+  },
+
+  // A padlock (pixel-sized). shut: 0 open … 1 closed.
+  lock: {
+    build(g) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const shackle = el('path', { d: 'M -8 0 L -8 -9 A 8 8 0 0 1 8 -9 L 8 0', class: 'lock-shackle' }, tg);
+      el('rect', { x: -12, y: -2, width: 24, height: 20, rx: 3, class: 'lock-body' }, tg);
+      return { shackle };
+    },
+    update(h, o) { h.shackle.setAttribute('transform', `translate(0,${f2(-6 * (1 - (o.shut ?? 1)))})`); },
+  },
+
+  // A simple mask (V-3) that lifts away. lift: 0 on … 1 lifted.
+  mask: {
+    build(g) {
+      const tg = el('g', { class: 'fixed', 'data-x': 0, 'data-y': 0 }, g);
+      const m = el('g', {}, tg);
+      el('path', { d: 'M -34 -10 Q 0 -30 34 -10 Q 32 16 0 22 Q -32 16 -34 -10 Z', class: 'mask' }, m);
+      el('ellipse', { cx: -13, cy: -4, rx: 7, ry: 4, class: 'mask-eye' }, m);
+      el('ellipse', { cx: 13, cy: -4, rx: 7, ry: 4, class: 'mask-eye' }, m);
+      return { m };
+    },
+    update(h, o) { const l = o.lift ?? 0; h.m.setAttribute('transform', `translate(${f2(18 * l)},${f2(-46 * l)}) rotate(${f2(-18 * l)})`); h.m.setAttribute('opacity', f2(1 - 0.55 * l)); },
+  },
+
   // A static polyline through world points (relative to the anchor).
   path: {
     build(g, o) {
@@ -522,6 +558,9 @@ export const EXTENT = {
   room: o => { const h = (o.size || 2.2) / 2; const pts = []; for (const x of [-h, h]) for (const y of [-h, h]) for (const z of [-h, h]) pts.push([x, y, z]); return { pts }; },
   flash: () => ({ lb: [-0.95, -0.95, 0.95, 0.95] }),
   path: o => ({ pts: o.pts }),
+  drawer: o => ({ px: [-(o.wpx || 150) / 2, -14, (o.wpx || 150) / 2, 14] }),
+  lock: () => ({ px: [-13, -20, 13, 19] }),
+  mask: () => ({ px: [-36, -76, 56, 24] }),
   water: o => ({ px: [0, -30, o.heights.length * 12, 130] }),
   tenrow: () => ({ px: [0, -26, 222, 42] }),
   bins: () => ({ px: [0, -24, 4 * 52 + 3 * 10, 92] }),

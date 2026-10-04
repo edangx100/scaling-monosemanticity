@@ -28,7 +28,7 @@ for (const step of STEPS) {
 test('every technical term is introduced with a glossary note on first use', () => {
   const seen = new Set();
   for (const step of STEPS) for (const [, term] of step.body.map(p => (typeof p === 'object' ? [p.lead, ...p.list].join(' ') : p)).join(' ').matchAll(/\{\{([\w-]+)\|/g)) seen.add(term);
-  for (const term of ['token', 'vector', 'layer', 'next', 'neuron', 'polysemantic', 'direction', 'superposition', 'feature', 'sae', 'encoder', 'relu', 'decoder', 'training', 'loss', 'dead', 'brightness', 'clamping', 'correlation', 'similar', 'splitting', 'ablation', 'attribution']) assert.ok(seen.has(term), term);
+  for (const term of ['token', 'vector', 'layer', 'next', 'neuron', 'polysemantic', 'direction', 'superposition', 'feature', 'sae', 'encoder', 'relu', 'decoder', 'training', 'loss', 'dead', 'brightness', 'clamping', 'correlation', 'similar', 'splitting', 'ablation', 'attribution', 'sycophancy', 'persona']) assert.ok(seen.has(term), term);
 });
 
 test('the page renders with no unresolved marks', async () => {

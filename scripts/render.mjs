@@ -65,7 +65,8 @@ export async function renderPage({ bust = false } = {}) {
       : step.interaction === 'lambda-slider'
         ? `<div class="control"><label for="ctl-${step.id}">λ (toy)</label><input type="range" id="ctl-${step.id}" min="0" max="${sweep.length - 1}" step="1" value="${TUG_DEFAULT}" data-control="lambda-slider" aria-valuetext="λ ${sweep[TUG_DEFAULT].lambda}"><output for="ctl-${step.id}" id="out-${step.id}">${sweep[TUG_DEFAULT].lambda}</output></div>`
         : '';
-    const maths = step.maths ? `<details class="maths"><summary>Show the maths</summary><p>${step.maths}</p></details>` : '';
+    const maths = (step.maths ? `<details class="maths"><summary>Show the maths</summary><p>${step.maths}</p></details>` : '')
+      + (step.more ? `<details class="maths"><summary>${esc(step.more.summary)}</summary><ul class="results">${step.more.list.map(li => `<li>${mark(li)}</li>`).join('')}</ul></details>` : '');
     if (step.hero) {
       return `<section class="step hero" id="step-${step.id}" data-step="${step.id}" aria-labelledby="h-${step.id}">
   <div class="card">

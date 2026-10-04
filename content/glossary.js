@@ -26,4 +26,6 @@ export const GLOSSARY = {
   splitting: { term: 'Feature splitting', pic: 'lamps', def: 'When a bigger dictionary replaces one broad feature with several narrower ones nearby.' },
   ablation: { term: 'Ablation', pic: 'slash', def: 'Switching one feature off and rerunning the model to see what changes.' },
   attribution: { term: 'Attribution', pic: 'tenrow', def: 'A fast estimate of how much switching a feature off would change the answer, without rerunning the model for each one.' },
+  sycophancy: { term: 'Sycophancy', pic: 'drawer', def: 'Telling people what they want to hear, such as excessive flattery.' },
+  persona: { term: 'Persona', pic: 'mask', def: 'The character the model plays, here the helpful assistant.' },
 };

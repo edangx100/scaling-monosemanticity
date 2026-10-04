@@ -171,7 +171,13 @@ try {
       const byBright = await row();
       const pressed = await page.locator('#step-chain [data-rank="brightness"]').getAttribute('aria-pressed');
       check(name, 'IV-5 toggle switches the top 10 between attribution (8) and brightness (3)', byAttr.endsWith('· 8') && byBright.endsWith('· 3') && pressed === 'true', `${byAttr} → ${byBright}`);
-      check(name, 'no console errors (Acts II–IV)', errors.length === 0, errors.join(' | '));
+      // Act V: the collapsed list of further limitations.
+      await showStep(page, await idx(page, 'limits'));
+      const more = page.locator('#step-limits details.maths summary', { hasText: 'More limitations' });
+      await more.tap(); await page.waitForTimeout(100);
+      const items = await page.evaluate(() => { const d = [...document.querySelectorAll('#step-limits details.maths')].find(x => x.textContent.includes('More limitations')); return { open: d.open, n: d.querySelectorAll('li').length }; });
+      check(name, 'V-4 “More limitations” opens with five more', items.open && items.n === 5, JSON.stringify(items));
+      check(name, 'no console errors (Acts II–V)', errors.length === 0, errors.join(' | '));
       await ctx.close();
     }
 

@@ -11,7 +11,7 @@ const ease = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const lerp = (a, b, t) => a + (b - a) * t;
 
 // Fields that tween. Anything else is "static": changing it rebuilds the node.
-const ANIM = new Set(['at', 'o', 's', 'pxo', 'off', 'deadO', 'litO', 'fill', 'heat', 'drop', 'shadeO', 'level', 'lampsO', 'vals', 'segO', 'hiO', 'on', 'val', 'v', 'len', 'ps', 'flip', 'glow', 'tagO', 'lx', 'ly']);
+const ANIM = new Set(['at', 'o', 's', 'pxo', 'off', 'deadO', 'litO', 'fill', 'heat', 'drop', 'shadeO', 'level', 'lampsO', 'shut', 'lift', 'vals', 'segO', 'hiO', 'on', 'val', 'v', 'len', 'ps', 'flip', 'glow', 'tagO', 'lx', 'ly']);
 const staticKey = o => JSON.stringify(Object.keys(o).filter(k => !ANIM.has(k) && k !== 'id').sort().map(k => [k, o[k]]));
 
 function mix(a, b, t) {

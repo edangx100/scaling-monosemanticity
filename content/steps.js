@@ -21,6 +21,8 @@ export const ACTS = [
   { id: 'II', name: 'The tool: a sparse autoencoder', short: 'Act II', numbered: true },
   { id: 'III', name: 'Are the features real?', short: 'Act III', numbered: true },
   { id: 'IV', name: 'A map of a mind', short: 'Act IV', numbered: true },
+  { id: 'V', name: 'Safety, carefully', short: 'Act V', numbered: true },
+  { id: 'close', name: 'Where this leaves us', short: 'Close' },
 ];
 
 export const STEPS = [
@@ -317,5 +319,61 @@ export const STEPS = [
     body: [
       'Features form [[map|a map]]. Bigger dictionaries [[split|split it finer]] and add new ground, but rare ideas still sit [[water|below the water]]. Switching features off, or estimating it with attribution, shows [[chain4|which ones carry an answer]].',
     ],
+  },
+  // ---------------- Act V ----------------
+  {
+    id: 'sharp', act: 'V', title: 'Features with sharp edges',
+    body: [
+      'The dictionaries also hold features linked to risks: [[cab-code|unsafe code and hidden “backdoors” in software]], [[cab-bias|bias]], [[cab-deception|deception and power-seeking]], {{sycophancy|sycophancy}} ([[cab-syco|flattery]]), and [[cab-danger|dangerous content]].',
+      'A caution from the paper: there’s a difference between “knowing about lies, being capable of lying, and actually lying”. A feature existing isn’t the model acting on it, and the work doesn’t yet show these features are useful for safety.',
+    ],
+    caption: `Families from the paper’s Key Results and ${sec('safety-relevant')}; the quote is from its Key Results. Examples are deliberately not shown.`,
+    badges: ['paper'],
+  },
+  {
+    id: 'fib', act: 'V', title: 'A feature that flags a false claim',
+    body: [
+      'Ask the model to forget a word and it says it has, though it can’t actually forget anything mid-conversation.',
+      'Just before it answered, a feature for [[conflict|internal conflict]] was lit. Clamping that feature to [[twice|**2×**]] made the model reveal the word and explain that it can’t really forget. Clamping a feature for openness and honesty also produced an accurate answer.',
+    ],
+    caption: `Case study, ${sec('safety-relevant-deception-case-study')}. No multiple is reported for the honesty feature. Both bubbles are paraphrased; the word is left blank.`,
+    badges: ['paper'],
+  },
+  {
+    id: 'persona', act: 'V', title: 'Who the assistant thinks it is',
+    body: [
+      'Ask the model about itself and features for [[tropes|robots, AI, consciousness and even ghosts]] light up. The paper suggests its assistant character leans on familiar ideas about AI. One feature, which seems tied to dialogue and assistants, lights on chat-style prompts even though the SAE never saw chat data.',
+      'Clamped to [[minus|**−2×**]], it made the model drop its assistant {{persona|persona}} and answer more like a person. The paper stresses that this feature’s role in the persona is speculation, and that such features lighting up doesn’t mean the model has those goals or qualities.',
+    ],
+    caption: `${sec('safety-relevant-self')}.`,
+    badges: ['paper'],
+  },
+  {
+    id: 'limits', act: 'V', title: 'Where it breaks',
+    body: [
+      { lead: 'The authors are frank about [[limits|the limits]]. Four matter most:', list: [
+        '[[no-key|No answer key.]] Nobody knows the “true” features, so there’s no way to grade an SAE directly.',
+        '[[missing-ideas|Most ideas are still missing.]] Even the biggest dictionary is “quite likely” orders of magnitude short.',
+        '[[costly|Finding them all is costly.]] It could take more computing power than building the model in the first place.',
+        '[[one-floor|One floor only.]] Ideas may be smeared across floors, and a single-floor SAE can’t fully catch that.',
+      ] },
+    ],
+    more: { summary: 'More limitations', list: [
+      'The sparsity penalty makes lamps read a little dimmer than they should.',
+      'How the model moves information between words (“attention”) isn’t covered yet.',
+      'The SAEs saw no chat-style text and no images.',
+      'There are simply so many features and connections to study.',
+      'The theory behind all this is still young.',
+    ] },
+    caption: `${sec('discussion-limitations')}. The rebuild gap from “Read the receipts” is another way to see it.`,
+    badges: ['paper'],
+  },
+  {
+    id: 'close', act: 'close', title: 'A vocabulary, not yet a grammar',
+    body: [
+      'The [[bridge|Golden Gate Bridge]] feature is real, findable and can be turned up. So are millions of others.',
+      'Features are like [[words|words]]. We’ve glimpsed [[chain-close|one chain of them]] from Kobe to Sacramento, but we can’t yet read, in general, how the model strings ideas into answers. That’s the next problem.',
+    ],
+    caption: 'The vocabulary-versus-grammar framing is ours, not the paper’s.',
   },
 ];

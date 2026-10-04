@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T11:35:25.514Z",
+ "generated": "2026-10-04T12:10:57.640Z",
  "results": [
   {
    "browser": "chromium",
@@ -137,7 +137,7 @@
    "browser": "chromium",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 24, 48, 76, 100, 124 … 1500"
+   "detail": "0, 24, 48, 72, 100, 124 … 1500"
   },
   {
    "browser": "chromium",
@@ -171,7 +171,13 @@
   },
   {
    "browser": "chromium",
-   "name": "no console errors (Acts II–IV)",
+   "name": "V-4 “More limitations” opens with five more",
+   "ok": true,
+   "detail": "{\"open\":true,\"n\":5}"
+  },
+  {
+   "browser": "chromium",
+   "name": "no console errors (Acts II–V)",
    "ok": true,
    "detail": ""
   },
@@ -179,13 +185,13 @@
    "browser": "chromium",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "30 transitions watched every frame"
+   "detail": "35 transitions watched every frame"
   },
   {
    "browser": "chromium",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,recap-4"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,recap-4,sharp,fib,persona,limits,close"
   },
   {
    "browser": "chromium",
@@ -329,7 +335,7 @@
    "browser": "webkit",
    "name": "II-5 Replay retrains the toy live, round by round, to round 1500",
    "ok": true,
-   "detail": "0, 16, 36, 56, 76, 96 … 1500"
+   "detail": "0, 20, 40, 60, 80, 104 … 1500"
   },
   {
    "browser": "webkit",
@@ -357,7 +363,13 @@
   },
   {
    "browser": "webkit",
-   "name": "no console errors (Acts II–IV)",
+   "name": "V-4 “More limitations” opens with five more",
+   "ok": true,
+   "detail": "{\"open\":true,\"n\":5}"
+  },
+  {
+   "browser": "webkit",
+   "name": "no console errors (Acts II–V)",
    "ok": true,
    "detail": ""
   },
@@ -365,13 +377,13 @@
    "browser": "webkit",
    "name": "no scene text ever paints oversized while stepping (the “big white letters” flash)",
    "ok": true,
-   "detail": "30 transitions watched every frame"
+   "detail": "35 transitions watched every frame"
   },
   {
    "browser": "webkit",
    "name": "each → press changes the step exactly once (no flip-flop during smooth scroll)",
    "ok": true,
-   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,recap-4"
+   "detail": "tiles,numbers,floors,guess,one-number,many-jobs,directions,crowded,recap-1,ingredients,widen,relu,rebuild,training,tug,receipts,recap-2,lights,grading,languages,dial,code,neurons,recap-3,neighbourhoods,splitting,missing,ablation,chain,recap-4,sharp,fib,persona,limits,close"
   },
   {
    "browser": "webkit",
