@@ -140,6 +140,9 @@ export function trainingObjs(dirs, round, { hidden = 1 } = {}) {
   toy.CONCEPTS.forEach(c => objs.push({ id: `hid-${c.id}`, type: 'arrow', at: ROOM2.c, v: toy.DIRS[c.id], len: ROOM2.L * 1.15, c: 'ink-3', sw: 1.6, dash: true, o: hidden, layer: 1, k: ['hidden'] }));
   dirs.forEach((d, i) => objs.push({ id: `learn-${i}`, type: 'arrow', at: ROOM2.c, v: d, len: ROOM2.L, c: lampColor(i), lamp: true, sw: 2.5, layer: 2, k: ['random'] }));
   objs.push({ id: 'round', type: 'label', at: add3(ROOM2.c, [-2.2, -2.2, 2.7]), text: `round ${round}`, size: 13, weight: 700, cls: 'mono', layer: 3, k: ['random'] });
+  // Legend: the two kinds of arrow must never be confused.
+  objs.push({ id: 'legend-hidden', type: 'label', at: add3(ROOM2.c, [2.3, 2.3, -2.6]), pxo: [0, 0], text: '- - -  hidden idea', size: 12, cls: 'dim', layer: 3, k: ['hidden'] });
+  objs.push({ id: 'legend-learned', type: 'label', at: add3(ROOM2.c, [2.3, 2.3, -2.6]), pxo: [0, 16], text: '——●  SAE’s arrow (a feature)', size: 12, cls: 'legend-lamp', layer: 3, k: ['random'] });
   return objs;
 }
 SCENES['training'] = () => {
@@ -165,7 +168,7 @@ export function tugObjs(idx) {
   const t = idx / (TRAINED.sweep.length - 1);
   return [
     { id: 'rope', type: 'path', at: ROPE.a, pts: [[0, 0, 0], across(ROPE.len)], cls: 'rope', layer: 1, k: ['knot'] },
-    { id: 'm-lit', type: 'meter', at: add3(ROPE.a, [0, 0, 0.2]), pxo: [-34, 0], val: s.lit / maxLit, c: 'lamp', label: 'lamps lit', hpx: 110, layer: 3, k: ['lamps-lit'] },
+    { id: 'm-lit', type: 'meter', at: add3(ROPE.a, [0, 0, 0.2]), pxo: [-34, 0], val: s.lit / maxLit, c: 'lamp', label: 'lamps lit per list', hpx: 110, layer: 3, k: ['lamps-lit'] },
     { id: 'm-lit-v', type: 'label', at: ROPE.a, pxo: [-34, -126], text: s.lit.toFixed(2), size: 12, cls: 'mono', layer: 3, k: ['lamps-lit'] },
     { id: 'm-gap', type: 'meter', at: add3(ropeAt(1), [0, 0, 0.2]), pxo: [34, 0], val: s.gap, c: 'gap', label: 'rebuild gap', hpx: 110, layer: 3, k: ['gap'] },
     { id: 'm-gap-v', type: 'label', at: ropeAt(1), pxo: [34, -126], text: `${(s.gap * 100).toFixed(0)}%`, size: 12, cls: 'mono', layer: 3, k: ['gap'] },

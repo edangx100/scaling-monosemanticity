@@ -1,0 +1,18 @@
+{
+ "before": {
+  "status": "Ready. Press Train.",
+  "round": "0",
+  "loss": "0.532",
+  "lit": "2.44",
+  "dead": "0 of 8",
+  "found": "3 of 8"
+ },
+ "after": {
+  "status": "Finished 4,000 rounds.",
+  "round": "4,000",
+  "loss": "0.119",
+  "lit": "0.87",
+  "dead": "0 of 8",
+  "found": "8 of 8"
+ }
+}

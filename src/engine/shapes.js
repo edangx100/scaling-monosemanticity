@@ -71,12 +71,12 @@ export const TYPES = {
       el('polygon', { points: pts([P(w, d, h), P(w, 0, h), P(w, 0, 0), P(w, d, 0)]), style: `fill:${faceFill('paper', 'right')}` }, g);
       el('polygon', { points: pts([P(0, 0, h), P(w, 0, h), P(w, d, h), P(0, d, h)]), class: 'tile-top', style: `fill:${faceFill('paper', 'top')}` }, g);
       // Brightness tint (III-1): white = off, the feature's colour = brightest.
-      const heat = el('polygon', { points: pts([P(0, 0, h), P(w, 0, h), P(w, d, h), P(0, d, h)]), style: `fill:${col(o.heatC || 'bridge')}`, opacity: 0 }, g);
+      const heat = el('polygon', { points: pts([P(0, 0, h), P(w, 0, h), P(w, d, h), P(0, d, h)]), style: `fill:${col(o.heatC || 'heat')}`, opacity: 0 }, g);
       const [cx, cy] = P(w / 2, d / 2, h);
       const tg = el('g', { class: 'fixed', 'data-x': cx, 'data-y': cy }, g);
       fixedText(tg, o.word, { size: o.size || 13, weight: 600, dy: '0.35em', cls: 'tile-word' });
       const tag = el('g', { class: 'fixed tag', 'data-x': cx, 'data-y': cy }, g);
-      const tagText = fixedText(tag, o.tag ?? '', { size: 11, dy: '-1.05em', cls: 'mono dim' });
+      const tagText = fixedText(tag, o.tag ?? '', { size: 11, dy: o.tagBelow ? '1.75em' : '-1.05em', cls: 'mono dim' });
       return { tag, tagText, heat };
     },
     update(h, o) {

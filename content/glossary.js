@@ -4,7 +4,7 @@
 
 export const GLOSSARY = {
   token: { term: 'Token', pic: 'tile', def: 'A small chunk of text, like a word or part of a word, that the model reads as one unit.' },
-  vector: { term: 'Vector (a list of numbers)', pic: 'bars', def: 'A list of numbers. Researchers call the list a token has at some point inside the model its activations.' },
+  vector: { term: 'Vector (a list of numbers)', pic: 'bars', def: 'A list of numbers. Here, the list the model keeps for each token as it moves up the floors.' },
   layer: { term: 'Layer', pic: 'floor', def: 'One processing step. The model passes the list through many of them in order.' },
   next: { term: 'Next-word prediction', pic: 'odds', def: 'The model’s output: a set of odds for which token comes next.' },
   neuron: { term: 'Neuron', pic: 'bar', def: 'One of the model’s built-in units, loosely named after brain cells; here it’s just a number.', more: 'Real neurons sit inside each floor’s machinery rather than in the list between floors, but the problem we’re about to see is the same.' },

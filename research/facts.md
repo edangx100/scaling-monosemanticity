@@ -66,7 +66,7 @@ Every other seed item was confirmed as written; the confirmed lines are below.
 | B3 | Active features per token | Fewer than **300** on average, for all three SAEs | confirmed | §scaling-sae-experiments |
 | B4 | Variance explained | At least **65%** of the variance of the activations, for all three SAEs | confirmed | §scaling-sae-experiments |
 | B5 | Dead features | Roughly **2%** (1M), **35%** (4M), **65%** (34M) | confirmed (hedge) | §scaling-sae-experiments |
-| B6 | Definition of dead | Not active on any of a sample of 10⁷ tokens | added | §scaling-sae-experiments |
+| B6 | Definition of dead | Not active on any of a sample of 10⁷ (10 million) tokens | added | §scaling-sae-experiments |
 | B7 | Alive features in the 34M SAE | About **12M** | confirmed | §feature-survey-completeness |
 | B8 | Scaling laws | At compute-optimal settings, loss falls "approximately" as a power law in compute | confirmed | §scaling-scaling-laws |
 | B9 | Features vs steps | The optimal feature count "appears to scale somewhat more quickly" than optimal steps; this "may change at higher compute budgets" | confirmed (hedge) | §scaling-scaling-laws |

@@ -13,20 +13,20 @@ const MAP = [0, -34, 0];
 // Rings by relatedness, as the paper describes the Golden Gate neighbourhood
 // [G2]. Positions are schematic.
 const HOODS = [
-  { id: 'ggb', name: 'Golden Gate Bridge', ring: 0, pos: [0, 0], c: 'bridge', dy: -30 },
-  { id: 'alcatraz', name: 'Alcatraz', ring: 1, pos: [1.8, -1.8] },
-  { id: 'presidio', name: 'Presidio', ring: 1, pos: [-1.8, 1.8] },
-  { id: 'tahoe', name: 'Lake Tahoe', ring: 2, pos: [3.9, 0.6] },
-  { id: 'yosemite', name: 'Yosemite', ring: 2, pos: [0.4, -4.0] },
-  { id: 'solano', name: 'Solano County', ring: 2, pos: [-3.9, -0.2], minor: true },
-  { id: 'medoc', name: 'Médoc', ring: 3, pos: [5.4, -4.6], minor: true },
-  { id: 'skye', name: 'Isle of Skye', ring: 3, pos: [-5.0, 5.0] },
+  { id: 'ggb', name: 'Golden Gate Bridge', ring: 0, pos: [0, 0], c: 'bridge', dy: 30 },
+  { id: 'alcatraz', name: 'Alcatraz', ring: 1, pos: [1.8, -1.8], dx: 9, dy: 4, anchor: 'start' },
+  { id: 'presidio', name: 'Presidio', ring: 1, pos: [-1.8, 1.8], dx: -9, dy: 4, anchor: 'end' },
+  { id: 'tahoe', name: 'Lake Tahoe', ring: 2, pos: [5.6, -0.4] },
+  { id: 'yosemite', name: 'Yosemite', ring: 2, pos: [0.5, -5.1], dy: -12 },
+  { id: 'solano', name: 'Solano County', ring: 2, pos: [-5.0, -0.3], minor: true },
+  { id: 'medoc', name: 'Médoc', ring: 3, pos: [7.2, -6.0], minor: true },
+  { id: 'skye', name: 'Isle of Skye', ring: 3, pos: [-6.4, 6.4] },
 ];
 const RING_KEY = ['ggb-center', 'inner', 'middle', 'outer'];
 const islands = (o = 1) => [
-  { id: 'isle-3', type: 'plane', at: add3(MAP, [-7.8, -7.8, -0.06]), w: 15.6, d: 15.6, c: 'frame', fo: 0.35, o, layer: 0, k: ['outer'] },
-  { id: 'isle-2', type: 'plane', at: add3(MAP, [-5.4, -5.4, -0.04]), w: 10.8, d: 10.8, c: 'frame', fo: 0.55, o, layer: 0, k: ['middle'] },
-  { id: 'isle-1', type: 'plane', at: add3(MAP, [-2.9, -2.9, -0.02]), w: 5.8, d: 5.8, c: 'frame', fo: 0.85, o, layer: 0, k: ['inner'] },
+  { id: 'isle-3', type: 'plane', at: add3(MAP, [-10, -10, -0.06]), w: 20, d: 20, c: 'frame', fo: 0.35, o, layer: 0, k: ['outer'] },
+  { id: 'isle-2', type: 'plane', at: add3(MAP, [-7.2, -7.2, -0.04]), w: 14.4, d: 14.4, c: 'frame', fo: 0.55, o, layer: 0, k: ['middle'] },
+  { id: 'isle-1', type: 'plane', at: add3(MAP, [-3.4, -3.4, -0.02]), w: 6.8, d: 6.8, c: 'frame', fo: 0.85, o, layer: 0, k: ['inner'] },
 ];
 const SPREAD = 1.25;
 const hoodLamp = (h, i, spread) => {
@@ -34,7 +34,7 @@ const hoodLamp = (h, i, spread) => {
   const at = spread ? add3(MAP, [h.pos[0] * SPREAD, h.pos[1] * SPREAD, 0.5]) : add3(row, [0, 0, 0.5]);
   return { id: `hood-${h.id}`, type: 'lamp', at, r: h.ring ? 0.3 : 0.42, c: h.c || 'lamp', on: 1 - h.ring * 0.18, layer: 2, k: [RING_KEY[h.ring]] };
 };
-const hoodLabel = (h, o) => ({ id: `hood-name-${h.id}`, type: 'label', at: add3(MAP, [h.pos[0] * SPREAD, h.pos[1] * SPREAD, 0.5]), pxo: [0, h.dy ?? 22], text: h.name, size: 12, weight: h.ring ? 500 : 700, cls: h.minor ? 'minor' : '', o, layer: 3, k: [RING_KEY[h.ring]] });
+const hoodLabel = (h, o) => ({ id: `hood-name-${h.id}`, type: 'label', at: add3(MAP, [h.pos[0] * SPREAD, h.pos[1] * SPREAD, 0.5]), pxo: [h.dx ?? 0, h.dy ?? 22], anchor: h.anchor, text: h.name, size: 12, weight: h.ring ? 500 : 700, cls: h.minor ? 'minor' : '', o, layer: 3, k: [RING_KEY[h.ring]] });
 SCENES['neighbourhoods'] = () => {
   const aria = 'Lamps lift off a row and drift onto a map of islands: the Golden Gate Bridge at the centre; Alcatraz and the Presidio close by; Lake Tahoe, Yosemite and Solano County further out; far-off tourist spots, Médoc and the Isle of Skye, at the edge. Schematic layout.';
   return {
@@ -121,7 +121,7 @@ function johnObjs({ off = [], labels = 1, on = 1 } = {}) {
   const sad = 0.78 - 0.26 * off.length;     // schematic bar sizes
   const objs = [
     { id: 'john-text', type: 'label', at: add3(JOHN, [0, 0, 2.6]), text: 'John says, “I want to be alone right now.”\nJohn feels…', size: 13, weight: 600, layer: 3 },
-    { id: 'john-odds', type: 'odds', at: add3(JOHN, [0, 0, -1.6]), pxo: [-30, 0], rows: [{ word: 'sad', p: 0 }, { word: 'happy', p: 0 }], ps: [sad, 1 - sad - 0.12], noWin: true, hidePct: true, wpx: 110, layer: 3, k: ['switch'] },
+    { id: 'john-odds', type: 'odds', at: add3(JOHN, [0, 0, -1.6]), pxo: [-50, 0], rows: [{ word: 'pull toward “sad”', p: 0 }], ps: [sad], noWin: true, hidePct: true, wpx: 110, layer: 3, k: ['switch'] },
   ];
   JOHN_LAMPS.forEach((l, i) => {
     objs.push({ id: `john-${l.id}`, type: 'lamp', at: add3(johnLampAt(i), [0, 0, 1.0]), r: 0.34, c: l.c, on: off.includes(i) ? 0.12 : on, layer: 2, k: [l.key, ...(off.includes(i) ? ['switch'] : [])] });
@@ -131,7 +131,7 @@ function johnObjs({ off = [], labels = 1, on = 1 } = {}) {
   return objs;
 }
 SCENES['ablation'] = () => {
-  const aria = 'Under the sentence “John says, I want to be alone right now. John feels…”, four lamps are lit: wanting to be alone, sadness, the word “be” and the word “alone”. Bars show “sad” ahead of “happy”. The first lamp is switched off with a slash and the sad bar shrinks; then the second, and it shrinks again. Bar sizes are schematic.';
+  const aria = 'Under the sentence “John says, I want to be alone right now. John feels…”, four lamps are lit: wanting to be alone, sadness, the word “be” and the word “alone”. A bar shows the pull toward “sad” rather than “happy”. The first lamp is switched off with a slash and the bar shrinks; then the second, and it shrinks again. Bar sizes are schematic.';
   return {
     words: { switch: 'ink', alone: 'lamp', sadness: 'lamp' },
     frames: [

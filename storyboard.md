@@ -547,4 +547,15 @@ Every bracketed ID above exists in `research/facts.md` (checked by script). Chan
 12. **λ = 5** is moved from the body to the caption, since it's meaningless without the paper's scaling [A9].
 13. **Checkpoint 1 changes:** the three-dictionaries step was folded into the receipts step (II-7); III-3 gains a Chinese tile in the system font stack; the background definitions (M) are cited to *Toy Models* or *Towards Monosemanticity* where they come from there.
 14. **Copy changes made while building** (Phases 1–2): P4 adds "This is called next-word prediction." so the glossary term appears in the text; Recap I ends "That's Act II."; II-2 says "you'll see how in three steps" instead of naming II-5; II-1's caption carries the smoothie analogy's limit; II-6's scene adds a toy readout "features that match an idea: N of 8". The toy SAE is trained at λ = 0.3, the setting at which it recovers all 8 hidden ideas; the paper's λ = 5 stays in the caption with its caveat [A9].
-15. **Additions** from the beginner review: P4 next-word guess [M1]; II-5 training [M7]; III-4 "put the edited list back" [D1]; IV-4 ablation via the John example [I4, I5]; V-3 self-questions [J16]. Each is a background statement or a `facts.md` value.
+15. **Copy changes from the Phase 3 read-through:**
+  - I-3 covers only "an idea is a direction" (the shadow, now labelled). "Arrows add end to end" moves to II-4.
+  - II-1 says a feature is drawn as an arrow (which idea) with a lamp (how much).
+  - II-5 names the two kinds of arrow: hidden ideas are dashed grey, the SAE's arrows are yellow with lamps. The scene and Lab 1 have a key.
+  - II-7 is corrected from "up to a third goes unexplained" to "up to 35% is missed" (100 − 65 = 35, which is more than a third) [B4].
+  - III-6 says "the model's real neurons in the floors below".
+  - IV-3 reads "about once every N tokens, or more often".
+  - IV-4 states the result: switching either feature off weakened the pull toward "sad" more than any other feature. The scene shows one shrinking "pull toward sad" bar.
+  - IV-5 defines "mattered most" as "whose switching-off changed the answer most".
+  - V-2 is retitled "The word it said it forgot" and adds that the paper doesn't claim to know why this works.
+  - The glossary "vector" entry drops "activations".
+16. **Additions** from the beginner review: P4 next-word guess [M1]; II-5 training [M7]; III-4 "put the edited list back" [D1]; IV-4 ablation via the John example [I4, I5]; V-3 self-questions [J16]. Each is a background statement or a `facts.md` value.

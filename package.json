@@ -14,7 +14,9 @@
     "lh": "node scripts/lighthouse.mjs",
     "ref-shots": "node scripts/ref-shots.mjs --browser chromium",
     "frames": "node scripts/frames.mjs",
-    "og": "node scripts/og.mjs"
+    "og": "node scripts/og.mjs",
+    "words": "node scripts/words.mjs",
+    "perf": "node scripts/perf.mjs"
   },
   "author": "edang100x",
   "devDependencies": {

@@ -1,0 +1,426 @@
+{
+ "generated": "2026-10-04T14:11:56.614Z",
+ "cpuThrottle": "4×",
+ "viewport": "390×844 (phone emulation)",
+ "build": "production (dist/)",
+ "steps": {
+  "count": 35,
+  "frames": 5124,
+  "meanFps": 60,
+  "slowFrames": 3,
+  "worst": [
+   {
+    "step": "close",
+    "frames": 144,
+    "fps": 59.2,
+    "median": 16.7,
+    "p95": 16.8,
+    "max": 50,
+    "slow": 1,
+    "slowShare": 0.7
+   },
+   {
+    "step": "lights",
+    "frames": 146,
+    "fps": 59.6,
+    "median": 16.7,
+    "p95": 16.7,
+    "max": 33.3,
+    "slow": 1,
+    "slowShare": 0.7
+   },
+   {
+    "step": "neurons",
+    "frames": 146,
+    "fps": 59.6,
+    "median": 16.7,
+    "p95": 16.7,
+    "max": 33.4,
+    "slow": 1,
+    "slowShare": 0.7
+   },
+   {
+    "step": "tiles",
+    "frames": 147,
+    "fps": 60,
+    "median": 16.7,
+    "p95": 16.7,
+    "max": 16.8,
+    "slow": 0,
+    "slowShare": 0
+   },
+   {
+    "step": "numbers",
+    "frames": 145,
+    "fps": 60,
+    "median": 16.7,
+    "p95": 16.7,
+    "max": 16.8,
+    "slow": 0,
+    "slowShare": 0
+   }
+  ]
+ },
+ "lab1Training": {
+  "frames": 372,
+  "fps": 60,
+  "median": 16.7,
+  "p95": 16.8,
+  "max": 16.8,
+  "slow": 0,
+  "slowShare": 0,
+  "rounds": "2,960"
+ },
+ "perStep": [
+  {
+   "step": "tiles",
+   "frames": 147,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "numbers",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "floors",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "guess",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "one-number",
+   "frames": 171,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "many-jobs",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "directions",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "crowded",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "recap-1",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "ingredients",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "widen",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "relu",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "rebuild",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "training",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "tug",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "receipts",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "recap-2",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "lights",
+   "frames": 146,
+   "fps": 59.6,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 33.3,
+   "slow": 1,
+   "slowShare": 0.7
+  },
+  {
+   "step": "grading",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "languages",
+   "frames": 147,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "dial",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "code",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "neurons",
+   "frames": 146,
+   "fps": 59.6,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 33.4,
+   "slow": 1,
+   "slowShare": 0.7
+  },
+  {
+   "step": "recap-3",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "neighbourhoods",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "splitting",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "missing",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "ablation",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "chain",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "recap-4",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "sharp",
+   "frames": 147,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "fib",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "persona",
+   "frames": 146,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "limits",
+   "frames": 145,
+   "fps": 60,
+   "median": 16.7,
+   "p95": 16.7,
+   "max": 16.8,
+   "slow": 0,
+   "slowShare": 0
+  },
+  {
+   "step": "close",
+   "frames": 144,
+   "fps": 59.2,
+   "median": 16.7,
+   "p95": 16.8,
+   "max": 50,
+   "slow": 1,
+   "slowShare": 0.7
+  }
+ ]
+}

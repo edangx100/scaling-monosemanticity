@@ -72,8 +72,8 @@ const LANGS = [
   { word: 'Cầu Cổng Vàng', tag: 'Vietnamese' },
   { word: '金门大桥', tag: 'Chinese' },
 ];
-const LANG_STEP = 4.2;
-const langTile = (l, i, o = 1) => ({ id: `lang-${i}`, type: 'tile', at: add3(LANG0, [i * LANG_STEP, 0, 0]), w: 3.9, word: l.word, tag: l.tag, tagO: 1, heat: o ? 0.85 : 0, o, layer: 1, k: ['languages'] });
+const LANG_STEP = 4.8;
+const langTile = (l, i, o = 1) => ({ id: `lang-${i}`, type: 'tile', at: add3(LANG0, [i * LANG_STEP, 0, 0]), w: 3.9, word: l.word, tag: l.tag, tagBelow: true, tagO: 1, heat: o ? 0.85 : 0, o, layer: 1, k: ['languages'] });
 SCENES['languages'] = () => {
   const lampAt = add3(LANG0, [8, -5, 2.8]);
   const lamp = on => ({ ...ggbLamp(on), at: lampAt, label: 'Golden Gate Bridge' });
@@ -121,7 +121,8 @@ export function clampObjs(mult, { stage = 'done' } = {}) {
   const lamp = { ...ggbLamp(mult == null ? run(toy.listAt('at', MID)).f[GGB] / ggbMax() : Math.max(0, Math.min(1, mult / 2))), at: lampAt };
   const lampName = { id: 'ggb3-name', type: 'label', at: lampAt, pxo: [18, 0], text: 'Golden Gate Bridge', anchor: 'start', size: 12, weight: 600, layer: 3, k: ['clamping'] };
   const dial = { id: 'dial-ggb3', type: 'dial', at: DIAL_AT, r: 0.62, val: mult ?? 0, off: mult == null, layer: 3, k: ['clamping'] };
-  return [...fl, col, odds, lamp, lampName, dial];
+  const oddsTag = { id: 'odds-tag', type: 'label', at: odds.at, pxo: [-30, -112], text: 'toy’s guesses after “at”', size: 12, cls: 'dim', layer: 3, k: ['guess'] };
+  return [...fl, col, odds, oddsTag, lamp, lampName, dial];
 }
 SCENES['dial'] = () => {
   const before = clampResult(null), after = clampResult(10);
@@ -135,7 +136,7 @@ SCENES['dial'] = () => {
       { objs: clampObjs(10, { stage: 'side' }), dur: 0.6, aria },
       { objs: clampObjs(10, { stage: 'back' }), dur: 0.7, aria },
       { objs: clampObjs(10), dur: 0.6, aria },
-    ].map(f => ({ ...f, cam: { fit: ['odds', 'floor-0', 'floor-5', 'col-snap', 'dial-ggb3', 'ggb-lamp', 'ggb3-name'] } })),
+    ].map(f => ({ ...f, cam: { fit: ['odds', 'odds-tag', 'floor-0', 'floor-5', 'col-snap', 'dial-ggb3', 'ggb-lamp', 'ggb3-name'] } })),
   };
 };
 
@@ -148,11 +149,11 @@ const CODE = [
   { word: 'teh cat sat', tag: 'English typo', bug: false },
 ];
 SCENES['code'] = () => {
-  const codeTiles = glow => CODE.map((c, i) => ({ id: `code-${i}`, type: 'tile', at: add3(CODE0, [i * 3.1, 0, 0]), w: 2.9, word: c.word, tag: c.tag, tagO: 1, heatC: 'lamp', heat: c.bug ? glow : 0, layer: 1, k: [c.bug ? 'mistakes' : 'typos'] }));
+  const codeTiles = glow => CODE.map((c, i) => ({ id: `code-${i}`, type: 'tile', at: add3(CODE0, [i * 3.7, 0, 0]), w: 2.9, word: c.word, tag: c.tag, tagBelow: true, tagO: 1, heatC: 'lamp', heat: c.bug ? glow : 0, layer: 1, k: [c.bug ? 'mistakes' : 'typos'] }));
   const lampAt = add3(CODE0, [2.5, -4.5, 3]);
   const lamp = on => ({ id: 'code-lamp', type: 'lamp', at: lampAt, r: 0.38, c: 'lamp', on, label: 'code error', layer: 2, k: ['mistakes'] });
   const dial = (val, off = false) => ({ id: 'dial-code', type: 'dial', at: add3(lampAt, [0, 0, -1.9]), r: 0.6, val, off, layer: 3, k: ['below'] });
-  const term = which => ({ id: 'terminal', type: 'bubble', at: add3(CODE0, [3 * 3.1 + 1.0, -5.5, 2.4]), w: 200, lines: which === 'pos' ? ['Correct code, clamped +3×:', 'predicts an error.'] : ['Buggy code, clamped −5×:', 'predicts the bug-free “3”.'], badge: 'PARAPHRASED · FROM THE PAPER', layer: 3, k: ['below'] });
+  const term = which => ({ id: 'terminal', type: 'bubble', at: add3(CODE0, [3 * 3.7 + 1.0, -5.5, 2.4]), w: 200, lines: which === 'pos' ? ['Correct code, clamped +3×:', 'predicts an error.'] : ['Buggy code, clamped −5×:', 'predicts the bug-free “3”.'], badge: 'PARAPHRASED · FROM THE PAPER', layer: 3, k: ['below'] });
   const aria = 'Three tiles of code with a misspelled variable (in Python, C and Scheme) glow; a tile with an English typo stays dark. A dial on the code-error lamp turns to +3×, and a card paraphrasing the paper says the model predicts an error for correct code; then the dial goes below zero to −5×, and the card says the model predicts the bug-free output.';
   return {
     words: { mistakes: 'lamp', typos: 'ink', below: 'machine' },

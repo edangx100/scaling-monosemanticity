@@ -80,4 +80,30 @@ All 11 blockers are fixed in the current `storyboard.md`, along with most of the
 ## Open items from this review
 1. **Step count:** resolved at Checkpoint 1. The three-dictionaries step was folded into the receipts step, giving **31** steps; III-3 was kept.
 2. **CJK fonts:** resolved at Checkpoint 1. A short Chinese tile uses the system font stack (no self-hosted CJK font), labelled illustrative, alongside the Greek, Cyrillic and Vietnamese tiles.
-3. **Repeat the read-through** on the built page in Phase 3, as KICKOFF requires.
+3. **Repeat the read-through** on the built page in Phase 3, as KICKOFF requires. Done; see below.
+
+## Second read-through (Phase 3, built page)
+The full built page (all 35 steps and both labs) was read by a reviewer briefed as a reader with no ML background. It reported 6 blockers, 36 confusing points and 53 nits.
+
+**Blockers, all fixed:**
+1. **II-7 arithmetic:** "at least 65%, so up to a third unexplained" was wrong; 35% is more than a third. It now reads "up to 35% is missed".
+2. **Ideas and learned features looked alike:** both were yellow arrows with lamps. Act I's ideas are now plain grey arrows. Lamps appear only on features (Act II on). II-5 and Lab 1 carry a key (dashed = hidden idea, solid with lamp = SAE's arrow).
+3. **I-3 held two ideas:** "a direction" and "arrows add". The adding moved to II-4, where the decoder actually adds arrows.
+4. **The I-3 shadow was unlabelled.** It is now thicker and labelled "shadow", and the text says where the light comes from.
+5. **IV-4 never said what happened when a feature was switched off.** The text now states the result. The scene shows a single "pull toward sad" bar, where two bars had been ambiguous.
+6. **V-2's title was misleading** ("A feature that flags a false claim"). It now names the example. The text adds that the paper doesn't claim to know why clamping works.
+
+**Confusing points, fixed:**
+- II-1 now says what the arrow and the lamp each stand for.
+- III-1 brightness is now an orange tint (its own --heat token), no longer the bridge red.
+- III-4's odds are labelled "toy's guesses after 'at'".
+- III-6 says which neurons.
+- II-6's meter says "per list".
+- IV-3 and IV-5 got the wording fixes.
+- IV-1 rings are spread out, and no label sits on a lamp.
+- The language and code tags no longer overlap the previous tile.
+- Recap I hides token numbers.
+
+**Left as is:**
+- Most nits are word-level preferences.
+- The remaining confusing points concern pace (Act IV is dense). They would need new steps, not fixes.

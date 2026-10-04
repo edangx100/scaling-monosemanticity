@@ -245,6 +245,26 @@ try {
       check(name, 'reduced motion: cross-fades (snapshot overlay) to the final frame', mid && !end.snap && end.tiles === 10 && !end.plank, JSON.stringify({ mid, ...end }));
       await ctx.close();
     }
+
+    // ---- a step's own Replay button can be reached without the next step taking over ----
+    {
+      const ctx = await browser.newContext(contextOptions(name, { width: 320, height: 568 }));
+      const page = await ctx.newPage();
+      await page.goto(server.url, { waitUntil: 'networkidle' });
+      const steps = await page.evaluate(() => window.__story.steps), bad = [];
+      for (let i = 1; i < steps.length; i++) {
+        const btn = page.locator(`#step-${steps[i]} [data-replay]`);
+        if (!await btn.count()) continue;
+        await page.evaluate(i => window.__story.go(i, { instant: true }), i);
+        await page.waitForTimeout(120);
+        await btn.scrollIntoViewIfNeeded();
+        await page.waitForTimeout(200);
+        const a = await page.evaluate(() => window.__story.active);
+        if (a !== steps[i]) bad.push(`${steps[i]}→${a}`);
+      }
+      check(name, 'scrolling to a step’s Replay button keeps that step active (320×568)', bad.length === 0, bad.join(', ') || 'all steps');
+      await ctx.close();
+    }
     await browser.close();
   }
 } finally { server.stop(); }

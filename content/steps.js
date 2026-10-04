@@ -99,7 +99,7 @@ export const STEPS = [
     id: 'directions', act: 'I', title: 'Ideas as directions',
     body: [
       'A list of three numbers can be drawn as [[token-arrow|an arrow]] in a room: go this far across, this far back, this far up. Each token’s list becomes one arrow.',
-      'The paper’s starting bet is that a model stores each idea as a {{direction|direction}}. Picture [[shadow|the shadow]] the token’s arrow casts on the [[bridge-arrow|“bridge” arrow]]: the longer the shadow, the more bridge-ness. Ideas also add: put a [[sf-arrow|“San Francisco” arrow]] on the end of a “bridge” arrow, and the total points at both.',
+      'The paper’s starting bet is that a model stores each idea as a {{direction|direction}}. Picture [[shadow|the shadow]] the token’s arrow casts on the [[bridge-arrow|“bridge” arrow]], as if a light shone straight down onto it: the longer the shadow, the more bridge-ness.',
     ],
     caption: `The linear representation hypothesis, ${sec('scaling-to-sonnet')}. Room and meter are the toy.`,
     badges: ['paper', 'toy'],
@@ -127,7 +127,7 @@ export const STEPS = [
     id: 'ingredients', act: 'II', title: 'A few ingredients at a time',
     body: [
       'Think of a smoothie. Many fruits exist, but each smoothie uses only a few. A good cook can taste one and name what went in.',
-      'Dictionary learning does this for the model’s lists. It learns a big set of ingredient ideas, called {{feature|features}}, and explains each list as [[few|a few]] of them added together. The full set is the “dictionary”. Using only a few at a time is called being sparse.',
+      'Dictionary learning does this for the model’s lists. It learns a big set of ingredient ideas, called {{feature|features}}, and explains each list as [[few|a few]] of them added together. We draw each feature as an arrow (which idea) with a lamp (how much of it this list holds). The full set is the “dictionary”. Using only a few at a time is called being sparse.',
     ],
     caption: `Dictionary learning and sparsity, ${sec('scaling-to-sonnet')}, ${sec('scaling-sparse-autoencoders')}. The lamps are the toy’s learned features. Where the smoothie stops working: fruits are fixed, but features are learned from data.`,
     badges: ['paper', 'toy'],
@@ -154,7 +154,7 @@ export const STEPS = [
   {
     id: 'rebuild', act: 'II', title: 'Rebuild the original',
     body: [
-      'The second half, the {{decoder|decoder}}, [[decoder|works backwards]]. Each lit lamp contributes its arrow, stretched more for a brighter lamp, and the arrows join end to end. If the features are good, the result lands close to the original list.',
+      'The second half, the {{decoder|decoder}}, [[decoder|works backwards]]. Each lit lamp contributes its arrow, stretched more for a brighter lamp. Arrows add end to end, like steps on a walk: put one on the end of another, and the total points at both. If the features are good, the walk ends close to the original list.',
       'Why rebuild something we already had? Because it’s the test. If the machine must rebuild each list from only a few lamps, those lamps have to capture what’s really in it. The leftover gap is called [[error|the error]].',
     ],
     maths: '<code>x̂ = b<sup>dec</sup> + Σ<sub>i</sub> f<sub>i</sub>(x) W<sup>dec</sup><sub>·,i</sub></code>: the rebuilt list is a learned offset plus each feature’s arrow (column <i>i</i> of W<sup>dec</sup>) times its brightness.',
@@ -164,8 +164,8 @@ export const STEPS = [
   {
     id: 'training', act: 'II', title: 'Learning by rebuilding',
     body: [
-      'At first the SAE’s arrows point in [[random|random directions]]. {{training|Training}} shows it list after list. Each time, it nudges every arrow a little, so the next rebuild is better and uses fewer lamps.',
-      'Watch our toy: after {toy:trainRounds} rounds, its arrows swing round onto the [[hidden|8 hidden ideas]]. That’s how an SAE finds features. Nobody tells it what the ideas are; they’re simply the directions that make rebuilding easiest.',
+      'At first the SAE’s arrows (yellow, with lamps) point in [[random|random directions]]. {{training|Training}} shows it list after list. Each time, it nudges every arrow a little, so the next rebuild is better and uses fewer lamps.',
+      'Watch our toy: after {toy:trainRounds} rounds, its arrows swing round onto the [[hidden|8 hidden ideas]] (dashed grey). That’s how an SAE finds features. Nobody tells it what the ideas are; they’re simply the directions that make rebuilding easiest.',
     ],
     caption: `The toy’s real training run; Replay retrains from a new random start. The paper’s SAEs were trained on middle-floor lists from text similar to Sonnet’s own training data (${sec('feature-survey-completeness')}).`,
     badges: ['toy'],
@@ -186,7 +186,7 @@ export const STEPS = [
     body: [
       'The team trained three SAEs (three dictionaries) on snapshots from Sonnet’s middle floor, with [[shelves|about 1 million, 4 million and 34 million lamps]]. On a typical token, [[fewer|fewer than **300**]] of those lamps light up.',
       'Not every lamp gets used. One that stays dark across 10 million tokens is called {{dead|dead}}: [[dead|roughly 2% of the smallest dictionary, about a third of the middle one and nearly two-thirds of the largest]]. That still leaves the biggest with about 12 million working features.',
-      'And the rebuilds aren’t perfect. They account for at least 65% of the ways the original lists differ from one another, so [[unexplained|up to a third goes unexplained]]. Keep that in mind; it comes back at the end.',
+      'And the rebuilds aren’t perfect. Of everything that makes one list different from another, they capture at least 65%, so [[unexplained|up to 35% is missed]]. Keep that in mind; it comes back at the end.',
     ],
     maths: 'The 34M SAE’s training length was chosen with scaling laws. Loss fell roughly as a power law in compute, and the best number of features appeared to grow somewhat faster than the best number of training steps, a trend the authors say may change at higher budgets.',
     caption: `Sizes, lamps per token, dead shares (roughly 2%, 35%, 65%) and variance explained, ${sec('scaling-sae-experiments')}; alive count, ${sec('feature-survey-completeness')}; scaling laws, ${sec('scaling-scaling-laws')}. Shelf lengths are schematic; dead shares are drawn to scale.`,
@@ -254,7 +254,7 @@ export const STEPS = [
   {
     id: 'neurons', act: 'III', title: 'Features beat neurons',
     body: [
-      'Are features just neurons with new names? {{correlation|Correlation}} measures how closely two things rise and fall together: 1 means in lockstep, 0 means unrelated. For [[shaded|**82%**]] of the features checked, no neuron in any floor below scored above [[line|0.3]], a weak match at best.',
+      'Are features just neurons with new names? {{correlation|Correlation}} measures how closely two things rise and fall together: 1 means in lockstep, 0 means unrelated. For [[shaded|**82%**]] of the features checked, none of the model’s real neurons in the floors below scored above [[line|0.3]], a weak match at best.',
       'Graded the same way as before, features came out more interpretable and more specific than neurons, by margins the paper calls significant.',
     ],
     caption: `${sec('assessing-features-v-neurons')}. Dot positions are schematic; only the 82% and 0.3 come from the paper, which gives no numeric scores.`,
@@ -288,7 +288,7 @@ export const STEPS = [
     id: 'missing', act: 'IV', title: 'What’s missing',
     body: [
       'Sonnet can list every London borough, yet the 34M dictionary has features for only [[sixty|about **60%**]] of them.',
-      'The rule: the more often an idea appears in the text the SAE learned from, the likelier it gets a feature. A dictionary with N working features usually has a feature for ideas that show up roughly once every N tokens. For the 34M SAE, N is about 12 million. Rarer ideas sit below [[waterline|the waterline]]. A missing feature doesn’t mean missing knowledge, because the model can combine other features.',
+      'The rule: the more often an idea appears in the text the SAE learned from, the likelier it gets a feature. A dictionary with N working features usually has a feature for any idea that shows up about once every N tokens, or more often. For the 34M SAE, N is about 12 million. Rarer ideas sit below [[waterline|the waterline]]. A missing feature doesn’t mean missing knowledge, because the model can combine other features.',
     ],
     maths: 'The paper finds a concept becomes more than 50% likely to have a feature at a frequency slightly below 1 ÷ (number of working features). By that rule, an idea seen once in a billion tokens would need a dictionary of roughly a billion working features.',
     caption: `${sec('feature-survey-completeness')}. “Usually” means the paper’s more-than-50% point, which sits slightly below one over the number of working features. Bar heights and the 1M and 4M water levels are schematic; at 34M, 12 of these 20 boroughs sit above the line, matching the paper’s 60%.`,
@@ -299,7 +299,7 @@ export const STEPS = [
     id: 'ablation', act: 'IV', title: 'Switch one off',
     body: [
       'Which lit lamps actually matter for an answer? [[switch|Switch one off]], rerun the model, and see whether the answer changes. That’s called {{ablation|ablation}}.',
-      'The paper tried this on a short story: John says he wants to be alone right now; “John feels…”. The two features that pushed hardest toward “sad” rather than “happy” were one for [[alone|wanting to be alone]] and one for [[sadness|sadness]].',
+      'The paper tried this on a short story: John says he wants to be alone right now; “John feels…”. Switching off a feature for [[alone|wanting to be alone]], or one for [[sadness|sadness]], weakened the pull toward “sad” rather than “happy” more than switching off any other feature.',
     ],
     caption: `${sec('computational-sad')}; ablation is defined in ${sec('computational')}. Bar sizes are schematic. By raw brightness, the 2nd and 3rd features were just the words “be” and “alone”.`,
     badges: ['paper', 'schematic'],
@@ -308,7 +308,7 @@ export const STEPS = [
     id: 'chain', act: 'IV', title: 'A chain of ideas',
     body: [
       'Ask Sonnet for the capital of the state where Kobe Bryant played basketball, and it answers Sacramento. That takes three hops. Kobe played for the Lakers in Los Angeles; Los Angeles is in California; California’s capital is Sacramento. The five features that mattered most [[chain|stood for those links]]: Kobe Bryant, the Lakers, Los Angeles, California and “capital”.',
-      'Switching off features one at a time is slow, so researchers use {{attribution|attribution}}, a quick estimate of what switching each one off would do. The [[brightest|brightest lamps]] weren’t the important ones: the Lakers feature was only the 70th brightest. Of the 10 features that mattered most, only 3 made the brightness top 10. **8** made [[attribution|attribution’s top 10]].',
+      'Switching off features one at a time is slow, so researchers use {{attribution|attribution}}, a quick estimate of what switching each one off would do. The [[brightest|brightest lamps]] weren’t the important ones: the Lakers feature was only the 70th brightest. Take the 10 features whose switching-off changed the answer most: only 3 of them were in the brightness top 10, but **8** were in [[attribution|attribution’s top 10]].',
     ],
     caption: `${sec('computational-multistep')}; attribution and ablation agree at 0.8 correlation, ${sec('computational')}. The paper calls this example “somewhat cherry-picked”.`,
     badges: ['paper'],
@@ -331,10 +331,10 @@ export const STEPS = [
     badges: ['paper'],
   },
   {
-    id: 'fib', act: 'V', title: 'A feature that flags a false claim',
+    id: 'fib', act: 'V', title: 'The word it said it forgot',
     body: [
       'Ask the model to forget a word and it says it has, though it can’t actually forget anything mid-conversation.',
-      'Just before it answered, a feature for [[conflict|internal conflict]] was lit. Clamping that feature to [[twice|**2×**]] made the model reveal the word and explain that it can’t really forget. Clamping a feature for openness and honesty also produced an accurate answer.',
+      'Just before it answered, a feature for [[conflict|internal conflict]] was lit. Clamping that feature to [[twice|**2×**]] made the model reveal the word and explain that it can’t really forget. Clamping a feature for openness and honesty also produced an accurate answer. The paper doesn’t claim to know why this works; it shows that a feature was lit at an untrue moment, and that turning it up changed the answer.',
     ],
     caption: `Case study, ${sec('safety-relevant-deception-case-study')}. No multiple is reported for the honesty feature. Both bubbles are paraphrased; the word is left blank.`,
     badges: ['paper'],

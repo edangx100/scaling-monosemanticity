@@ -1,0 +1,29 @@
+{
+ "generated": "2026-10-04T14:00:24.411Z",
+ "runs": [
+  {
+   "browser": "chromium",
+   "mode": "tap",
+   "total": 97,
+   "failed": []
+  },
+  {
+   "browser": "chromium",
+   "mode": "hover",
+   "total": 97,
+   "failed": []
+  },
+  {
+   "browser": "webkit",
+   "mode": "tap",
+   "total": 97,
+   "failed": []
+  },
+  {
+   "browser": "webkit",
+   "mode": "hover",
+   "total": 97,
+   "failed": []
+  }
+ ]
+}

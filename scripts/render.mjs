@@ -106,6 +106,10 @@ export async function renderPage({ bust = false } = {}) {
   <div class="lab-body">
     <div class="lab-stage-wrap"><div class="lab-stage"></div><div class="hud"><span class="badge toy">Toy</span></div></div>
     <div class="lab-panel">
+      <ul class="lab-legend" aria-label="Key">
+        <li><svg viewBox="0 0 36 12" width="36" height="12" aria-hidden="true"><line x1="2" y1="6" x2="34" y2="6" class="lg-hidden"/></svg>a hidden idea (dashed)</li>
+        <li><svg viewBox="0 0 36 12" width="36" height="12" aria-hidden="true"><line x1="2" y1="6" x2="27" y2="6" class="lg-learned"/><circle cx="29" cy="6" r="4.5" class="lg-lamp"/></svg>an arrow the SAE learned (solid, with a lamp)</li>
+      </ul>
       <div class="lab-buttons"><button class="btn primary" type="button" data-lab1="train" aria-pressed="false">Train</button><button class="btn" type="button" data-lab1="reset">Reset</button><span class="lab-status" data-out="status" aria-live="polite"></span></div>
       <div class="control"><label for="lab1-lambda">λ (sparsity)</label><input type="range" id="lab1-lambda" min="0" max="1.5" step="0.05" value="0.3"><output id="lab1-lambda-out" for="lab1-lambda">0.30</output></div>
       <div class="control"><label for="lab1-width">Lamps</label><input type="range" id="lab1-width" min="4" max="16" step="1" value="8"><output id="lab1-width-out" for="lab1-width">8</output></div>

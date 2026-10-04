@@ -37,3 +37,11 @@ test('the page renders with no unresolved marks', async () => {
   assert.ok(!/(href|src)="\//.test(html), 'absolute path found; all paths must be relative for GitHub Pages');
   assert.match(html, /og:image" content="https:\/\/edangx100\.github\.io\/scaling-monosemanticity\//);
 });
+
+test('every step changes the scene (its final picture differs from the step before)', () => {
+  const sig = id => JSON.stringify(SCENES[id]().frames.at(-1).objs.map(o => [o.id, o.type, o.at, o.vals, o.on, o.val, o.v, o.text, o.heat, o.level, o.lift]).sort());
+  const ids = STEPS.map(s => s.id);
+  const same = [];
+  for (let i = 1; i < ids.length; i++) if (sig(ids[i]) === sig(ids[i - 1])) same.push(`${ids[i - 1]} → ${ids[i]}`);
+  assert.deepEqual(same, []);
+});

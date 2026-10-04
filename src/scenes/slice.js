@@ -38,7 +38,7 @@ const roomObj = () => ({ id: 'room', type: 'room', at: ROOM.c, size: ROOM.size, 
 
 // The 8 idea arrows in the room, with lamps at their tips.
 const ideaArrows = (on = 1, extra = {}) => toy.CONCEPTS.map(c => ({
-  id: `idea-${c.id}`, type: 'arrow', at: ROOM.c, v: toy.DIRS[c.id], len: ROOM.L * on, c: c.id === 'ggb' ? 'bridge' : 'lamp', lamp: true, sw: 2.5, k: ['ideas'], layer: 2, o: on ? 1 : 0, ...extra,
+  id: `idea-${c.id}`, type: 'arrow', at: ROOM.c, v: toy.DIRS[c.id], len: ROOM.L * on, c: 'ink-2', sw: 2.5, k: ['ideas'], layer: 2, o: on ? 1 : 0, ...extra,   // ideas: plain arrows (features, with lamps, come in Act II)
 }));
 
 // ---------- steps ----------
@@ -181,7 +181,7 @@ SCENES['many-jobs'] = () => {
 };
 
 // I-3 · Ideas as directions (slider picks which token's arrow to show)
-export function directionsObjs(word, { showBridge = true, showSF = true, grow = 1 } = {}) {
+export function directionsObjs(word, { showBridge = true, grow = 1 } = {}) {
   const list = listVals(word, MID), b = toy.DIRS.bridge, sh = toy.shadowOn(list, 'bridge');
   const proj = b.map(v => v * sh);
   const maxSh = Math.max(...WORDS.map(w => toy.shadowOn(listVals(w, MID), 'bridge')));
@@ -191,25 +191,24 @@ export function directionsObjs(word, { showBridge = true, showSF = true, grow = 
     { id: 'tok-label', type: 'label', at: add3(ROOM.c, [-ROOM.size / 2, -ROOM.size / 2, ROOM.size * 0.62]), text: `token: “${word}” · shadow ${sh.toFixed(2)}`, size: 12, cls: 'dim mono', layer: 3, k: ['shadow'] },
   ];
   if (showBridge) objs.push(
-    { id: 'bridge-arrow', type: 'arrow', at: ROOM.c, v: b, len: ROOM.L * 1.15, c: 'bridge', lamp: true, sw: 2.5, label: 'bridge idea', k: ['bridge-arrow'], layer: 2 },
-    { id: 'shadow', type: 'arrow', at: ROOM.c, v: proj, len: ROOM.L, c: 'bridge', sw: 7, k: ['shadow'], layer: 1, o: 0.45, nohead: true },
+    { id: 'bridge-arrow', type: 'arrow', at: ROOM.c, v: b, len: ROOM.L * 1.15, c: 'bridge', sw: 3, label: 'bridge idea', k: ['bridge-arrow'], layer: 2 },
+    { id: 'shadow', type: 'arrow', at: ROOM.c, v: proj, len: ROOM.L, c: 'bridge', sw: 10, k: ['shadow'], layer: 1, o: 0.4, nohead: true },
+    { id: 'shadow-label', type: 'label', at: add3(ROOM.c, proj, ROOM.L * 0.5), pxo: [-14, 12], text: 'shadow', anchor: 'end', size: 12, weight: 700, cls: 'halo', layer: 3, k: ['shadow'] },
     { id: 'drop', type: 'arrow', at: add3(ROOM.c, proj, ROOM.L), v: list.map((v, i) => v - proj[i]), len: ROOM.L, c: 'ink-3', sw: 1.5, k: ['shadow'], layer: 2 },
     { id: 'meter', type: 'meter', at: add3(ROOM.c, [2.6, -2.6, 1.4]), val: Math.max(0, sh) / maxSh, label: 'bridge-ness', c: 'bridge', k: ['shadow'], layer: 3 },
   );
-  if (showSF) objs.push({ id: 'sf-arrow', type: 'arrow', at: add3(ROOM.c, b, ROOM.L * 1.15), v: toy.DIRS.sf, len: ROOM.L * 0.8, c: 'lamp', lamp: true, sw: 2.5, label: 'San Francisco', k: ['sf-arrow'], layer: 2 });
   return objs;
 }
 SCENES.directions = () => {
-  const aria = 'Inside a wireframe room, the Bridge token’s three numbers become one arrow. An orange arrow marks the “bridge” idea; the token arrow casts a shadow along it, and a bridge-ness meter matches the shadow’s length. Then a San Francisco arrow is placed on the end of the bridge arrow.';
+  const aria = 'Inside a wireframe room, the Bridge token’s three numbers become one blue arrow. A red arrow marks the “bridge” idea; the token arrow casts a labelled shadow along it, and a bridge-ness meter matches the shadow’s length.';
   const col = column('col-room', listVals('Bridge', MID), ROOM.c, { k: ['token-arrow'] });
   return {
-    words: { 'token-arrow': 'raw', shadow: 'bridge', 'bridge-arrow': 'bridge', 'sf-arrow': 'lamp' },
+    words: { 'token-arrow': 'raw', shadow: 'bridge', 'bridge-arrow': 'bridge' },
     interaction: 'shadow-slider',
     frames: [
       { objs: [roomObj(), col], aria, enter: 0.8 },
-      { objs: [...directionsObjs('Bridge', { showBridge: false, showSF: false }), { ...col, o: 0 }], dur: 0.8, aria },
-      { objs: directionsObjs('Bridge', { showSF: false }), dur: 0.8, aria },
-      { objs: directionsObjs('Bridge'), dur: 0.6, aria },
+      { objs: [...directionsObjs('Bridge', { showBridge: false }), { ...col, o: 0 }], dur: 0.8, aria },
+      { objs: directionsObjs('Bridge'), dur: 0.8, aria },
     ],
   };
 };
@@ -225,9 +224,9 @@ SCENES.crowded = () => {
   const sharers = toy.SLOT_SHARERS;
   const seg = (o) => ({ id: 'col-big', type: 'bars', at: slotAt, vals: toy.listAt('Bridge', MID).map((v, i) => (i === toy.WATCHED_SLOT ? 1.2 : v)), unit: 1.1, bw: 0.5, gap: 0.2, hi: toy.WATCHED_SLOT, hiLabel: 'slot #2', segs: [null, ['seg-a', 'seg-b', 'seg-c'], null], segO: o, k: ['slot2'], layer: 3 });
   const segLabels = ['bridge', 'code error', 'sadness'].map((t, i) => ({ id: `seg-label-${i}`, type: 'label', at: add3(slotAt, [0.6, -0.6, 1.0]), pxo: [6, i * 15 - 15], text: t, size: 11, anchor: 'start', cls: `seg-${'abc'[i]}-text`, k: ['slot2'], layer: 3 }));
-  const aria = `Three grey arrows at right angles fill the room. Then eight lamp-tipped arrows, one per toy idea, spread out as evenly as they can in 3-D; the closest two are ${Math.round(pair.angle)}° apart, not 90°. Beside the room, slot #2 splits into three coloured pieces: ${sharers.join(', ')}.`;
+  const aria = `Three grey arrows at right angles fill the room. Then eight darker arrows, one per toy idea, spread out as evenly as they can in 3-D; the closest two are ${Math.round(pair.angle)}° apart, not 90°. Beside the room, slot #2 splits into three coloured pieces: ${sharers.join(', ')}.`;
   return {
-    words: { axes: 'ink', ideas: 'lamp', slot2: 'raw' },
+    words: { axes: 'ink', ideas: 'ink', slot2: 'raw' },
     frames: [
       { objs: [roomObj(), ...axes()], aria, enter: 0.7 },
       { objs: [roomObj(), ...axes(0.35), ...ideaArrows(1)], dur: 1.0, aria },
@@ -242,14 +241,14 @@ SCENES['recap-1'] = () => {
   const roofList = listVals('at', toy.FLOORS);
   const odds = toy.nextWordOdds(roofList, ['sunset', 'night', 'dawn']);
   const objs = [
-    ...tiles(), ...floors(MID).map(f => ({ ...f, k: [...f.k, 'tower'] })),
+    ...tiles().map(t => ({ ...t, tagO: 0 })), ...floors(MID).map(f => ({ ...f, k: [...f.k, 'tower'] })),
     column('col-climb', listVals('Bridge', MID), climbAt(MID), { k: ['column'] }),
     { id: 'odds', type: 'odds', at: [TOWER.x + 1.5, TOWER.y + 1.5, roofZ + 2.6], rows: odds, wpx: 90, k: ['odds'], layer: 3 },
     roomObj(), ...ideaArrows(1),
   ];
   const aria = 'Zoomed out: the street of word tiles, the tower with its middle floor lit and next-word odds on its roof, a column of numbers at the middle floor, and the room crowded with eight idea arrows.';
   return {
-    words: { tiles: 'tile', column: 'raw', tower: 'machine', odds: 'raw', ideas: 'lamp' },
+    words: { tiles: 'tile', column: 'raw', tower: 'machine', odds: 'raw', ideas: 'ink' },
     frames: [{ objs, aria, enter: 1.0 }],
   };
 };
